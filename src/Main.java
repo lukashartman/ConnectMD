@@ -36,7 +36,7 @@ public class Main extends Application {
 
     //Method to run on application stop
     public void stop(){
-
+        System.out.println("Application stopped");
     }
 
 }

@@ -1,0 +1,53 @@
+.whiteSubmitButton{
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+    -fx-text-fill: #659BFF;
+    -fx-alignment: center;
+    -fx-pref-width: 129;
+    -fx-pref-height: 44;
+    -fx-background-radius: 30;
+}
+
+.whiteLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+}
+
+.connectMDLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 65;
+    -fx-text-fill: #659BFF;
+}
+
+.loginTextField {
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-pref-width: 313;
+    -fx-pref-height: 35;
+    -fx-background-color: #FFFFFF, #659BFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+    -fx-prompt-text-fill: #FFFFFF;
+}
+.loginTextField:focused {
+    -fx-background-color: #FFFFFF, #507ED1;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: #FFFFFF, #659BFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #FFFFFF;
+
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color:  #FFFFFF, #507ED1;
+}

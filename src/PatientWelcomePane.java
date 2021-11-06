@@ -17,10 +17,10 @@ import javafx.scene.layout.*;
 
 public class PatientWelcomePane extends HBox {
     
-private Button logOutButton, viewPharmInfoButton, viewHealthButton, sendMessageButton, requestChangeButton;
+    private Button viewPharmInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, logOutButton;
     private Label helloLabelPatient, welcomeLabel;
     private String patientName = "";
-    private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
+    private ObservableList<String> list = FXCollections.observableArrayList("A", "B", "C", "D", "E");
     
    
     public PatientWelcomePane() throws FileNotFoundException {
@@ -63,7 +63,7 @@ private Button logOutButton, viewPharmInfoButton, viewHealthButton, sendMessageB
         //Set the background and children
       
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
-        this.getChildren().addAll(viewPharmInfoButton, viewHealthButton, sendMessageButton, logOutButton, requestChangeButton, helloLabelPatient);
+        this.getChildren().addAll(viewPharmInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, helloLabelPatient, logOutButton);
 
         //ACTIONS
       

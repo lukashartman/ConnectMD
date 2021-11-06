@@ -110,6 +110,7 @@
     </ignored-roots>
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test commit" />
+    <MESSAGE value="Fix code that doesn't compile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix code that doesn't compile" />
   </component>
 </project>

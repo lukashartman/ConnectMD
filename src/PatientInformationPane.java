@@ -81,7 +81,7 @@ public class PatientInformationPane  extends HBox  {
         insuranceNameField.setLayoutX(0);
         insuranceNameField.setLayoutY(0);
         
-        //images
+        //profile picture
       
         FileInputStream profilePictureInput = new FileInputStream((""));
         patientProfileImage = new Image(profilePictureInput);

@@ -47,7 +47,7 @@ public class PatientRegistrationPane extends StackPane
         confirm.setText("Confirm");
         cancel.setText("Cancel");
         
-        // set ailgnment and widths 
+        // set alignment and widths 
         fieldsVBox.setAlignment(Pos.CENTER);
         fieldsVBox.setPrefWidth(500);
         buttonBox.setAlignment(Pos.CENTER);

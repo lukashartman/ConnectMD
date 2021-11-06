@@ -17,7 +17,7 @@ import javafx.scene.layout.*;
 
 public class PatientWelcomePane extends HBox {
     
-private Button viewInfoButton, viewHealthButton, sendMessageButton, logOutButton, requestChangeButton;
+private Button logOutButton, viewPharmInfoButton, viewHealthButton, sendMessageButton, requestChangeButton;
     private Label helloLabelPatient, welcomeLabel;
     private String patientName = "";
     private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
@@ -40,10 +40,10 @@ private Button viewInfoButton, viewHealthButton, sendMessageButton, logOutButton
         logOutButton.setLayoutX(0);
         logOutButton.setLayoutY(0);
 
-        viewInfoButton = new Button("View My Pharmacy Information");
-        viewInfoButton.getStyleClass().add("bluePatientInfoButton");
-        viewInfoButton.setLayoutX(0);
-        viewInfoButton.setLayoutY(0);
+        viewPharmInfoButton = new Button("View My Pharmacy Information");
+        viewPharmInfoButton.getStyleClass().add("bluePatientInfoButton");
+        viewPharmInfoButton.setLayoutX(0);
+        viewPharmInfoButton.setLayoutY(0);
 
         viewHealthButton = new Button("View Health");
         viewHealthButton.getStyleClass().add("blueViewHealthButton");
@@ -63,11 +63,11 @@ private Button viewInfoButton, viewHealthButton, sendMessageButton, logOutButton
         //Set the background and children
       
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
-        this.getChildren().addAll(viewInfoButton, viewHealthButton, sendMessageButton, logOutButton, requestChangeButton, helloLabelPatient);
+        this.getChildren().addAll(viewPharmInfoButton, viewHealthButton, sendMessageButton, logOutButton, requestChangeButton, helloLabelPatient);
 
         //ACTIONS
       
-        viewInfoButton.setOnAction(event -> SceneController.changeSceneTest());
+        viewPharmInfoButton.setOnAction(event -> SceneController.changeSceneTest());
         viewHealthButton.setOnAction(event -> SceneController.changeSceneTest());
         sendMessageButton.setOnAction(event -> SceneController.changeSceneTest());
         requestChangeButton.setOnAction(event -> SceneController.changeSceneTest());

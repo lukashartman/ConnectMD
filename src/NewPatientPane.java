@@ -11,8 +11,7 @@ import javafx.scene.layout.VBox;
  *
  * @author Ben
  */
-public class PatientRegistrationPane extends StackPane
-{
+public class NewPatientPane extends StackPane {
     private Pane root;
     private VBox fieldsVBox, left, right; 
     private HBox buttonBox; 

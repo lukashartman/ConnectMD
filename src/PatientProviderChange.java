@@ -53,7 +53,7 @@ public class PatientProviderChange extends HBox {
         String[] providers = {""};
 
         //create Combo box
-        chooseNewProviderField = new ComboBox(FXCollections.observableList(providers));
+        chooseNewProviderField = new ComboBox();
         chooseNewProviderField.setValue("Message to:");
         chooseNewProviderField.setLayoutX(0);
         chooseNewProviderField.setLayoutY(0);
@@ -79,7 +79,7 @@ public class PatientProviderChange extends HBox {
         //create right sidebar
         patientInformationBackground = new Pane();
         patientInformationBackground.setPrefWidth(0);
-        patientInformationBackground.getChildren().addAll(patientProfileImage, patientNameLabel, dateOfBirthLabel, patientIdLabel, pharmacyLabel, phoneLabel, addressLabel, insuranceLabel);
+        patientInformationBackground.getChildren().addAll(patientNameLabel, dateOfBirthLabel, patientIdLabel, pharmacyLabel, phoneLabel, addressLabel, insuranceLabel);
         patientInformationBackground.setBackground(new Background (new BackgroundFill(Color.web("#659BFF"),null, null)));
 
         //create labels
@@ -120,13 +120,13 @@ public class PatientProviderChange extends HBox {
         insuranceLabel.setLayoutY(0);
 
         //create patient image
-        FileInputStream inputStream = new FileInputStream()
-        patientProfileImage = new Image(InputStream);
+        FileInputStream inputStream = new FileInputStream("");
+        patientProfileImage = new Image(inputStream);
         patientProfileImageView = new ImageView(patientProfileImage);
-        patientProfileImageView.setFitWidth();
-        patientProfileImageView.setFitHeight();
-        patientProfileImageView.setLayoutX();
-        patientProfileImageView.setLayoutY();
+//        patientProfileImageView.setFitWidth();
+//        patientProfileImageView.setFitHeight();
+//        patientProfileImageView.setLayoutX();
+//        patientProfileImageView.setLayoutY();
 
     }
 }

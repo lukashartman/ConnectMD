@@ -55,7 +55,7 @@ public class PatientMessagesPane extends HBox {
         String[] receiver = {""};
 
         //create Combo box
-        msgToBox = new ComboBox(FXCollections.observableList(receiver));
+        msgToBox = new ComboBox();
         msgToBox.setValue("Message to:");
         msgToBox.setLayoutX(0);
         msgToBox.setLayoutY(0);
@@ -84,11 +84,21 @@ public class PatientMessagesPane extends HBox {
         submitAndFinishButton.setLayoutX(0);
         submitAndFinishButton.setLayoutY(0);
 
+        //create patient image
+        FileInputStream inputStream = new FileInputStream("");
+        patientProfileImage = new Image(inputStream);
+        patientProfileImageView = new ImageView(patientProfileImage);
+//        patientProfileImageView.setFitWidth();
+//        patientProfileImageView.setFitHeight();
+//        patientProfileImageView.setLayoutX();
+//        patientProfileImageView.setLayoutY();
+
 
         //create right sidebar
+        //TODO: Patient profile image must be added to the children after getting a source
         patientInformationBackground = new Pane();
         patientInformationBackground.setPrefWidth(0);
-        patientInformationBackground.getChildren().addAll(patientProfileImage, patientNameLabel, dateOfBirthLabel, patientIdLabel, pharmacyLabel, phoneLabel, addressLabel, insuranceLabel);
+        patientInformationBackground.getChildren().addAll(patientNameLabel, dateOfBirthLabel, patientIdLabel, pharmacyLabel, phoneLabel, addressLabel, insuranceLabel);
         patientInformationBackground.setBackground(new Background (new BackgroundFill(Color.web("#659BFF"),null, null)));
 
         //create labels
@@ -128,14 +138,7 @@ public class PatientMessagesPane extends HBox {
         insuranceLabel.setLayoutX(0);
         insuranceLabel.setLayoutY(0);
 
-        //create patient image
-        FileInputStream inputStream = new FileInputStream()
-        patientProfileImage = new Image(InputStream);
-        patientProfileImageView = new ImageView(patientProfileImage);
-        patientProfileImageView.setFitWidth();
-        patientProfileImageView.setFitHeight();
-        patientProfileImageView.setLayoutX();
-        patientProfileImageView.setLayoutY();
+
 
     }
 }

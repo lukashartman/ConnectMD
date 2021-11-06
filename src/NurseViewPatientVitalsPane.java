@@ -6,9 +6,9 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import java.io.FileNotFoundException;
+import javafx.scene.layout.*;
 
-
-public class NurseViewPatientVitalsPane {
+public class NurseViewPatientVitalsPane extends HBox{
     private Label vitalsLabel, helloNurseLabel, weightLabel, poundsLabel, heightLabel, feetLabel, inchesLabel,
             bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel;
     private TextField weightField, heightField, bodyTempField,bloodPressureField;

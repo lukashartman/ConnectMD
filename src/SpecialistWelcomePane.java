@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import javafx.scene.layout.*;
 
 
-public class SpecialistWelcomePane {
+public class SpecialistWelcomePane extends HBox{
     private Button viewPatientInfoButton, beginPatientVisitButton, viewAllMessagesButton, logOutButton;
     private Label helloLabelDr, helloLabelNurse, welcomeLabel;
     private ComboBox selectPatient;

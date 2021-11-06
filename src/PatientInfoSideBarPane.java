@@ -17,6 +17,7 @@ public class PatientInfoSideBarPane extends VBox {
     private Label nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel;
 
     public PatientInfoSideBarPane() throws FileNotFoundException {
+        //LABELS
         nameLabel = new Label("Amanda Weiler");
         nameLabel.getStyleClass().add("whiteLabel");
         nameLabel.setLayoutX(0);
@@ -50,7 +51,6 @@ public class PatientInfoSideBarPane extends VBox {
         addressLabel.setLayoutY(0);
 
 
-
         insuranceLabel = new Label("Insurance = Blue Cross Blue Shield /n" +
                 "ID: DZW92000000");
         insuranceLabel.getStyleClass().add("whiteLabel");
@@ -58,7 +58,7 @@ public class PatientInfoSideBarPane extends VBox {
         insuranceLabel.setLayoutY(0);
 
         this.setBackground(new Background(new BackgroundFill(Color.web("#659BFF"), null, null)));
-        this.getChildren().addAll(patientPFP, nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel);
+        this.getChildren().addAll(nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel);
     }
 
 }

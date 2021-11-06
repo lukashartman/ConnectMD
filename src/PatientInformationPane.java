@@ -12,19 +12,21 @@ import javafx.scene.layout.*;
  *
  * @author Noah
  */
+
 public class PatientInformationPane  extends HBox  {
+    
     private Image patientProfileImage;
     private ImageView patientProfileImageView;
     private Label helloLabel, yourInfoLabel, DOBLabel, IDLabel;
     private TextField pharmNameField, pharmAddressField, PhoneField, insuranceNameField; 
     private Button backButton; 
+    private String patientName = "";
+    private String patientDOB = "";
+    private String patientID = "";
     
    
     public PatientInformationPane()throws FileNotFoundException{
         
-        String patientName = "";
-        String patientDOB = "";
-        String patientID = "";
         
         // labels
         helloLabel = new Label("Hello, " + patientName);

@@ -23,7 +23,7 @@ public class Main extends Application {
         //Setup stage, scene, and window
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new PatientWelcomePane();
+        currentPane = new PatientProviderChange();
 
         scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");
@@ -37,6 +37,10 @@ public class Main extends Application {
     //Method to run on application stop
     public void stop(){
         System.out.println("Application stopped");
+    }
+
+    private void setScene(){
+        window.setScene(scene1);
     }
 
 }

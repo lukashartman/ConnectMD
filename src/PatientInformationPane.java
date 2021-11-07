@@ -13,7 +13,7 @@ import javafx.scene.layout.*;
  * @author Noah
  */
 
-public class PatientInformationPane  extends HBox  {
+public class PatientInformationPane  extends Pane  {
     
     private Image patientProfileImage;
     private ImageView patientProfileImageView;
@@ -26,7 +26,7 @@ public class PatientInformationPane  extends HBox  {
     
    
     public PatientInformationPane()throws FileNotFoundException{
-        
+        //TODO: Refactor this. IT IS NOT COMPLETE!!!
         
         // labels
         helloLabel = new Label("Hello, " + patientName);

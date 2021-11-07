@@ -23,6 +23,18 @@
     -fx-background-radius: 30;
 }
 
+.smallBlueButton{
+    -fx-background-color: #659BFF;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-pref-width: 129;
+    -fx-pref-height: 44;
+    -fx-background-radius: 30;
+}
+
 .logOutButton{
     -fx-background-color: #507ED1;
     -fx-font-family: Helvetica Neue;
@@ -64,6 +76,20 @@
     -fx-text-fill: #659BFF;
 }
 
+.textBoxTitleLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+    -fx-text-fill: #659BFF;
+}
+
+.textBoxUnitLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+    -fx-text-fill: #659BFF;
+}
+
 /* TEXT FIELDS */
 .loginTextField {
     -fx-background-insets: 0, 0 0 1 0 ;
@@ -77,8 +103,20 @@
     -fx-font-size: 25;
     -fx-prompt-text-fill: #FFFFFF;
 }
+
 .loginTextField:focused {
     -fx-background-color: #FFFFFF, #507ED1;
+}
+
+.whiteTextField{
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #707070;
+    -fx-text-fill: black;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
 }
 
 /* MISC INTERACTIVE ELEMENTS */

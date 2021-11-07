@@ -3,111 +3,136 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import java.io.FileNotFoundException;
-import javafx.scene.layout.*;
 
-public class NurseViewPatientVitalsPane extends HBox{
-    private Label vitalsLabel, helloNurseLabel, weightLabel, poundsLabel, heightLabel, feetLabel, inchesLabel,
+import java.io.FileNotFoundException;
+
+public class NurseViewPatientVitalsPane extends Pane {
+    private Label vitalsLabel, helloLabel, weightLabel, poundsLabel, heightLabel, feetLabel, inchesLabel,
             bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel;
-    private TextField weightField, heightField, bodyTempField,bloodPressureField;
+    private TextField weightField, heightFieldFt, heightFieldIn, bodyTempField,bloodPressureField;
     private Button backButton, nextButton;
-    private String specialistName = "";
+    private String specialistNameAndTitle = "";
+    private Pane rightPane;
 
     public NurseViewPatientVitalsPane() throws FileNotFoundException {
+
+
+        //Create right sidebar
+        //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
+        rightPane = new PatientInfoSideBarPane("P44924663");
+        rightPane.setLayoutX(852);
+        rightPane.setLayoutY(0);
+
        //LABELS
         vitalsLabel = new Label("Vitals");
-        vitalsLabel.getStyleClass().add("blueLabel");
-        vitalsLabel.setLayoutX(0);
-        vitalsLabel.setLayoutY(0);
+        vitalsLabel.getStyleClass().add("welcomeLabel");
+        vitalsLabel.setLayoutX(14);
+        vitalsLabel.setLayoutY(36);
 
-        helloNurseLabel = new Label("Hello, " + specialistName + " R.N.");
-        helloNurseLabel.getStyleClass().add("blueLabel");
-        helloNurseLabel.setLayoutX(0);
-        helloNurseLabel.setLayoutY(0);
+        helloLabel = new Label("Hello " + specialistNameAndTitle);
+        helloLabel.getStyleClass().add("helloLabel");
+        helloLabel.setLayoutX(14);
+        helloLabel.setLayoutY(12);
 
         weightLabel = new Label("Weight");
-        weightLabel.getStyleClass().add("blueLabel");
-        weightLabel.setLayoutX(0);
-        weightLabel.setLayoutY(0);
+        weightLabel.getStyleClass().add("textBoxTitleLabel");
+        weightLabel.setLayoutX(202);
+        weightLabel.setLayoutY(252);
 
         poundsLabel = new Label("Ibs.");
-        poundsLabel.getStyleClass().add("blueLabel");
-        poundsLabel.setLayoutX(0);
-        poundsLabel.setLayoutY(0);
+        poundsLabel.getStyleClass().add("textBoxUnitLabel");
+        poundsLabel.setLayoutX(683);
+        poundsLabel.setLayoutY(259);
 
         heightLabel = new Label("Height");
-        heightLabel.getStyleClass().add("blueLabel");
-        heightLabel.setLayoutX(0);
-        heightLabel.setLayoutY(0);
+        heightLabel.getStyleClass().add("textBoxTitleLabel");
+        heightLabel.setLayoutX(206);
+        heightLabel.setLayoutY(312);
 
         feetLabel = new Label("ft.");
-        feetLabel.getStyleClass().add("blueLabel");
-        feetLabel.setLayoutX(0);
-        feetLabel.setLayoutY(0);
+        feetLabel.getStyleClass().add("textBoxUnitLabel");
+        feetLabel.setLayoutX(482);
+        feetLabel.setLayoutY(319);
 
-        inchesLabel = new Label();
-        inchesLabel.getStyleClass().add("blueLabel");
-        inchesLabel.setLayoutX(0);
-        inchesLabel.setLayoutY(0);
+        inchesLabel = new Label("in.");
+        inchesLabel.getStyleClass().add("textBoxUnitLabel");
+        inchesLabel.setLayoutX(693);
+        inchesLabel.setLayoutY(319);
 
-        bodyTempLabel = new Label();
-        bodyTempLabel.getStyleClass().add("blueLabel");
-        bodyTempLabel.setLayoutX(0);
-        bodyTempLabel.setLayoutY(0);
+        bodyTempLabel = new Label("Body Temperature");
+        bodyTempLabel.getStyleClass().add("textBoxTitleLabel");
+        bodyTempLabel.setLayoutX(38);
+        bodyTempLabel.setLayoutY(372);
 
-        degreesLabel = new Label();
-        degreesLabel.getStyleClass().add("blueLabel");
-        degreesLabel.setLayoutX(0);
-        degreesLabel.setLayoutY(0);
+        degreesLabel = new Label("F.");
+        degreesLabel.getStyleClass().add("textBoxUnitLabel");
+        degreesLabel.setLayoutX(693);
+        degreesLabel.setLayoutY(379);
 
-        bloodPressureLabel = new Label();
-        bloodPressureLabel.getStyleClass().add("blueLabel");
-        bloodPressureLabel.setLayoutX(0);
-        bloodPressureLabel.setLayoutY(0);
+        bloodPressureLabel = new Label("Blood Pressure");
+        bloodPressureLabel.getStyleClass().add("textBoxTitleLabel");
+        bloodPressureLabel.setLayoutX(81);
+        bloodPressureLabel.setLayoutY(432);
 
-        mmHgLabel = new Label();
-        mmHgLabel.getStyleClass().add("blueLabel");
-        mmHgLabel.setLayoutX(0);
-        mmHgLabel.setLayoutY(0);
+        mmHgLabel = new Label("mmHg");
+        mmHgLabel.getStyleClass().add("textBoxUnitLabel");
+        mmHgLabel.setLayoutX(683);
+        mmHgLabel.setLayoutY(439);
 
         //BUTTONS
         backButton = new Button("< Back");
-        backButton.getStyleClass().add("backButton");
-        backButton.setLayoutX(0);
-        backButton.setLayoutY(0);
+        backButton.getStyleClass().add("smallBlueButton");
+        backButton.setLayoutX(15);
+        backButton.setLayoutY(656);
 
         nextButton = new Button("Next >");
-        nextButton.getStyleClass().add("nextButton");
-        nextButton.setLayoutX(0);
-        nextButton.setLayoutY(0);
+        nextButton.getStyleClass().add("smallBlueButton");
+        nextButton.setLayoutX(711);
+        nextButton.setLayoutY(656);
 
         // TEXT FIELDS
         weightField = new TextField();
-        weightField.getStyleClass().add("weightTextField");
-        weightField.setLayoutX(0);
-        weightField.setLayoutY(0);
+        weightField.getStyleClass().add("whiteTextField");
+        weightField.setLayoutX(317);
+        weightField.setLayoutY(252);
+        weightField.setPrefWidth(361);
+        weightField.setPrefHeight(30);
 
-        heightField = new TextField();
-        heightField.getStyleClass().add("heightTextField");
-        heightField.setLayoutX(0);
-        heightField.setLayoutY(0);
+        heightFieldFt = new TextField();
+        heightFieldFt.getStyleClass().add("whiteTextField");
+        heightFieldFt.setLayoutX(317);
+        heightFieldFt.setLayoutY(312);
+        heightFieldFt.setPrefWidth(160);
+        heightFieldFt.setPrefHeight(30);
+
+        heightFieldIn = new TextField();
+        heightFieldIn.getStyleClass().add("whiteTextField");
+        heightFieldIn.setLayoutX(518);
+        heightFieldIn.setLayoutY(312);
+        heightFieldIn.setPrefWidth(160);
+        heightFieldIn.setPrefHeight(30);
 
         bodyTempField = new TextField() ;
-        bodyTempField.getStyleClass().add("bodyTempTextField");
-        bodyTempField.setLayoutX(0);
-        bodyTempField.setLayoutY(0);
+        bodyTempField.getStyleClass().add("whiteTextField");
+        bodyTempField.setLayoutX(317);
+        bodyTempField.setLayoutY(372);
+        bodyTempField.setPrefWidth(361);
+        bodyTempField.setPrefHeight(30);
 
         bloodPressureField = new TextField();
-        bloodPressureField.getStyleClass().add("bloodPressureTextField");
-        bloodPressureField.setLayoutX(0);
-        bloodPressureField.setLayoutY(0);
+        bloodPressureField.getStyleClass().add("whiteTextField");
+        bloodPressureField.setLayoutX(317);
+        bloodPressureField.setLayoutY(432);
+        bloodPressureField.setPrefWidth(361);
+        bloodPressureField.setPrefHeight(30);
 
        this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
-       this.getChildren().addAll(vitalsLabel, helloNurseLabel, weightLabel, poundsLabel, heightLabel, feetLabel, inchesLabel,
-               bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel, weightField, heightField, bodyTempField,
-               bloodPressureField, backButton, nextButton);
+       this.getChildren().addAll(vitalsLabel, helloLabel, weightLabel, poundsLabel, heightLabel, feetLabel, inchesLabel,
+               bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel, weightField, heightFieldFt, heightFieldIn, bodyTempField,
+               bloodPressureField, backButton, nextButton, rightPane);
 
         backButton.setOnAction(event -> SceneController.changeSceneTest());
         nextButton.setOnAction(event -> SceneController.changeSceneTest());

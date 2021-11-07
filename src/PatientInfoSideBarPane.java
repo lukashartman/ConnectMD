@@ -12,12 +12,13 @@ import java.io.FileNotFoundException;
 
 //This pane will be a VBox in nurseViewPatientVitalsPane
 
-public class PatientInfoSideBarPane extends VBox {
+public class PatientInfoSideBarPane extends Pane {
     private Image patientPFP;
     private Label nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel;
 
-    public PatientInfoSideBarPane() throws FileNotFoundException {
+    public PatientInfoSideBarPane(String patientID) throws FileNotFoundException {
         //LABELS
+        //TODO: for all these elements, grab the correct patient information using the patientID passed into here
         nameLabel = new Label("Amanda Weiler");
         nameLabel.getStyleClass().add("whiteLabel");
         nameLabel.setLayoutX(0);

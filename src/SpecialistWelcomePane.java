@@ -6,21 +6,22 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.collections.ObservableList;
 import javafx.scene.paint.Color;
-import java.io.FileNotFoundException;
 import javafx.scene.layout.*;
+
+import java.io.FileNotFoundException;
 
 
 public class SpecialistWelcomePane extends Pane{
     private Button viewPatientInfoButton, beginPatientVisitButton, viewAllMessagesButton, logOutButton;
     private Label helloLabel, welcomeLabel;
     private ComboBox selectPatient;
-    private String specialistName = "";
-    private String specialistTitle = "";
+    private String specialistNameAndTitle = "";
     private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
-
     public SpecialistWelcomePane() throws FileNotFoundException {
+
+
         //LABELS
-        helloLabel = new Label("Hello " + specialistTitle + " " + specialistName);
+        helloLabel = new Label("Hello " + specialistNameAndTitle);
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);

@@ -4,6 +4,8 @@
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientInfoSideBarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInfoSideBarPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.css" afterDir="false" />
     </list>
@@ -115,6 +117,18 @@
     <MESSAGE value="Test commit" />
     <MESSAGE value="Fix code that doesn't compile" />
     <MESSAGE value="Fix PatientVisitPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix PatientVisitPane" />
+    <MESSAGE value="Customize and Finish Specialist Welcome Pane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customize and Finish Specialist Welcome Pane" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -55,6 +55,18 @@
     -fx-text-fill: white;
 }
 
+.sidebarDOBID{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-size: 30;
+    -fx-text-fill: #FFFFFF;
+}
+
+.sidebarSmallLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-size: 20;
+    -fx-text-fill: #FFFFFF;
+}
+
 .welcomeLabel{
     -fx-font-family: Helvetica Neue;
     -fx-font-weight: bold;

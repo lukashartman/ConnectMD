@@ -10,7 +10,7 @@ public class Main extends Application {
     //Instance Variables
     protected static Stage window;
     private Scene scene1;
-    private HBox loginPane;
+    private Pane currentPane;
 
     //Method to launch application
     public static void main(String[] args){
@@ -23,9 +23,9 @@ public class Main extends Application {
         //Setup stage, scene, and window
         primaryStage.setResizable(false);
         window = primaryStage;
-        loginPane = new LoginPane();
+        currentPane = new SpecialistWelcomePane();
 
-        scene1 = new Scene(loginPane, 1280, 720);
+        scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");
 
         window.setScene(scene1);

@@ -1,3 +1,4 @@
+/* BUTTONS */
 .whiteSubmitButton{
     -fx-background-color: #FFFFFF;
     -fx-font-family: Helvetica Neue;
@@ -10,11 +11,50 @@
     -fx-background-radius: 30;
 }
 
+.wideBlueButton{
+    -fx-background-color: #659BFF;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-pref-width: 338;
+    -fx-pref-height: 44;
+    -fx-background-radius: 30;
+}
+
+.logOutButton{
+    -fx-background-color: #507ED1;
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-pref-width: 129;
+    -fx-pref-height: 44;
+    -fx-background-radius: 30;
+}
+
+/* LABELS */
 .whiteLabel{
     -fx-font-family: Helvetica Neue;
     -fx-font-weight: bold;
     -fx-font-size: 40;
     -fx-text-fill: white;
+}
+
+.welcomeLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 40;
+    -fx-text-fill: #659BFF;
+}
+
+.helloLabel{
+    -fx-font-family: Helvetica Neue;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: #659BFF;
 }
 
 .connectMDLabel{
@@ -24,6 +64,7 @@
     -fx-text-fill: #659BFF;
 }
 
+/* TEXT FIELDS */
 .loginTextField {
     -fx-background-insets: 0, 0 0 1 0 ;
     -fx-background-radius: 0 ;
@@ -40,6 +81,7 @@
     -fx-background-color: #FFFFFF, #507ED1;
 }
 
+/* MISC INTERACTIVE ELEMENTS */
 .date-picker > .text-field {
     -fx-background-color: #FFFFFF, #659BFF;
     -fx-text-fill: #FFFFFF;
@@ -50,4 +92,13 @@
 .date-picker:focused > .text-field,
 .date-picker > .text-field:focused {
     -fx-background-color:  #FFFFFF, #507ED1;
+}
+
+.selectPatientDropdown{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #507ED1;
+    -fx-prompt-text-fill: #FFFFFF;
+    -fx-pref-width: 552;
+    -fx-pref-height: 55;
 }

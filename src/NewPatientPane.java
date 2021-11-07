@@ -4,25 +4,22 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 /**
  *
  * @author Ben
  */
-public class NewPatientPane extends StackPane {
-    private Pane root;
-    private VBox fieldsVBox, left, right; 
+public class NewPatientPane extends Pane {
+    private VBox fieldsVBox, left, right;
     private HBox buttonBox; 
     private BorderPane border; 
     private TextField firstName, lastName, email, password, passwordConfirm; 
     private Button confirm, cancel; 
      
-    
-    public void newPatientPane()
-    {
-     
+
+    public NewPatientPane() {
+
         fieldsVBox = new VBox(15);
         left = new VBox(); // left side VBox 
         right = new VBox(); // right side VBox

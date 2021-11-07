@@ -11,12 +11,12 @@ import java.io.FileNotFoundException;
 
 //This pane will be a VBox in nurseViewPatientVitalsPane
 
-public class PatientInfoSideBarPane extends Pane {
+public class PatientInformationBasicSidebarPane extends Pane {
     private Image patientPFP;
     private ImageView patientPFPView;
-    private Label nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel;
+    private Label nameLabel, birthdayLabel, idLabel;
 
-    public PatientInfoSideBarPane(String patientID) throws FileNotFoundException {
+    public PatientInformationBasicSidebarPane(String patientID) throws FileNotFoundException {
 
         //Set size of the sidebar across all calls to view it
         this.setPrefWidth(427);
@@ -39,28 +39,7 @@ public class PatientInfoSideBarPane extends Pane {
         idLabel.setLayoutX(114);
         idLabel.setLayoutY(277);
 
-        pharmLabel = new Label("Pharmacy: CVS Pharmacy \n " +
-                "909 E Apache Blvd, Tempe, AZ 85281");
-        pharmLabel.getStyleClass().add("sidebarSmallLabel");
-        pharmLabel.setLayoutX(45);
-        pharmLabel.setLayoutY(360);
 
-        phonelabel = new Label("Phone: 480-694-5998");
-        phonelabel.getStyleClass().add("sidebarSmallLabel");
-        phonelabel.setLayoutX(45);
-        phonelabel.setLayoutY(425);
-
-        addressLabel = new Label("Address: 3951 Dye Street, \n" +
-                "Phoenix,AZ, 85024");
-        addressLabel.getStyleClass().add("sidebarSmallLabel");
-        addressLabel.setLayoutX(45);
-        addressLabel.setLayoutY(466);
-
-        insuranceLabel = new Label("Insurance: Blue Cross Blue Shield \n" +
-                "ID: DZW92000000");
-        insuranceLabel.getStyleClass().add("sidebarSmallLabel");
-        insuranceLabel.setLayoutX(45);
-        insuranceLabel.setLayoutY(531);
 
         FileInputStream inputstream = new FileInputStream("src/logo.png");
         patientPFP = new Image(inputstream);
@@ -71,7 +50,7 @@ public class PatientInfoSideBarPane extends Pane {
         patientPFPView.setLayoutY(12);
 
         this.setBackground(new Background(new BackgroundFill(Color.web("#659BFF"), null, null)));
-        this.getChildren().addAll(patientPFPView, nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel);
+        this.getChildren().addAll(patientPFPView, nameLabel, birthdayLabel, idLabel);
     }
 
 }

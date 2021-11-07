@@ -10,7 +10,7 @@ import javafx.scene.layout.VBox;
  *
  * @author Ben
  */
-public class PatientVisitPane extends VBox
+public class PatientVisitSidebarPane extends VBox
 {
     private ComboBox visitMenu;
     private TextArea visitSummary;

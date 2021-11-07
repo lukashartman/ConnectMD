@@ -15,7 +15,7 @@ public class PatientProviderChange extends Pane {
     public PatientProviderChange() throws FileNotFoundException {
 
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
-        rightPane = new PatientInfoSideBarPane("P44924663");
+        rightPane = new PatientInformationSidebarPane("P44924663");
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
 

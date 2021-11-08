@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewPatientPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPatientPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +122,8 @@
     <MESSAGE value="Customize and Finish PatientWelcomePane" />
     <MESSAGE value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
     <MESSAGE value="Customize and Finish PatientInformationPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customize and Finish PatientInformationPane" />
+    <MESSAGE value="Correct Main Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct Main Start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,10 +19,10 @@ public class Main extends Application {
     //Method to display application
     public void start (Stage primaryStage) throws FileNotFoundException {
 
-        //Setup stage, scene, and window
+        //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new LoginPane();
+        currentPane = new SpecialistMessagesPane();
 
         scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");

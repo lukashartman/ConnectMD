@@ -1,6 +1,6 @@
 import javafx.scene.control.Alert;
 
-public class SceneController extends Main{
+public class SceneController extends Main {
 
     public static void changeSceneTest(){
         Alert alert = new Alert(Alert.AlertType.WARNING);

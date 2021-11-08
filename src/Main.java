@@ -22,9 +22,9 @@ public class Main extends Application {
         //Setup stage, scene, and window
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new PatientVisitSidebarPane("P44924663");
+        currentPane = new LoginPane();
 
-        scene1 = new Scene(currentPane, 427, 720);
+        scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");
 
         window.setScene(scene1);

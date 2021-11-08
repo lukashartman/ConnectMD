@@ -1,60 +1,53 @@
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
-/**
- *
- * @author Ben
- */
-public class PatientVisitSidebarPane extends VBox
-{
-    private ComboBox visitMenu;
-    private TextArea visitSummary;
-    private TextField searchVisits;
-    private HBox comboBoxHBox;
-    private HBox visitSummaryHBox;
-    private Insets insets1;
-    private Insets insets2;
-    private Insets insets3;
+public class PatientVisitSidebarPane extends Pane {
 
-    public void visitPane()
-    {
-        // create neccesary pane contents
-        visitMenu = new ComboBox();
-        visitSummary = new TextArea();
-        visitSummaryHBox = new HBox();
-        comboBoxHBox = new HBox();
-        searchVisits = new TextField();
-        insets1 = new Insets(50, 20, 0, 0);
-        insets2 = new Insets(20, 20, 0, 0);
-        insets3 = new Insets(20, 0, 0, 0);
+    private Image patientPFP;
+    private ImageView patientPFPView;
+    private Label nameLabel, birthdayLabel, idLabel;
+    private String patientID;
 
-        // set default menu contents
-        visitMenu.getItems().add("11/21/21");
-        visitMenu.getItems().add("10/12/21");
-        visitMenu.getItems().add("09/04/21");
-        visitMenu.getItems().add("08/28/21");
-        visitMenu.getItems().add("07/11/21");
+    public PatientVisitSidebarPane(String patientID) throws FileNotFoundException {
+        //Set size of the sidebar across all calls to view it
+        this.setPrefWidth(427);
+        this.setPrefHeight(720);
 
-        visitSummary.setPrefRowCount(30); // size of text field that will display visit summary
-        searchVisits.setText("Search Visit Date"); // set text field default contents
+        //LABELS
+        //TODO: for all these elements, grab the correct patient information using the patientID passed into here
+        nameLabel = new Label("Amanda Weiler");
+        nameLabel.getStyleClass().add("whiteLabel");
+        nameLabel.setLayoutX(70);
+        nameLabel.setLayoutY(187);
 
-        // padding and alignment
-        comboBoxHBox.setPadding(insets2);
-        comboBoxHBox.setAlignment(Pos.CENTER);
-        visitSummaryHBox.setPadding(insets3);
+        birthdayLabel = new Label("DOB: " + "10/20/2000");
+        birthdayLabel.getStyleClass().add("sidebarDOBID");
+        birthdayLabel.setLayoutX(100);
+        birthdayLabel.setLayoutY(235);
 
-        // add contents to both HBox's
-        comboBoxHBox.getChildren().addAll(visitMenu);
-        visitSummaryHBox.getChildren().addAll(visitSummary);
+        idLabel = new Label("ID: " + patientID);
+        idLabel.getStyleClass().add("sidebarDOBID");
+        idLabel.setLayoutX(114);
+        idLabel.setLayoutY(277);
 
-        // add contents to the Patient Visit Pane
-        this.getChildren().addAll(searchVisits, comboBoxHBox, visitSummaryHBox);
-        this.setPrefWidth(300);
-        this.setPadding(insets1);
+        FileInputStream inputstream = new FileInputStream("src/logo.png");
+        patientPFP = new Image(inputstream);
+        patientPFPView = new ImageView(patientPFP);
+        patientPFPView.setFitWidth(158);
+        patientPFPView.setFitHeight(158);
+        patientPFPView.setLayoutX(134);
+        patientPFPView.setLayoutY(12);
+
+
+
+        this.setBackground(new Background(new BackgroundFill(Color.web("#659BFF"), null, null)));
+        this.getChildren().addAll(patientPFPView, nameLabel, birthdayLabel, idLabel);
+
     }
 }

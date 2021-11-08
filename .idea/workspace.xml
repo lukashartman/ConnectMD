@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewPatientPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPatientPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInfoSideBarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientMessagesPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientProviderChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientProviderChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientVisitPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +35,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -126,7 +121,8 @@
     <MESSAGE value="Customize and Finish PatientInfoSideBarPane" />
     <MESSAGE value="Customize and Finish PatientWelcomePane" />
     <MESSAGE value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
+    <MESSAGE value="Customize and Finish PatientInformationPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customize and Finish PatientInformationPane" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

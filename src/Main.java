@@ -2,7 +2,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-
 import java.io.FileNotFoundException;
 
 public class Main extends Application {
@@ -23,9 +22,9 @@ public class Main extends Application {
         //Setup stage, scene, and window
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new PatientInformationPane();
+        currentPane = new PatientVisitSidebarPane("P44924663");
 
-        scene1 = new Scene(currentPane, 1280, 720);
+        scene1 = new Scene(currentPane, 427, 720);
         scene1.getStylesheets().add("theme.css");
 
         window.setScene(scene1);

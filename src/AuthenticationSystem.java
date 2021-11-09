@@ -4,13 +4,13 @@ public class AuthenticationSystem
     {
 
 
-        return;
+        return true;
     }
 
     public boolean loginSpecialist(String userName, String password)
     {
 
-        return;
+        return true;
     }
 
 

@@ -17,19 +17,19 @@ public class HealthCarePortalSystem extends Main
 
     public void loginPatient()
     {
-        boolean status;
-        String firstName;
-        String lastName;
-        String dob;
+        boolean status = false;
+        String firstName = "Null";
+        String lastName = "Null";
+        String dob = "Null";
 
         status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
     }
 
     public void loginSpecialist()
     {
-        boolean status;
-        String userName;
-        String password;
+        boolean status = false;
+        String userName = "Null";
+        String password = "Null";
 
         status = authenticationSystem.loginSpecialist(userName, password); //specialist login request; returns status (yes or no)
     }

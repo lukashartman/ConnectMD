@@ -11,6 +11,22 @@ public class HealthCarePortalSystem extends Main {
         alert.showAndWait();
     }
 
+    public static void loginPatient()
+    {
+
+
+
+    }
+
+    public static void loginSpecialist()
+    {
+
+
+
+    }
+
+
+
     public static void calculateDaysBetweenDates(){
 
     }

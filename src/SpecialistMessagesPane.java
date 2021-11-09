@@ -51,7 +51,7 @@ public class SpecialistMessagesPane extends Pane {
         this.getChildren().addAll(helloLabel, welcomeLabel, backButton, fromLabel, subjectLabel, bodyLabel);
 
         //Action Events
-        backButton.setOnAction(event -> SceneController.changeSceneTest());
+        backButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
     }
 
 }

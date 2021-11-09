@@ -133,7 +133,7 @@ public class NurseViewPatientVitalsPane extends Pane {
                bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel, weightField, heightFieldFt, heightFieldIn, bodyTempField,
                bloodPressureField, backButton, nextButton, rightPane);
 
-        backButton.setOnAction(event -> SceneController.changeSceneTest());
-        nextButton.setOnAction(event -> SceneController.changeSceneTest());
+        backButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        nextButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
     }
 }

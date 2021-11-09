@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
     </list>
@@ -126,17 +129,7 @@
     <MESSAGE value="Customize and Finish PatientInformationPane" />
     <MESSAGE value="Correct Main Start" />
     <MESSAGE value="Create SpecialistMessagesPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create SpecialistMessagesPane" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Misc. Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Misc. Fixes" />
   </component>
 </project>

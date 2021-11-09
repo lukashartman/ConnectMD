@@ -65,10 +65,10 @@ public class SpecialistWelcomePane extends Pane{
         this.getChildren().addAll(viewAllMessagesButton,viewPatientInfoButton,beginPatientVisitButton,logOutButton,helloLabel, welcomeLabel,selectPatient);
 
         //Action Events
-        viewAllMessagesButton.setOnAction(event -> SceneController.changeSceneTest());
-        viewPatientInfoButton.setOnAction(event -> SceneController.changeSceneTest());
-        beginPatientVisitButton.setOnAction(event -> SceneController.changeSceneTest());
-        logOutButton.setOnAction(event -> SceneController.changeSceneTest());
+        viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        logOutButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
     }
 }
 

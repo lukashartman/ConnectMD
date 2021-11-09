@@ -125,7 +125,7 @@ public class LoginPane extends HBox {
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
         this.getChildren().addAll(patientLoginBackground, logoBackground, providerLoginBackground);
 
-        patientSubmitButton.setOnAction(event -> SceneController.changeSceneTest());
+        patientSubmitButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
 
     }
 }

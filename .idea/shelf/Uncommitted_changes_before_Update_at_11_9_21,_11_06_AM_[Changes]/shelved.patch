@@ -1,0 +1,146 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"9f237982-f304-4b88-9933-6e8d9e99e185\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/AuthenticationSystem.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/LoginPane.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/LoginPane.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/PatientWelcomePane.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/PatientWelcomePane.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/SceneController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/HealthCarePortalSystem.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/SpecialistMessagesPane.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SpecialistMessagesPane.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/SpecialistWelcomePane.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/SpecialistWelcomePane.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1zYTYJnJK7npJlPib2ojMasTdVb\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"run.code.analysis.last.selected.profile\" value=\"pProject Default\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"8\" />\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"ConnectMD\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\n                <map>\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n        <entry key=\"db79c472-30af-4a41-8d55-06b658173b68\">\n          <value>\n            <State>\n              <option name=\"SHOW_ONLY_AFFECTED_CHANGES\" value=\"true\" />\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"HEAD\" />\n                      </list>\n                    </value>\n                  </entry>\n                  <entry key=\"structure\">\n                    <value>\n                      <list>\n                        <option value=\"dir:/Users/lukehartman/Documents/Programming Assignments/CSE360-Project/ConnectMD/src\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"OPEN_GENERIC_TABS\">\n      <map>\n        <entry key=\"db79c472-30af-4a41-8d55-06b658173b68\" value=\"TOOL_WINDOW\" />\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <ignored-roots>\n      <path value=\"$PROJECT_DIR$\" />\n    </ignored-roots>\n    <MESSAGE value=\"Initial commit\" />\n    <MESSAGE value=\"Test commit\" />\n    <MESSAGE value=\"Fix code that doesn't compile\" />\n    <MESSAGE value=\"Fix PatientVisitPane\" />\n    <MESSAGE value=\"Customize and Finish Specialist Welcome Pane\" />\n    <MESSAGE value=\"Customize and Finish Vitals Pane\" />\n    <MESSAGE value=\"Customize and Finish PatientInfoSideBarPane\" />\n    <MESSAGE value=\"Customize and Finish PatientWelcomePane\" />\n    <MESSAGE value=\"Customize and Finish PatientMessagesPane and PatientProviderChange\" />\n    <MESSAGE value=\"Customize and Finish PatientInformationPane\" />\n    <MESSAGE value=\"Correct Main Start\" />\n    <MESSAGE value=\"Create SpecialistMessagesPane\" />\n    <MESSAGE value=\"Misc. Fixes\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Misc. Fixes\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,16 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/AuthenticationSystem.java" afterDir="false" />
++    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="Initial commit">
++      <change afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/LoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPane.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialist.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,12 +33,16 @@
+   <component name="PropertiesComponent">
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="node.js.detected.package.eslint" value="true" />
++    <property name="node.js.detected.package.tslint" value="true" />
++    <property name="node.js.selected.package.eslint" value="(autodetect)" />
++    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+     <property name="project.structure.last.edited" value="Modules" />
+     <property name="project.structure.proportion" value="0.15" />
+     <property name="project.structure.side.proportion" value="0.2" />
+-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
++    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+   </component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+@@ -65,6 +66,28 @@
+     </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="" />
++      <created>1636152189161</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1636152189161</updated>
++      <workItem from="1636152190537" duration="6028000" />
++    </task>
++    <task id="LOCAL-00001" summary="Initial commit">
++      <created>1636158943800</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1636158943800</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+@@ -74,31 +97,6 @@
+               <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                 <map>
+                   <entry key="Show.Git.Branches" value="false" />
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-        <entry key="db79c472-30af-4a41-8d55-06b658173b68">
+-          <value>
+-            <State>
+-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="HEAD" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                  <entry key="structure">
+-                    <value>
+-                      <list>
+-                        <option value="dir:/Users/lukehartman/Documents/Programming Assignments/CSE360-Project/ConnectMD/src" />
+-                      </list>
+-                    </value>
+-                  </entry>
+                 </map>
+               </option>
+             </State>
+@@ -106,11 +104,6 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="OPEN_GENERIC_TABS">
+-      <map>
+-        <entry key="db79c472-30af-4a41-8d55-06b658173b68" value="TOOL_WINDOW" />
+-      </map>
+-    </option>
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+@@ -118,18 +111,6 @@
+       <path value="$PROJECT_DIR$" />
+     </ignored-roots>
+     <MESSAGE value="Initial commit" />
+-    <MESSAGE value="Test commit" />
+-    <MESSAGE value="Fix code that doesn't compile" />
+-    <MESSAGE value="Fix PatientVisitPane" />
+-    <MESSAGE value="Customize and Finish Specialist Welcome Pane" />
+-    <MESSAGE value="Customize and Finish Vitals Pane" />
+-    <MESSAGE value="Customize and Finish PatientInfoSideBarPane" />
+-    <MESSAGE value="Customize and Finish PatientWelcomePane" />
+-    <MESSAGE value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
+-    <MESSAGE value="Customize and Finish PatientInformationPane" />
+-    <MESSAGE value="Correct Main Start" />
+-    <MESSAGE value="Create SpecialistMessagesPane" />
+-    <MESSAGE value="Misc. Fixes" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Misc. Fixes" />
++    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+   </component>
+ </project>
+\ No newline at end of file

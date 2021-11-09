@@ -17,6 +17,7 @@ public class SpecialistWelcomePane extends Pane{
     private ComboBox selectPatient;
     private String specialistNameAndTitle = "";
     private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
+
     public SpecialistWelcomePane() throws FileNotFoundException {
 
 

@@ -22,7 +22,7 @@ public class Main extends Application {
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new SpecialistMessagesPane();
+        currentPane = new PatientInformationPane();
 
         scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");

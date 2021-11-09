@@ -7,7 +7,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 //This pane will be a VBox in nurseViewPatientVitalsPane
 

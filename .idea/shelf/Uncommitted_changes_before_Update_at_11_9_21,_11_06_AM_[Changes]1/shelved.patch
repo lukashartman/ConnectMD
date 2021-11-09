@@ -1,0 +1,108 @@
+Index: src/HealthcareSpecialist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class HealthcareSpecialist {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/HealthcareSpecialist.java b/src/HealthcareSpecialist.java
+--- a/src/HealthcareSpecialist.java	
++++ b/src/HealthcareSpecialist.java	
+@@ -1,2 +1,28 @@
+-public class HealthcareSpecialist {
+-}
++import java.util.ArrayList;
++import java.util.Vector;
++
++public class HealthcareSpecialist
++{ //This class gets the healthcareSpecialist information and
++
++    //Vector of type HealthcareSpecialistNode to store their data
++    private Vector<HealthcareSpecialistNode> healthcareSpecialistData;
++
++    //to add a specialist (will probably have to do this from the text file)
++    public void addSpecialistParse()
++    {
++
++    }
++
++    //to retrieve a specialist's information
++    public void retrieveSpecialist()
++    {
++        //initialize the vector
++        healthcareSpecialistData = new Vector<HealthcareSpecialistNode>();
++    }
++
++    //CONSTRUCTOR
++    public HealthcareSpecialist()
++    {
++
++    }
++}
+\ No newline at end of file
+Index: src/HealthcareSpecialistNode.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/HealthcareSpecialistNode.java b/src/HealthcareSpecialistNode.java
+new file mode 100644
+--- /dev/null	
++++ b/src/HealthcareSpecialistNode.java	
+@@ -0,0 +1,55 @@
++public class HealthcareSpecialistNode
++{  //This class makes and fills the HealthcareSpecialist Node so that we can use it for the HealthcareSpecialist class
++
++    //DECLARING VARIABLES
++    private String username;
++    private String password;
++    private String firstName;
++    private String lastName;
++    private String titleName; //what they want to be called by (RN or Dr)
++
++    //CONSTRUCTOR
++    public HealthcareSpecialistNode()
++    {
++        firstName = new String("");
++        lastName = new String("");
++        username = new String("");
++        password = new String("");
++        titleName = new String("");
++    }
++
++    //GETTERS AND SETTERS
++    public String getFirstName()
++    {
++        return firstName;
++    }
++    public String getLastName()
++    {
++        return lastName;
++    }
++    public String getUsername()
++    {
++        return username;
++    }
++    public String getPassword()
++    {
++        return password;
++    }
++
++    public String setFirstName()
++    {
++        return firstName;
++    }
++    public String setLastName()
++    {
++        return lastName;
++    }
++    public String setUsername()
++    {
++        return username;
++    }
++    public String setPassword()
++    {
++        return password;
++    }
++}
+\ No newline at end of file

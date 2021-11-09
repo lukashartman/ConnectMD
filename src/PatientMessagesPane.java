@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 public class PatientMessagesPane extends Pane {
     private Button backButton, submitAndFinishButton;
     private Label msgProviderLabel, helloLabel, messageToLabel, subjectLabel, bodyLabel;
-    private ComboBox msgToBox;
+    private ComboBox messageToBox;
     private TextField subjectField;
     private TextArea bodyField;
     private Pane rightPane;
@@ -47,11 +47,11 @@ public class PatientMessagesPane extends Pane {
 
 
         //create Combo box
-        msgToBox = new ComboBox();
-        msgToBox.getStyleClass().add("selectPatientDropdown");
-        msgToBox.setMaxWidth(360);
-        msgToBox.setLayoutX(279);
-        msgToBox.setLayoutY(143);
+        messageToBox = new ComboBox();
+        messageToBox.getStyleClass().add("selectPatientDropdown");
+        messageToBox.setMaxWidth(360);
+        messageToBox.setLayoutX(279);
+        messageToBox.setLayoutY(143);
 
         //create text fields
         subjectField = new TextField();
@@ -82,7 +82,7 @@ public class PatientMessagesPane extends Pane {
 
 
         this.setBackground(new Background (new BackgroundFill(Color.web("#FFFFFF"),null, null)));
-        this.getChildren().addAll(helloLabel, msgProviderLabel, msgToBox, subjectField, bodyField,
+        this.getChildren().addAll(helloLabel, msgProviderLabel, messageToBox, subjectField, bodyField,
                 submitAndFinishButton, backButton, messageToLabel, subjectLabel, bodyLabel, rightPane );
 
 

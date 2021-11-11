@@ -1,18 +1,21 @@
-import javafx.scene.control.Alert;
+import java.io.FileNotFoundException;
 
 public class HealthCarePortalSystem extends Main
 {
     AuthenticationSystem authenticationSystem = new AuthenticationSystem();
 
+    //Note: this method is just for Luke to play around with and will be
+    // removed in the final version.
+    public static void changeSceneTest() {
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
 
-    public static void changeSceneTest()
-    {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Warning Dialog");
-        alert.setHeaderText("This is where we change the scene");
-        //alert.setContentText("Careful with the next step!");
-
-        alert.showAndWait();
     }
 
     public void loginPatient()

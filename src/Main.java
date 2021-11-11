@@ -9,8 +9,8 @@ public class Main extends Application {
 
     //Instance Variables
     protected static Stage window;
-    private Scene scene1;
-    private Pane currentPane;
+    protected static Scene scene1;
+    protected static Pane mainPane;
 
     //Method to launch application
     public static void main(String[] args){
@@ -25,14 +25,15 @@ public class Main extends Application {
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new ViewMessagePane();
+        mainPane = new MainPane();
 
-        scene1 = new Scene(currentPane, 1280, 720);
+        scene1 = new Scene(mainPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");
 
         window.setScene(scene1);
         window.setTitle("ConnectMD | Log In");
         window.show();
+        System.out.println("Application started");
     }
 
     //Method to run on application stop
@@ -40,4 +41,10 @@ public class Main extends Application {
         System.out.println("Application stopped");
     }
 
+    public class MainPane extends StackPane {
+            public MainPane() throws FileNotFoundException {
+
+            this.getChildren().add(new LoginPane());
+        }
+    }
 }

@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -24,7 +25,7 @@ public class Main extends Application {
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
-        currentPane = new NurseViewPatientVitalsPane();
+        currentPane = new ViewMessagePane();
 
         scene1 = new Scene(currentPane, 1280, 720);
         scene1.getStylesheets().add("theme.css");
@@ -34,14 +35,9 @@ public class Main extends Application {
         window.show();
     }
 
-
     //Method to run on application stop
     public void stop(){
         System.out.println("Application stopped");
-    }
-
-    private void setScene(){
-        window.setScene(scene1);
     }
 
 }

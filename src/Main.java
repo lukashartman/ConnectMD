@@ -1,9 +1,11 @@
 import javafx.application.Application;
-import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main extends Application {
 
@@ -11,6 +13,9 @@ public class Main extends Application {
     protected static Stage window;
     protected static Scene scene1;
     protected static Pane mainPane;
+    public static ArrayList<Patient> patientList = new ArrayList<Patient>();
+    public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList;
+    public static ArrayList<String> messages;
 
     //Method to launch application
     public static void main(String[] args){
@@ -20,7 +25,30 @@ public class Main extends Application {
     //Method to display application
     public void start (Stage primaryStage) throws FileNotFoundException {
 
-        //TODO: Read from plaintext into Vector of patients
+        System.out.println("Starting Patient Data Input");
+        Scanner patientDataScanner = new Scanner(new File("src/patientData.txt"));
+        while (patientDataScanner.hasNextLine()){
+
+            for (int i = 0; i < 4; i++) {
+                String tempVariable = patientDataScanner.next();
+                System.out.print(tempVariable);
+            }
+            System.out.println("New Patient Incoming");
+            //TODO: use the data to create a patient object via constructor
+            String tempVariable = patientDataScanner.next();
+            System.out.print(tempVariable);
+            //Patient tempPatient = new Patient();
+            //patientList.add(tempPatient);
+        }
+        patientDataScanner.close();
+
+//        Scanner specialistDataScanner = new Scanner(new File("src/specialistData.txt"));
+//        while (specialistDataScanner.hasNext()){
+//            //TODO: use the data to create a healthcare specialist object via constructor
+//            HealthcareSpecialistNode tempSepcialist = new HealthcareSpecialistNode();
+//            healthcareSpecialistList.add(tempSepcialist);
+//        }
+//        specialistDataScanner.close();
 
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
@@ -32,7 +60,7 @@ public class Main extends Application {
 
         window.setScene(scene1);
         window.setTitle("ConnectMD | Log In");
-        window.show();
+//        window.show();
         System.out.println("Application started");
     }
 
@@ -41,6 +69,7 @@ public class Main extends Application {
         System.out.println("Application stopped");
     }
 
+    //Create pane that will be overwritten for every scene change
     public class MainPane extends StackPane {
             public MainPane() throws FileNotFoundException {
 

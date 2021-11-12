@@ -1,8 +1,11 @@
+import com.sun.org.apache.xml.internal.security.utils.JavaUtils;
 import javafx.scene.control.Alert;
+import java.util.Date;
 
 public class HealthCarePortalSystem extends Main
 {
-    AuthenticationSystem authenticationSystem = new AuthenticationSystem();
+    AuthenticationSystem authenticationSystem;
+
 
 
     public static void changeSceneTest()
@@ -17,12 +20,16 @@ public class HealthCarePortalSystem extends Main
 
     public void loginPatient()
     {
-        boolean status = false;
-        String firstName = "Null";
-        String lastName = "Null";
-        String dob = "Null";
+        Date dob;
+        // retrieve login credential strings from text fields in pane
+        // initialize full name and date of birth
 
-        status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
+        boolean status = false;
+        String firstName = " ";
+        String lastName = " ";
+        dob = new Date(1, 1, 1);
+
+        status = authenticationSystem.loginPatient(firstName, lastName, dob); // patient login request; returns status (yes or no)
     }
 
     public void loginSpecialist()

@@ -1,35 +1,31 @@
-import com.sun.org.apache.xml.internal.security.utils.JavaUtils;
-import javafx.scene.control.Alert;
-import java.util.Date;
+import java.io.FileNotFoundException;
 
 public class HealthCarePortalSystem extends Main
 {
-    AuthenticationSystem authenticationSystem;
+    AuthenticationSystem authenticationSystem = new AuthenticationSystem();
 
+    //Note: this method is just for Luke to play around with and will be
+    // removed in the final version.
+    public static void changeSceneTest() {
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
 
-
-    public static void changeSceneTest()
-    {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Warning Dialog");
-        alert.setHeaderText("This is where we change the scene");
-        //alert.setContentText("Careful with the next step!");
-
-        alert.showAndWait();
     }
 
     public void loginPatient()
     {
-        Date dob;
-        // retrieve login credential strings from text fields in pane
-        // initialize full name and date of birth
-
         boolean status = false;
-        String firstName = " ";
-        String lastName = " ";
-        dob = new Date(1, 1, 1);
+        String firstName = "Null";
+        String lastName = "Null";
+        String dob = "Null";
 
-        status = authenticationSystem.loginPatient(firstName, lastName, dob); // patient login request; returns status (yes or no)
+        status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
     }
 
     public void loginSpecialist()

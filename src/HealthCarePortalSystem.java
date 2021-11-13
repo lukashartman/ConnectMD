@@ -21,7 +21,13 @@ public class HealthCarePortalSystem extends Main
 
     public void registerPatient()
     {
+        Patient newPatient;
 
+        // get info entered into GUI
+
+        //newPatient = new Patient();
+
+       // patientList.add(newPatient);
 
     }
 
@@ -55,16 +61,23 @@ public class HealthCarePortalSystem extends Main
         String subject = " ";
         String message = " ";
 
-        // get message contents from GUI fields
+        /*
+         get message contents from GUI fields and set local variable
+         to = " ";
+         from = " ";
+          subject = " ";
+         message = " ";
+        */
 
-        newMessage = new Message(to, from, subject, body);
+        newMessage = new Message(to, from, subject, body); // creates new message with previously initialized members
 
-        messages.add(newMessage);
+        messages.add(1, newMessage); // adds message to head of Array List
 
     }
 
     public void viewMessage()
     {
+
 
 
     }

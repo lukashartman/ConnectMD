@@ -10,3 +10,4 @@ public class Patient
     {
         patientData = new Vector<PatientNode>();
     }
+}

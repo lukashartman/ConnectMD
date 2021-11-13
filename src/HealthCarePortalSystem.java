@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.util.Date;
 
 public class HealthCarePortalSystem extends Main
 {
@@ -18,12 +19,20 @@ public class HealthCarePortalSystem extends Main
 
     }
 
+    public void registerPatient()
+    {
+
+
+    }
+
     public void loginPatient()
     {
+        Date dob;
+
         boolean status = false;
-        String firstName = "Null";
-        String lastName = "Null";
-        String dob = "Null";
+        String firstName = " ";
+        String lastName = " ";
+        dob = new Date(2021,1,1);
 
         status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
     }
@@ -31,8 +40,8 @@ public class HealthCarePortalSystem extends Main
     public void loginSpecialist()
     {
         boolean status = false;
-        String userName = "Null";
-        String password = "Null";
+        String userName = " ";
+        String password = " ";
 
         status = authenticationSystem.loginSpecialist(userName, password); //specialist login request; returns status (yes or no)
     }
@@ -40,7 +49,17 @@ public class HealthCarePortalSystem extends Main
     public void sendMessage()
     {
 
+        Message newMessage;
+        String to = " ";
+        String from = " ";
+        String subject = " ";
+        String message = " ";
 
+        // get message contents from GUI fields
+
+        newMessage = new Message(to, from, subject, body);
+
+        messages.add(newMessage);
 
     }
 
@@ -48,8 +67,18 @@ public class HealthCarePortalSystem extends Main
     {
 
 
+    }
+
+    public void viewPatientInfo()
+    {
 
     }
+
+    public void prescribeMedication()
+    {
+
+    }
+
 
     public void calculateDaysBetweenDates()
     {

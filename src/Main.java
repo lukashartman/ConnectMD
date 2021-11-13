@@ -15,7 +15,7 @@ public class Main extends Application {
     protected static Pane mainPane;
     public static ArrayList<Patient> patientList = new ArrayList<Patient>();
     public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList;
-    public static ArrayList<String> messages;
+    public static ArrayList<Message> messages;
 
     //Method to launch application
     public static void main(String[] args){

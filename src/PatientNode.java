@@ -19,7 +19,7 @@ public class PatientNode {
     //CONSTRUCTOR
     public PatientNode(String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
-                       String newInsuranceID int newPhoneNumber,
+                       String newInsuranceID, int newPhoneNumber,
                    LocalDate newBirthDate)
     {
         firstName = newFirstName;
@@ -77,7 +77,7 @@ public class PatientNode {
     }
     public void setPharmacyAddress(String pharmacyAddress)
     {
-        this.pharmacyAddress = pharamcyAddress;
+        this.pharmacyAddress = pharmacyAddress;
     }
     public void setInsuranceName(String insuranceName)
     {

@@ -1,6 +1,3 @@
-import jdk.vm.ci.meta.Local;
-import sun.util.resources.LocaleData;
-
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
 
@@ -30,19 +27,17 @@ public class HealthCarePortalSystem extends Main
         LocalDate birthDate;
         String firstName = "";
         String lastName = "";
-        String username = "";
-        String password = "";
         String homeAddress = "";
         String pharmacyName = "";
         String pharmacyAddress = "";
         String insuranceName = "";
-        String insuranceAddress = "";
-        integer phoneNumber = 0;
+        String insuranceID = "";
+        int phoneNumber = 0;
         birthDate = LocalDate.of(2000, 1, 1);
 
 
-        newPatient = new Patient(userName, password, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
-                insuranceName, phoneNumber, birthDate); // create and initialize all attributes of new patient
+        newPatient = new PatientNode(firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
+                insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
 
        patientList.add(newPatient); // add new patient to array list of type patient
 

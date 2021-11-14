@@ -14,6 +14,7 @@ public class PatientNode {
     private String insuranceID;
     private int phoneNumber;
     private LocalDate birthDate;
+    ArrayList<Visit> visits;
 
     //CONSTRUCTOR
     public PatientNode(String newFirstName, String newLastName, String newHomeAddress,
@@ -30,7 +31,7 @@ public class PatientNode {
         insuranceID = newInsuranceID;
         phoneNumber = newPhoneNumber;
         birthDate = newBirthDate;
-        ArrayList<Visit> visits = new ArrayList<Visit>();
+        visits = new ArrayList<Visit>();
 
     }
 

@@ -95,13 +95,16 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void enterPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
+    public void enterPatientVitals(String patientFirstName, String patientLastName, float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
         Visit newVisit = new Visit();
 
         newVisit.updateVitals(weight, heightFeet, heightInch, temp, bloodPressure);
 
-
+        for(int i = 0; i < patientList.size(); i++)
+            if(patientList.get(i).getFirstName().equals(patientFirstName) && patientList.get(i).getLastName().equals(patientLastName)
+                patientList.get(i).visits.add(0, newVisit);
+s
     }
 
     public void editPatientInfoPatient()

@@ -13,7 +13,7 @@ public class Main extends Application {
     protected static Stage window;
     protected static Scene scene1;
     protected static Pane mainPane;
-    public static ArrayList<Patient> patientList = new ArrayList<Patient>();
+    public static ArrayList<PatientNode> patientList = new ArrayList<PatientNode>();
     public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList;
     public static ArrayList<Message> messages;
 

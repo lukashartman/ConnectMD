@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HealthCarePortalSystem">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HealthCarePortalSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HealthCarePortalSystem" />
       <module name="ConnectMD" />

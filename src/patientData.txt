@@ -1,2 +1,24 @@
-Amanda Weiler 11/22/2000 Female
-John Smith 11/22/2001 Male
+patientID
+firstName
+lastName
+DOB
+pharmacyName
+pharmacyAddress
+phone
+address
+insuranceName
+insuranceID
+//Repeat below lines as needed
+visitDate
+physicalExam
+weight
+heightFt
+heightIn
+bodyTemp
+bloodPressure
+knownAllergies
+healthIssues
+medications
+immunizations
+notes
+#

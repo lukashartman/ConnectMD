@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
-public class HealthcareSpecialistNode
-{  //This class makes and fills the HealthcareSpecialist Node so that we can use it for the HealthcareSpecialist class
+public class HealthcareSpecialistNode {  //This class makes and fills the HealthcareSpecialist Node so that we can use it for the HealthcareSpecialist class
 
     //DECLARING VARIABLES
     private String username;
@@ -12,8 +11,7 @@ public class HealthcareSpecialistNode
     private ArrayList<String> patientIDs; //list of patient IDs that they are assigned to
 
     //CONSTRUCTOR
-    public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName)
-    {
+    public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName) {
         firstName = new String("");
         lastName = new String("");
         username = new String("");

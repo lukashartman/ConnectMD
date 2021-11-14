@@ -1,41 +1,38 @@
 //Patient Node to store data
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class PatientNode {
     //DECLARING VARIABLES
-    private final String username;
-    private final String password;
-    private final String firstName;
-    private final String lastName;
-    private final String homeAddress;
-    private final String pharmacyName;
-    private final String pharmacyAddress;
-    private final String insuranceName;
-    private final Integer phoneNumber;
-    private final Date birthDate;
+    private String firstName;
+    private String lastName;
+    private String homeAddress;
+    private String pharmacyName;
+    private String pharmacyAddress;
+    private String insuranceName;
+    private String insuranceID;
+    private int phoneNumber;
+    private LocalDate birthDate;
 
     //CONSTRUCTOR
-    public PatientNode(String newUsername, String newPassword, String newFirstName, String newLastName, String newHomeAddress,
-                   String newPharmacyName,  String newPharmacyAddress,String newInsuranceName, Integer newPhoneNumber,
-                   Integer newBirthDate)
+    public PatientNode(String newFirstName, String newLastName, String newHomeAddress,
+                   String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
+                       String newInsuranceID int newPhoneNumber,
+                   LocalDate newBirthDate)
     {
-        firstName = firstNameField.getText();
-        lastName = "";
-        username = "";
-        password = "";
-        homeAddress = "";
-        pharmacyName = "";
-        pharmacyAddress = "";
-        insuranceName = "";
-        phoneNumber = 0;
-        birthDate = new Date(2000,1,1);
+        firstName = newFirstName;
+        lastName = newLastName;
+        homeAddress = newHomeAddress;
+        pharmacyName = newPharmacyName;
+        pharmacyAddress = newPharmacyAddress;
+        insuranceName = newInsuranceName;
+        insuranceID = newInsuranceID;
+        phoneNumber = newPhoneNumber;
+        birthDate = newBirthDate;
 
     }
 
     //GETTERS
-    public String getUsername() {return username;}
-    public String getPassword() {return password;}
     public String getFirstName()
     {
         return firstName;
@@ -51,33 +48,51 @@ public class PatientNode {
         return pharmacyAddress;
     }
     public String getInsuranceName() {return insuranceName;}
-    public Integer getPhoneNumber() {return phoneNumber;}
-    public Date getBirthDate()
+    public String getInsuranceID() {return insuranceID;}
+    public int getPhoneNumber() {return phoneNumber;}
+    public LocalDate getBirthDate()
     {
         return birthDate;
     }
 
     //SETTERS
-    public String setUsername() {return username;}
-    public String setPassword() {return password;}
-    public String setFirstName()
+    public void setFirstName(String firstName)
     {
-        return firstName;
+        this.firstName = firstName;
     }
-    public String setLastName()
+    public void setLastName(String lastName)
     {
-        return lastName;
+        this.lastName = lastName;
     }
-    public String setHomeAddress() {return homeAddress;}
-    public String setPharmacyName() {return pharmacyName;}
-    public String setPharmacyAddress()
+    public void setHomeAddress(String homeAddress)
     {
-        return pharmacyAddress;
+        this.homeAddress = homeAddress;
     }
-    public String setInsuranceName() {return insuranceName;}
-    public Integer setPhoneNumber() {return phoneNumber;}
-    public Date setBirthDate()
+    public void setPharmacyName(String pharmacyName)
     {
-        return birthDate;
+        this.pharmacyName = pharmacyName;
+    }
+    public void setPharmacyAddress(String pharmacyAddress)
+    {
+        this.pharmacyAddress = pharamcyAddress;
+    }
+    public void setInsuranceName(String insuranceName)
+    {
+        this.insuranceName = insuranceName;
+    }
+
+    public void setInsuranceID(String insuranceID)
+    {
+        this.insuranceID = insuranceID;
+    }
+
+    public void setPhoneNumber(int phoneNumber)
+    {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setBirthDate(LocalDate birthDate)
+    {
+        this.birthDate = birthDate;
     }
 }

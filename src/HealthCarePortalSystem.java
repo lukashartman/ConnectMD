@@ -1,9 +1,11 @@
 import java.io.FileNotFoundException;
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class HealthCarePortalSystem extends Main
 {
     AuthenticationSystem authenticationSystem = new AuthenticationSystem();
+
 
     //Note: this method is just for Luke to play around with and will be
     // removed in the final version.
@@ -16,7 +18,6 @@ public class HealthCarePortalSystem extends Main
             System.out.println("You broke it");
             e.printStackTrace();
         }
-
     }
 
     public void registerPatient()
@@ -33,7 +34,7 @@ public class HealthCarePortalSystem extends Main
         String insuranceName = "";
         String insuranceAddress = "";
         integer phoneNumber = 0;
-        birthDate = new Date(2000,1,1);
+        birthDate = new LocalDate(2000, 1, 1);
 
         // get info that was entered into pane fields
 
@@ -46,60 +47,52 @@ public class HealthCarePortalSystem extends Main
 
     public void loginPatient()
     {
-        Date dob;
+        LocalDate dob;
 
         boolean status = false;
         String firstName = " ";
         String lastName = " ";
-        dob = new Date(2021,1,1);
+        dob = new LocalDate(2021,1,1);
 
         status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
     }
 
-    public void loginSpecialist()
+    public void loginSpecialist(String userName, String password)
     {
         boolean status = false;
-        String userName = " ";
-        String password = " ";
 
         status = authenticationSystem.loginSpecialist(userName, password); //specialist login request; returns status (yes or no)
+
+        // if true , switch pane
+        // if not, do nothing
     }
 
-    public void sendMessage()
+    public void sendMessage(String to, String from, String subject, String body)
     {
 
         Message newMessage;
-        String to = " ";
-        String from = " ";
-        String subject = " ";
-        String message = " ";
-
-        /*
-         get message contents from GUI fields and set local variable
-         to = " ";
-         from = " ";
-          subject = " ";
-         message = " ";
-        */
 
         newMessage = new Message(to, from, subject, body); // creates new message with previously initialized members
 
-        messages.add(1, newMessage); // adds message to head of Array List
+        messages.add(0, newMessage); // adds message to head of Array List
 
     }
 
     public void viewMessage()
     {
+        //TODO get fucked
 
-        // get name of current user
-        // ??? how to display all messages of one single user ???
+    }
 
+    public void editPatientHealthHistory()
+    {
 
 
     }
 
-    public void editPatientInfoSpecialist()
+    public void editPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
+
 
 
     }
@@ -132,10 +125,6 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void calculateDaysBetweenDates()
-    {
 
-
-    }
 
 }

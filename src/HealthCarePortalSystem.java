@@ -23,11 +23,24 @@ public class HealthCarePortalSystem extends Main
     {
         Patient newPatient;
 
-        // get info entered into GUI
+        String firstName = "";
+        String lastName = "";
+        String username = "";
+        String password = "";
+        String homeAddress = "";
+        String pharmacyName = "";
+        String pharmacyAddress = "";
+        String insuranceName = "";
+        String insuranceAddress = "";
+        integer phoneNumber = 0;
+        birthDate = new Date(2000,1,1);
 
-        //newPatient = new Patient();
+        // get info that was entered into pane fields
 
-       // patientList.add(newPatient);
+        newPatient = new Patient(userName, password, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
+                insuranceName, phoneNumber, birthDate); // create and initialize all attributes of new patient
+
+       patientList.add(newPatient); // add new patient to array list of type patient
 
     }
 
@@ -78,11 +91,38 @@ public class HealthCarePortalSystem extends Main
     public void viewMessage()
     {
 
+        // get name of current user
+        // ??? how to display all messages of one single user ???
+
 
 
     }
 
-    public void viewPatientInfo()
+    public void editPatientInfoSpecialist()
+    {
+
+
+    }
+
+    public void editPatientInfoPatient()
+    {
+
+
+    }
+
+    public void viewPatientInfoSpecialist()
+    {
+
+
+    }
+
+    public void viewPatientInfoPatient()
+    {
+
+
+    }
+
+    public void viewVisitSummary()
     {
 
     }
@@ -91,7 +131,6 @@ public class HealthCarePortalSystem extends Main
     {
 
     }
-
 
     public void calculateDaysBetweenDates()
     {

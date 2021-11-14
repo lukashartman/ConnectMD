@@ -1,4 +1,7 @@
 //Patient Node to store data
+
+import java.util.Date;
+
 public class PatientNode {
     //DECLARING VARIABLES
     private final String username;
@@ -9,17 +12,15 @@ public class PatientNode {
     private final String pharmacyName;
     private final String pharmacyAddress;
     private final String insuranceName;
-    private final String insuranceAddress;
-
     private final Integer phoneNumber;
-    private final Integer birthDate;
+    private final Date birthDate;
 
     //CONSTRUCTOR
     public PatientNode(String newUsername, String newPassword, String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName,  String newPharmacyAddress,String newInsuranceName, Integer newPhoneNumber,
                    Integer newBirthDate)
     {
-        firstName = "";
+        firstName = firstNameField.getText();
         lastName = "";
         username = "";
         password = "";
@@ -27,9 +28,8 @@ public class PatientNode {
         pharmacyName = "";
         pharmacyAddress = "";
         insuranceName = "";
-        insuranceAddress = "";
         phoneNumber = 0;
-        birthDate = 0;
+        birthDate = new Date(2000,1,1);
 
     }
 
@@ -51,12 +51,8 @@ public class PatientNode {
         return pharmacyAddress;
     }
     public String getInsuranceName() {return insuranceName;}
-    public String getInsuranceAddress()
-    {
-        return insuranceAddress;
-    }
     public Integer getPhoneNumber() {return phoneNumber;}
-    public Integer getBirthDate()
+    public Date getBirthDate()
     {
         return birthDate;
     }
@@ -79,12 +75,8 @@ public class PatientNode {
         return pharmacyAddress;
     }
     public String setInsuranceName() {return insuranceName;}
-    public String setInsuranceAddress()
-    {
-        return insuranceAddress;
-    }
     public Integer setPhoneNumber() {return phoneNumber;}
-    public Integer setBirthDate()
+    public Date setBirthDate()
     {
         return birthDate;
     }

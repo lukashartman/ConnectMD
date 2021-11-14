@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/AuthenticationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636867361995</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit">
+      <created>1636869803311</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636869803311</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

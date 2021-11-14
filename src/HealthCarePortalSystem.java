@@ -22,7 +22,7 @@ public class HealthCarePortalSystem extends Main
 
     public void registerPatient()
     {
-        Patient newPatient;
+        PatientNode newPatient;
 
         LocalDate birthDate;
         String firstName = "";
@@ -46,27 +46,22 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void loginPatient()
+    public void loginPatient(String firstName, String lastName, LocalDate dob)
     {
-        LocalDate dob;
-
         int status = 0;
-        String firstName = " ";
-        String lastName = " ";
-        dob = LocalDate.of(2021,1,1);
 
-        status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
+        status = authenticationSystem.loginPatientAuthentication(firstName, lastName, dob); //patient login request; returns status (yes or no)
 
         if(status != -1)
             currentPatient = patientList.get(status);
 
     }
 
-    public void loginProvider(String userName, String password)
+    public void loginSpecialist(String userName, String password)
     {
         int status = 0;
 
-        status = authenticationSystem.loginSpecialist(userName, password); //specialist login request; returns status (yes or no)
+        status = authenticationSystem.loginSpecialistAuthentication(userName, password); //specialist login request; returns status (yes or no)
 
         if(status != -1)
             currentHealthcareSpecialist = healthcareSpecialistList.get(status);
@@ -91,8 +86,7 @@ public class HealthCarePortalSystem extends Main
 
     public void editPatientHealthHistory()
     {
-
-
+        // TODO how do we select what is to be edited
     }
 
     public void enterPatientVitals(String patientFirstName, String patientLastName, float weight, float temp, int heightFeet, int heightInch, String bloodPressure)

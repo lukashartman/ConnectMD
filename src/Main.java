@@ -18,7 +18,7 @@ public class Main extends Application {
     public static ArrayList<Message> messages;
 
     public static HealthcareSpecialistNode currentHealthcareSpecialist; // current healthcare specialist that is logged in
-    public static Patient currentPatient; // current patient that is logged in
+    public static PatientNode currentPatient; // current patient that is logged in
 
     //Method to launch application
     public static void main(String[] args){

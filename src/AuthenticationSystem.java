@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class AuthenticationSystem extends HealthCarePortalSystem
 {
-    public int loginPatient(String firstName, String lastName, LocalDate dob)
+    public int loginPatientAuthentication(String firstName, String lastName, LocalDate dob)
     {
         int status = -1;
         for(int i = 0; i < patientList.size(); i++)
@@ -14,7 +14,7 @@ public class AuthenticationSystem extends HealthCarePortalSystem
         return status;
     }
 
-    public int loginSpecialist(String userName, String password)
+    public int loginSpecialistAuthentication(String userName, String password)
     {
         int status = -1;
         for(int i = 0; i < healthcareSpecialistList.size(); i++)

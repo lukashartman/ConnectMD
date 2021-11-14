@@ -30,21 +30,21 @@ public class Main extends Application {
 
         System.out.println("Starting Patient Data Input");
         Scanner patientDataScanner = new Scanner(new File("src/patientData.txt"));
-        while (patientDataScanner.hasNextLine()){
-
-            for (int i = 0; i < 4; i++) {
-                String tempVariable = patientDataScanner.next();
-                System.out.print(tempVariable);
-            }
-            System.out.println("New Patient Incoming");
-            //TODO: use the data to create a patient object via constructor
-            String tempVariable = patientDataScanner.next();
-            System.out.print(tempVariable);
-            //Patient tempPatient = new Patient();
-            //patientList.add(tempPatient);
-        }
-        patientDataScanner.close();
-
+//        while (patientDataScanner.hasNextLine()){
+//
+//            for (int i = 0; i < 4; i++) {
+//                String tempVariable = patientDataScanner.next();
+//                System.out.print(tempVariable);
+//            }
+//            System.out.println("New Patient Incoming");
+//            //TODO: use the data to create a patient object via constructor
+//            String tempVariable = patientDataScanner.next();
+//            System.out.print(tempVariable);
+//            Patient tempPatient = new Patient();
+//            patientList.add(tempPatient);
+//        }
+//        patientDataScanner.close();
+//
 //        Scanner specialistDataScanner = new Scanner(new File("src/specialistData.txt"));
 //        while (specialistDataScanner.hasNext()){
 //            //TODO: use the data to create a healthcare specialist object via constructor
@@ -62,8 +62,8 @@ public class Main extends Application {
         scene1.getStylesheets().add("theme.css");
 
         window.setScene(scene1);
-        window.setTitle("ConnectMD | Log In");
-//        window.show();
+        window.setTitle("ConnectMD");
+        window.show();
         System.out.println("Application started");
     }
 

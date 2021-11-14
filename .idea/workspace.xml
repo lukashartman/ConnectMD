@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,8 +65,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HealthCarePortalSystem" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HealthCarePortalSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +208,7 @@
     <MESSAGE value="Create SpecialistMessagesPane" />
     <MESSAGE value="Misc. Fixes" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Correct incorrect Java implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct incorrect Java implementations" />
   </component>
 </project>

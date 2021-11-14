@@ -1,3 +1,6 @@
+import jdk.vm.ci.meta.Local;
+import sun.util.resources.LocaleData;
+
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
 
@@ -37,7 +40,6 @@ public class HealthCarePortalSystem extends Main
         integer phoneNumber = 0;
         birthDate = LocalDate.of(2000, 1, 1);
 
-        // get info that was entered into pane fields
 
         newPatient = new Patient(userName, password, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
                 insuranceName, phoneNumber, birthDate); // create and initialize all attributes of new patient
@@ -92,24 +94,29 @@ public class HealthCarePortalSystem extends Main
     public void enterPatientVitals(String patientFirstName, String patientLastName, float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
         Visit newVisit = new Visit();
+        int patientIndex = -1;
 
         newVisit.updateVitals(weight, heightFeet, heightInch, temp, bloodPressure);
 
-        for(int i = 0; i < patientList.size(); i++)
-            if(patientList.get(i).getFirstName().equals(patientFirstName) && patientList.get(i).getLastName().equals(patientLastName)
-                patientList.get(i).visits.add(0, newVisit);
-s
+        patientIndex = findPatient(patientFirstName, patientLastName);
+
+        if(patientIndex != -1)
+            patientList.get(patientIndex).visits.add(0, newVisit);
     }
 
-    public void editPatientInfoPatient()
+    public void editPatientInfoPatient(String firstName, String lastName)
     {
+        int patientIndex = -1;
+
+
+
 
 
     }
 
     public void viewPatientInfoSpecialist()
     {
-
+        // change panes and pull info for said patient
 
     }
 
@@ -124,9 +131,32 @@ s
 
     }
 
-    public void prescribeMedication()
+    public void prescribeMedication(String patientFirstName, String patientLastName, String prescriptionName)
     {
+        Visit tempVisitNode = new Visit();
+        int visitIndex;
 
+        int patientIndex = -1;
+
+        patientIndex = findPatient(patientFirstName,patientLastName);
+
+        if(patientIndex != -1)
+        {
+            visitIndex = patientList.get(patientIndex).visits.indexOf(tempVisitNode.getVisitDate().equals(LocalDate.now()));
+            patientList.get(patientIndex).visits.get(visitIndex).prescribeMedication(prescriptionName);
+        }
+
+    }
+
+    public int findPatient(String firstName, String lastName)
+    {
+        int index = -1;
+
+        for(int i = 0; i < patientList.size(); i++)
+            if(patientList.get(i).getFirstName().equals(firstName) && patientList.get(i).getLastName().equals(lastName))
+                index = i;
+
+            return index;
     }
 
 

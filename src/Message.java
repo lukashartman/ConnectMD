@@ -3,7 +3,8 @@ import javafx.scene.control.Button;
 
 import java.util.ArrayList;
 
-public class Message {
+public class Message
+{
 
     private ArrayList<String> patientIDs;
     private ArrayList<String> specialistIDs;
@@ -14,16 +15,13 @@ public class Message {
     private String body = "";
 
     //CONSTRUCTOR
-    public Message ()
+    public Message(String to, String from, String subject, String body)
     {
-        to = new String();
-        from = new String();
-        subject = new String("");
-        body = new String("");
-
+        this.to = to;
+        this.from = from;
+        this.subject = subject;
+        this.body = body;
     }
-
-
 
     public String getMessageSubject()
     {
@@ -55,7 +53,5 @@ public class Message {
     {
         from = newFrom;
     }
-
-
 
 }

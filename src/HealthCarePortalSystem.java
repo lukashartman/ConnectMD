@@ -24,6 +24,7 @@ public class HealthCarePortalSystem extends Main
     {
         Patient newPatient;
 
+        LocalDate birthDate;
         String firstName = "";
         String lastName = "";
         String username = "";
@@ -34,7 +35,7 @@ public class HealthCarePortalSystem extends Main
         String insuranceName = "";
         String insuranceAddress = "";
         integer phoneNumber = 0;
-        birthDate = new LocalDate(2000, 1, 1);
+        birthDate = LocalDate.of(2000, 1, 1);
 
         // get info that was entered into pane fields
 
@@ -49,19 +50,26 @@ public class HealthCarePortalSystem extends Main
     {
         LocalDate dob;
 
-        boolean status = false;
+        int status = 0;
         String firstName = " ";
         String lastName = " ";
-        dob = new LocalDate(2021,1,1);
+        dob = LocalDate.of(2021,1,1);
 
         status = authenticationSystem.loginPatient(firstName, lastName, dob); //patient login request; returns status (yes or no)
+
+        if(status != -1)
+            currentPatient = patientList.get(status);
+
     }
 
-    public void loginSpecialist(String userName, String password)
+    public void loginProvider(String userName, String password)
     {
-        boolean status = false;
+        int status = 0;
 
         status = authenticationSystem.loginSpecialist(userName, password); //specialist login request; returns status (yes or no)
+
+        if(status != -1)
+            currentHealthcareSpecialist = healthcareSpecialistList.get(status);
 
         // if true , switch pane
         // if not, do nothing
@@ -69,13 +77,10 @@ public class HealthCarePortalSystem extends Main
 
     public void sendMessage(String to, String from, String subject, String body)
     {
-
         Message newMessage;
-
         newMessage = new Message(to, from, subject, body); // creates new message with previously initialized members
 
         messages.add(0, newMessage); // adds message to head of Array List
-
     }
 
     public void viewMessage()
@@ -90,9 +95,11 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void editPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
+    public void enterPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
+        Visit newVisit = new Visit();
 
+        newVisit.updateVitals(weight, heightFeet, heightInch, temp, bloodPressure);
 
 
     }

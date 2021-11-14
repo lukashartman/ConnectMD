@@ -1,6 +1,7 @@
 //Patient Node to store data
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class PatientNode {
     //DECLARING VARIABLES
@@ -29,6 +30,7 @@ public class PatientNode {
         insuranceID = newInsuranceID;
         phoneNumber = newPhoneNumber;
         birthDate = newBirthDate;
+        ArrayList<Visit> visits = new ArrayList<Visit>();
 
     }
 

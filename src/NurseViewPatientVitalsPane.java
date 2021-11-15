@@ -19,7 +19,6 @@ public class NurseViewPatientVitalsPane extends Pane {
     public NurseViewPatientVitalsPane() throws FileNotFoundException {
         specialistNameAndTitle = Main.currentHealthcareSpecialist.getTitleName();
 
-
         //Create right sidebar
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
         rightPane = new PatientInformationSidebarPane();

@@ -127,6 +127,6 @@ public class LoginPane extends HBox {
 
         patientSubmitButton.setOnAction(event -> HealthCarePortalSystem.loginPatient(firstNameField.getText(), lastNameField.getText(), dobField.getValue()));
         providerSubmitButton.setOnAction(event -> HealthCarePortalSystem.loginSpecialist(usernameField.getText(), passwordField.getText()));
-
+        createAccountButton.setOnAction(event -> HealthCarePortalSystem.showCreateAccountPane());
     }
 }

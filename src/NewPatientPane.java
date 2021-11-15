@@ -83,6 +83,7 @@ public class NewPatientPane extends Pane {
         dobField.setLayoutX(607);
         dobField.setLayoutY(438);
 
+        //TODO: fill this field with actual names of doctors
         providerPrefField = new ComboBox(list);
         providerPrefField.getStyleClass().add("whiteTextField");
         providerPrefField.setPrefWidth(361);
@@ -93,6 +94,9 @@ public class NewPatientPane extends Pane {
         this.getChildren().addAll(firstNameLabel, lastNameLabel, dobLabel, providerPrefLabel, welcomeLabel,
                 helloLabel, enterInfoLabel, quitButton, submitAndFinishButton, firstNameField, lastNameField, dobField,
                 providerPrefField);
+
+        submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.registerPatient(firstNameField.getText(), lastNameField.getText(), dobField.getValue(), providerPrefField.getValue().toString()));
+
     }
     
 }

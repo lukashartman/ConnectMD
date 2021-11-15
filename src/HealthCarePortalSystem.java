@@ -2,6 +2,7 @@ import javafx.scene.control.Alert;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
+import java.util.Random;
 
 
 public class HealthCarePortalSystem extends Main
@@ -21,22 +22,25 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public void registerPatient()
+    public static void registerPatient(String newFirstName, String newLastName, LocalDate newDOB, String newProviderPref)
     {
         PatientNode newPatient;
 
-        String patientID = "";
-        LocalDate birthDate;
-        String firstName = "";
-        String lastName = "";
+        //TODO: here we need to add this patient's new ID to that specific specialist's list of patients
+
+        Random rnd = new Random();
+        int n = 1000000 + rnd.nextInt(9999999);
+
+        String patientID = "P" + n;
+        LocalDate birthDate = newDOB;
+        String firstName = newFirstName;
+        String lastName = newLastName;
         String homeAddress = "";
         String pharmacyName = "";
         String pharmacyAddress = "";
         String insuranceName = "";
         String insuranceID = "";
         int phoneNumber = 0;
-        birthDate = LocalDate.of(2000, 1, 1);
-
 
         newPatient = new PatientNode(patientID, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
                 insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
@@ -78,15 +82,40 @@ public class HealthCarePortalSystem extends Main
 
     public static void loginSpecialist(String userName, String password)
     {
-        int status = 0;
+        int specialistIndex = 0;
 
-        status = authenticationSystem.loginSpecialistAuthentication(userName, password); //specialist login request; returns status (yes or no)
+        specialistIndex = authenticationSystem.loginSpecialistAuthentication(userName, password); //specialist login request; returns status (yes or no)
 
-        if(status != -1)
-            currentHealthcareSpecialist = healthcareSpecialistList.get(status);
+        if(specialistIndex != -1){
+            currentHealthcareSpecialist = healthcareSpecialistList.get(specialistIndex);
 
-        // if true , switch pane
-        // if not, do nothing
+
+            try {
+                mainPane.getChildren().removeAll();
+                mainPane.getChildren().add(new SpecialistWelcomePane());
+                System.out.println("Scene changed");
+            } catch (FileNotFoundException e) {
+                System.out.println("You broke it");
+                e.printStackTrace();
+            }
+
+        } else {
+            System.out.println("Specialist not found");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Specialist Not Found");
+            alert.setHeaderText("There was an error finding the specialist");
+            alert.setContentText("Ensure all fields are filled");
+            alert.showAndWait();
+
+        }
+
+    }
+
+    public static void showCreateAccountPane(){
+        mainPane.getChildren().removeAll();
+        mainPane.getChildren().add(new NewPatientPane());
+        System.out.println("Scene changed");
     }
 
     public void sendMessage(String to, String from, String subject, String body)

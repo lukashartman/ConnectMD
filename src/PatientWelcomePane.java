@@ -22,6 +22,9 @@ public class PatientWelcomePane extends Pane {
     
    
     public PatientWelcomePane() throws FileNotFoundException {
+        patientName = Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName();
+
+
         helloLabelPatient = new Label("Hello, " + patientName);
         helloLabelPatient.getStyleClass().add("helloLabel");
         helloLabelPatient.setLayoutX(14);

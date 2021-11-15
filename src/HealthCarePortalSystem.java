@@ -1,4 +1,7 @@
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
@@ -12,18 +15,16 @@ public class HealthCarePortalSystem extends Main
     //Note: this method is just for Luke to play around with and will be
     // removed in the final version.
     public static void changeSceneTest() {
-        try {
-            mainPane.getChildren().removeAll();
-            mainPane.getChildren().add(new PatientWelcomePane());
-            System.out.println("Scene changed");
-        } catch (FileNotFoundException e) {
-            System.out.println("You broke it");
-            e.printStackTrace();
-        }
+       //Show alert
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Patient Not Found");
+        alert.setHeaderText("There was an error finding the patient");
+        alert.setContentText("Ensure all fields are filled and date is in the format of MM/DD/YYY");
+        alert.showAndWait();
+
     }
 
-    public static void registerPatient(String newFirstName, String newLastName, LocalDate newDOB, String newProviderPref)
-    {
+    public static void registerPatient(String newFirstName, String newLastName, LocalDate newDOB, String newProviderPref) {
         PatientNode newPatient;
 
         //TODO: here we need to add this patient's new ID to that specific specialist's list of patients
@@ -54,8 +55,7 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public static void loginPatient(String firstName, String lastName, LocalDate dob)
-    {
+    public static void loginPatient(String firstName, String lastName, LocalDate dob) {
         int patientIndex = 0;
 
         patientIndex = authenticationSystem.loginPatientAuthentication(firstName, lastName, dob); //patient login request; returns status (yes or no)
@@ -85,8 +85,7 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public static void loginSpecialist(String userName, String password)
-    {
+    public static void loginSpecialist(String userName, String password) {
         int specialistIndex = 0;
 
         specialistIndex = authenticationSystem.loginSpecialistAuthentication(userName, password); //specialist login request; returns status (yes or no)
@@ -134,23 +133,33 @@ public class HealthCarePortalSystem extends Main
         System.out.println("Scene changed");
     }
 
-
-    public void sendMessage(String to, String from, String subject, String body)
-    {
+    public static void sendMessage(String toID, String fromID, String subject, String body) {
         Message newMessage;
-        newMessage = new Message(to, from, subject, body); // creates new message with previously initialized members
+        newMessage = new Message(toID, fromID, subject, body); // creates new message with previously initialized members
 
         messages.add(0, newMessage); // adds message to head of Array List
-    }
 
-    public void viewMessage()
-    {
-        //TODO get fucked
+        showSpecialistMessagesPane();
 
     }
 
-    public void editPatientHealthHistory()
-    {
+    public static void viewMessage(Message message) {
+        mainPane.getChildren().clear();
+        mainPane.getChildren().add(new ViewMessagePane(message));
+        System.out.println("Scene changed");
+    }
+
+    public static void showSpecialistMessagesPane() {
+        mainPane.getChildren().removeAll();
+        try {
+            mainPane.getChildren().add(new SpecialistMessagesPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void editPatientHealthHistory() {
         // TODO how do we select what is to be edited
     }
 
@@ -166,8 +175,7 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public static void enterPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
-    {
+    public static void enterPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure) {
         Visit newVisit = new Visit();
         int patientIndex = -1;
 
@@ -199,8 +207,7 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public static void editPatientInfoPatient(String newPharmacyName, String newPharmacyAddress, int newPhoneNumber, String newHomeAddress, String newInsuranceName, String newInsuranceID)
-    {
+    public static void editPatientInfoPatient(String newPharmacyName, String newPharmacyAddress, int newPhoneNumber, String newHomeAddress, String newInsuranceName, String newInsuranceID) {
 
         int patientIndex = -1;
 
@@ -226,25 +233,21 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void viewPatientInfoSpecialist()
-    {
+    public void viewPatientInfoSpecialist() {
         // change panes and pull info for said patient
 
     }
 
-    public void viewPatientInfoPatient()
-    {
+    public void viewPatientInfoPatient() {
 
 
     }
 
-    public void viewVisitSummary()
-    {
+    public void viewVisitSummary() {
 
     }
 
-    public void prescribeMedication(String patientFirstName, String patientLastName, String prescriptionName)
-    {
+    public void prescribeMedication(String patientFirstName, String patientLastName, String prescriptionName) {
         Visit tempVisitNode = new Visit();
         int visitIndex;
 
@@ -303,8 +306,7 @@ public class HealthCarePortalSystem extends Main
 
 
     //Helper Methods
-    public static int findPatient(String firstName, String lastName)
-    {
+    public static int findPatient(String firstName, String lastName) {
         int index = -1;
 
         for(int i = 0; i < patientList.size(); i++)

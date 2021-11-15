@@ -11,10 +11,11 @@ public class SpecialistMessagesPane extends Pane {
     private Button backButton;
     private Label helloLabel, welcomeLabel, fromLabel, subjectLabel, bodyLabel;
     private String specialistNameAndTitle = "";
+    int messageOffset = 104;
 
     public SpecialistMessagesPane() throws FileNotFoundException {
         //LABELS
-        helloLabel = new Label("Hello " + specialistNameAndTitle);
+        helloLabel = new Label("Hello, " + Main.currentHealthcareSpecialist.getTitleName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -39,6 +40,38 @@ public class SpecialistMessagesPane extends Pane {
         bodyLabel.setLayoutX(533);
         bodyLabel.setLayoutY(104);
 
+        for (int i = 0; i < Main.messages.size(); i++) {
+            if (Main.messages.get(i).getRecipientID().equals(Main.currentHealthcareSpecialist.getProviderID())) {
+                messageOffset += 55;
+
+                Label fromLabel2 = new Label(Main.findPatientByID(Main.messages.get(i).getSenderID()).getFirstName() + " " + Main.findPatientByID(Main.messages.get(i).getSenderID()).getLastName());
+                 fromLabel2.getStyleClass().add("messageContentLabel");
+                 fromLabel2.setLayoutX(64);
+                 fromLabel2.setLayoutY(messageOffset);
+
+                Label subjectLabel2 = new Label(Main.messages.get(i).getMessageSubject());
+                subjectLabel2.getStyleClass().add("messageContentLabel");
+                subjectLabel2.setLayoutX(267);
+                subjectLabel2.setLayoutY(messageOffset);
+
+                Label bodyLabel2 = new Label(Main.messages.get(i).getMessageBody().substring(0, Math.min(Main.messages.get(i).getMessageBody().length(), 40)) + "...");
+                bodyLabel2.getStyleClass().add("messageContentLabel");
+                bodyLabel2.setLayoutX(533);
+                bodyLabel2.setLayoutY(messageOffset);
+
+
+                Button viewButton = new Button("View");
+                viewButton.getStyleClass().add("smallBlueButton");
+                viewButton.setLayoutX(1071);
+                viewButton.setLayoutY(messageOffset-15);
+
+                this.getChildren().addAll(fromLabel2, subjectLabel2, bodyLabel2, viewButton);
+                int finalI = i;
+                viewButton.setOnAction(event -> HealthCarePortalSystem.viewMessage(Main.messages.get(finalI)));
+            }
+        }
+
+
         //BUTTONS
         backButton = new Button("< Back");
         backButton.getStyleClass().add("smallBlueButton");
@@ -51,7 +84,7 @@ public class SpecialistMessagesPane extends Pane {
         this.getChildren().addAll(helloLabel, welcomeLabel, backButton, fromLabel, subjectLabel, bodyLabel);
 
         //Action Events
-        backButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        backButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistWelcomePane());
     }
 
 }

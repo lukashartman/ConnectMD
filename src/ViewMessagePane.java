@@ -11,10 +11,10 @@ public class ViewMessagePane extends Pane {
     String body = "";
     String specialistNameAndTitle = "";
 
-    public ViewMessagePane() {
+    public ViewMessagePane(Message message) {
 
         // create labels
-        helloLabel = new Label("Hello, " + specialistNameAndTitle);
+        helloLabel = new Label("Hello, " + Main.currentHealthcareSpecialist.getTitleName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -29,7 +29,7 @@ public class ViewMessagePane extends Pane {
         fromTitleLabel.setLayoutX(64);
         fromTitleLabel.setLayoutY(146);
 
-        fromInfoLabel = new Label("Amanda Weiler");
+        fromInfoLabel = new Label(Main.findPatientByID(message.getSenderID()).getFirstName() + " " + Main.findPatientByID(message.getSenderID()).getLastName());
         fromInfoLabel.getStyleClass().add("messageContentLabel");
         fromInfoLabel.setLayoutX(166);
         fromInfoLabel.setLayoutY(152);
@@ -39,7 +39,7 @@ public class ViewMessagePane extends Pane {
         subjectTitleLabel.setLayoutX(29);
         subjectTitleLabel.setLayoutY(209);
 
-        subjectInfoLabel = new Label("Medication Question");
+        subjectInfoLabel = new Label(message.getMessageSubject());
         subjectInfoLabel.getStyleClass().add("messageContentLabel");
         subjectInfoLabel.setLayoutX(166);
         subjectInfoLabel.setLayoutY(215);
@@ -49,8 +49,10 @@ public class ViewMessagePane extends Pane {
         bodyTitleLabel.setLayoutX(64);
         bodyTitleLabel.setLayoutY(272);
 
-        bodyInfoLabel = new Label(body);
+        bodyInfoLabel = new Label(message.getMessageBody());
         bodyInfoLabel.getStyleClass().add("messageContentLabel");
+        bodyInfoLabel.setMaxWidth(450);
+        bodyInfoLabel.setWrapText(true);
         bodyInfoLabel.setLayoutX(166);
         bodyInfoLabel.setLayoutY(278);
 
@@ -69,7 +71,7 @@ public class ViewMessagePane extends Pane {
         messageToTitleLabel.setLayoutX(608);
         messageToTitleLabel.setLayoutY(148);
 
-        fromInfoLabel2 = new Label("Amanda Weiler");
+        fromInfoLabel2 = new Label(Main.findPatientByID(message.getSenderID()).getFirstName() + " " + Main.findPatientByID(message.getSenderID()).getLastName());
         fromInfoLabel2.getStyleClass().add("messageContentLabel");
         fromInfoLabel2.setLayoutX(802);
         fromInfoLabel2.setLayoutY(152);
@@ -106,7 +108,7 @@ public class ViewMessagePane extends Pane {
                 subjectInfoLabel, bodyTitleLabel, bodyInfoLabel, subjectField, bodyField, backButton,
                 submitAndFinishButton, subjectTitleLabel2, bodyTitleLabel2, messageToTitleLabel, fromInfoLabel2);
 
-        //backButton.setOnAction(event -> SpecialistMessagesPane.changeSceneTest());
-        //submitAndFinishButton.setOnAction(event -> .changeSceneTest());
+        backButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistMessagesPane());
+        submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.sendMessage(message.getSenderID(), message.getRecipientID(), subjectField.getText(), bodyField.getText()));
     }
 }

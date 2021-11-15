@@ -78,7 +78,8 @@ public class SpecialistWelcomePane extends Pane{
             beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
         }
 
-        viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistMessagesPane());
+
         viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
     }

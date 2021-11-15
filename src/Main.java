@@ -16,7 +16,7 @@ public class Main extends Application {
     protected static Pane mainPane;
     public static ArrayList<PatientNode> patientList = new ArrayList<>();
     public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList = new ArrayList<>();
-    public static ArrayList<Message> messages;
+    public static ArrayList<Message> messages = new ArrayList<>();
 
     public static HealthcareSpecialistNode currentHealthcareSpecialist; // current healthcare specialist that is logged in
     public static PatientNode currentPatient; // current patient that is logged in
@@ -139,6 +139,11 @@ public class Main extends Application {
             }
         }
 
+        //TODO: remove this method; it is for testing purposes only
+        messages.add(new Message( "R23798542", "P18293746", "Test1", "This is just a test message to make sure that everything is working properly"));
+        messages.add(new Message( "R23798542", "P18293746", "Test2", "This is just a test message to make sure that everything is working properly"));
+
+
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
@@ -176,7 +181,7 @@ public class Main extends Application {
         return null;
     }
 
-    public PatientNode findPatientByID(String patientID){
+    public static PatientNode findPatientByID(String patientID){
         for (PatientNode patient : patientList){
             if (patient.getPatientID().equals(patientID)){
                 return patient;

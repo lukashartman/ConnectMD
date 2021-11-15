@@ -59,6 +59,7 @@ public class PatientNode {
     {
         return birthDate;
     }
+    public String getPatientID() {return patientID;}
 
     //SETTERS
     public void setFirstName(String firstName)

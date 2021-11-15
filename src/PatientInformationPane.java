@@ -77,31 +77,37 @@ public class PatientInformationPane extends Pane  {
         //TODO: dynamically fill all these fields with information based on the current user
         pharmNameField = new TextField();
         pharmNameField.getStyleClass().add("whiteTextField");
+        pharmNameField.setText(Main.currentPatient.getPharmacyName());
         pharmNameField.setLayoutX(369);
         pharmNameField.setLayoutY(204);
 
         pharmAddressField = new TextField();
         pharmAddressField.getStyleClass().add("whiteTextField");
+        pharmAddressField.setText(Main.currentPatient.getPharmacyAddress());
         pharmAddressField.setLayoutX(369);
         pharmAddressField.setLayoutY(250);
         
         phoneField = new TextField();
         phoneField.getStyleClass().add("whiteTextField");
+        phoneField.setText(String.valueOf(Main.currentPatient.getPhoneNumber()));
         phoneField.setLayoutX(369);
         phoneField.setLayoutY(319);
 
         addressField = new TextField();
         addressField.getStyleClass().add("whiteTextField");
+        addressField.setText(Main.currentPatient.getHomeAddress());
         addressField.setLayoutX(369);
         addressField.setLayoutY(362);
 
         insuranceNameField = new TextField();
         insuranceNameField.getStyleClass().add("whiteTextField");
+        insuranceNameField.setText(Main.currentPatient.getInsuranceName());
         insuranceNameField.setLayoutX(369);
         insuranceNameField.setLayoutY(434);
 
         insuranceIDField = new TextField();
         insuranceIDField.getStyleClass().add("whiteTextField");
+        insuranceIDField.setText(String.valueOf(Main.currentPatient.getInsuranceID()));
         insuranceIDField.setLayoutX(369);
         insuranceIDField.setLayoutY(480);
 
@@ -110,7 +116,7 @@ public class PatientInformationPane extends Pane  {
                 addressLabel, insuranceNameLabel, insuranceIDLabel, pharmNameField, pharmAddressField, phoneField,
                 addressField, insuranceNameField, insuranceIDField, backButton, rightPane);
 
-        backButton.setOnAction(event -> HealthCarePortalSystem.editPatientInfoPatient(pharmAddressField.getText(),
+        backButton.setOnAction(event -> HealthCarePortalSystem.editPatientInfoPatient(pharmNameField.getText(),
                 pharmAddressField.getText(), Integer.parseInt(phoneField.getText()), addressField.getText(),
                 insuranceNameField.getText(), insuranceIDField.getText()));
 

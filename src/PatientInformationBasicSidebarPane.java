@@ -23,25 +23,23 @@ public class PatientInformationBasicSidebarPane extends Pane {
         this.setPrefHeight(720);
 
         //LABELS
-        //TODO: for all these elements, grab the correct patient information using the patientID passed into here
-        nameLabel = new Label("Amanda Weiler");
+        //TODO: center the nameLabel somehow?
+        nameLabel = new Label(Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         nameLabel.getStyleClass().add("whiteLabel");
         nameLabel.setLayoutX(70);
         nameLabel.setLayoutY(187);
 
-        birthdayLabel = new Label("DOB: " + "10/20/2000");
+        birthdayLabel = new Label("DOB: " + Main.currentPatient.getBirthDate());
         birthdayLabel.getStyleClass().add("sidebarDOBID");
         birthdayLabel.setLayoutX(100);
         birthdayLabel.setLayoutY(235);
 
-        idLabel = new Label("ID:");
+        idLabel = new Label("ID: " + Main.currentPatient.getPatientID());
         idLabel.getStyleClass().add("sidebarDOBID");
         idLabel.setLayoutX(114);
         idLabel.setLayoutY(277);
 
-
-
-        FileInputStream inputstream = new FileInputStream("src/logo.png");
+        FileInputStream inputstream = new FileInputStream("src/patImages/" + Main.currentPatient.getPatientID() + ".jpeg");
         patientPFP = new Image(inputstream);
         patientPFPView = new ImageView(patientPFP);
         patientPFPView.setFitWidth(158);

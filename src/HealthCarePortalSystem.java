@@ -162,7 +162,7 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public static void editPatientInfoPatient(String newHomeAddress, String newPharmacyName, String newPharmacyAddress, String newInsuranceName, String newInsuranceID, int newPhoneNumber)
+    public static void editPatientInfoPatient(String newPharmacyName, String newPharmacyAddress, int newPhoneNumber, String newHomeAddress, String newInsuranceName, String newInsuranceID)
     {
 
         int patientIndex = -1;
@@ -171,12 +171,21 @@ public class HealthCarePortalSystem extends Main
         patientIndex = findPatient(currentPatient.getFirstName(), currentPatient.getLastName());  // finds patient in array list
 
         // updates patient information, overrides old info
-        patientList.get(patientIndex).setHomeAddress(newHomeAddress);
         patientList.get(patientIndex).setPharmacyName(newPharmacyName);
         patientList.get(patientIndex).setPharmacyAddress(newPharmacyAddress);
+        patientList.get(patientIndex).setHomeAddress(newHomeAddress);
+        patientList.get(patientIndex).setPhoneNumber(newPhoneNumber);
         patientList.get(patientIndex).setInsuranceName(newInsuranceName);
         patientList.get(patientIndex).setInsuranceID(newInsuranceID);
-        patientList.get(patientIndex).setPhoneNumber(newPhoneNumber);
+
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
 
     }
 

@@ -27,6 +27,7 @@ public class HealthCarePortalSystem extends Main
         PatientNode newPatient;
 
         //TODO: here we need to add this patient's new ID to that specific specialist's list of patients
+        // Along with the the doctor's nurse's array of patients
 
         Random rnd = new Random();
         int n = 1000000 + rnd.nextInt(9999999);

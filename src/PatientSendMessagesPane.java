@@ -15,7 +15,7 @@ public class PatientSendMessagesPane extends Pane {
 
     public PatientSendMessagesPane() throws FileNotFoundException {
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
-        rightPane = new PatientInformationSidebarPane("P44924663");
+        rightPane = new PatientInformationSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
 

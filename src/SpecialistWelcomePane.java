@@ -56,8 +56,8 @@ public class SpecialistWelcomePane extends Pane{
 
         //COMBO BOX
         for (int i = 0; i < Main.patientList.size(); i++) {
-            if (Main.patientList.get(i).getHealthCareSpecialist().equals(Main.currentHealthcareSpecialist)) {
-                list.add(Main.patientList.get(i).getFirstName() + " " + Main.patientList.get(i).getLastName() + " with DOB " + Main.patientList.get(i).getBirthDate().toString());
+            if (Main.currentHealthcareSpecialist.getPatientIDs().contains(Main.patientList.get(i))) {
+                list.add(Main.patientList.get(i).getFirstName() + " " + Main.patientList.get(i).getLastName());
             }
         }
 
@@ -72,9 +72,15 @@ public class SpecialistWelcomePane extends Pane{
         this.getChildren().addAll(viewAllMessagesButton,viewPatientInfoButton,beginPatientVisitButton,logOutButton,helloLabel, welcomeLabel,selectPatient);
 
         //Action Events
+
+        if(Main.currentHealthcareSpecialist.getType().equals("Nurse")){
+            Main.currentPatient = Main.findPatientByName(selectPatient.getValue().toString());
+            System.out.println(selectPatient.getValue().toString());
+            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane());
+        }
+
         viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
     }
 }

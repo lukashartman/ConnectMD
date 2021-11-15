@@ -100,7 +100,35 @@ public class Main extends Application {
         }
         doctorDataScanner.close();
 
-        //TODO: read in nurses
+
+        Scanner nurseDataScanner = new Scanner(new File("src/nurseData.txt"));
+        while (nurseDataScanner.hasNext()){
+            String doctorID = nurseDataScanner.nextLine();
+            String username = nurseDataScanner.nextLine();
+            String password = nurseDataScanner.nextLine();
+            String doctorFirstName = nurseDataScanner.nextLine();
+            String doctorLastName = nurseDataScanner.nextLine();
+            String drTitle = nurseDataScanner.nextLine();
+            String type = nurseDataScanner.nextLine();
+
+            HealthcareSpecialistNode newNurse = new HealthcareSpecialistNode(doctorID, doctorFirstName, doctorLastName, username, password, drTitle, type);
+            healthcareSpecialistList.add(newNurse);
+
+            String garbageData = nurseDataScanner.nextLine();
+        }
+        nurseDataScanner.close();
+
+        for (int i = 0; i < healthcareSpecialistList.size(); i++){
+            for(int j = 0; j < healthcareSpecialistList.size(); j++){
+                if (healthcareSpecialistList.get(i).getType().equals("Doctor")){
+                    if (healthcareSpecialistList.get(i).getNurseIDS().contains(healthcareSpecialistList.get(j).getProviderID())){
+                        healthcareSpecialistList.get(j).addPatient(healthcareSpecialistList.get(i).getPatientIDs().get(0));
+                    }
+                }
+
+            }
+        }
+
 
         for (int i = 0; i < patientList.size(); i++){
             for(int j = 0; j < healthcareSpecialistList.size(); j++){
@@ -151,6 +179,16 @@ public class Main extends Application {
     public PatientNode findPatientByID(String patientID){
         for (PatientNode patient : patientList){
             if (patient.getPatientID().equals(patientID)){
+                return patient;
+            }
+        }
+        return null;
+    }
+
+    public static PatientNode findPatientByName(String patientName){
+        for (PatientNode patient : patientList){
+            String fullNameTemp = patient.getFirstName() + " " + patient.getLastName();
+            if (fullNameTemp.equals(patientName)){
                 return patient;
             }
         }

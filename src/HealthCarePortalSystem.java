@@ -143,6 +143,16 @@ public class HealthCarePortalSystem extends Main
         // TODO how do we select what is to be edited
     }
 
+    public static void showVitalsPane(){
+        mainPane.getChildren().removeAll();
+        try {
+            mainPane.getChildren().add(new NurseViewPatientVitalsPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void enterPatientVitals(String patientFirstName, String patientLastName, float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
         Visit newVisit = new Visit();

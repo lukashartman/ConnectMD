@@ -15,7 +15,7 @@ public class PatientInformationSidebarPane extends Pane {
     private ImageView patientPFPView;
     private Label nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel;
 
-    public PatientInformationSidebarPane(String patientID) throws FileNotFoundException {
+    public PatientInformationSidebarPane() throws FileNotFoundException {
 
         //Set size of the sidebar across all calls to view it
         this.setPrefWidth(427);
@@ -23,40 +23,39 @@ public class PatientInformationSidebarPane extends Pane {
 
         //LABELS
         //TODO: for all these elements, grab the correct patient information using the patientID passed into here
-        nameLabel = new Label("Amanda Weiler");
+        nameLabel = new Label(Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         nameLabel.getStyleClass().add("whiteLabel");
         nameLabel.setLayoutX(70);
         nameLabel.setLayoutY(187);
 
-        birthdayLabel = new Label("DOB: " + "10/20/2000");
+        birthdayLabel = new Label("DOB: " + Main.currentPatient.getBirthDate());
         birthdayLabel.getStyleClass().add("sidebarDOBID");
         birthdayLabel.setLayoutX(100);
         birthdayLabel.setLayoutY(235);
 
-        idLabel = new Label("ID: " + patientID);
+        idLabel = new Label("ID: " + Main.currentPatient.getPatientID());
         idLabel.getStyleClass().add("sidebarDOBID");
         idLabel.setLayoutX(114);
         idLabel.setLayoutY(277);
 
-        pharmLabel = new Label("Pharmacy: CVS Pharmacy \n " +
-                "909 E Apache Blvd, Tempe, AZ 85281");
+        pharmLabel = new Label("Pharmacy: " + Main.currentPatient.getPharmacyName() + " \n " +
+                Main.currentPatient.getPharmacyAddress());
         pharmLabel.getStyleClass().add("sidebarSmallLabel");
         pharmLabel.setLayoutX(45);
         pharmLabel.setLayoutY(360);
 
-        phonelabel = new Label("Phone: 480-694-5998");
+        phonelabel = new Label("Phone: " + String.valueOf(Main.currentPatient.getPhoneNumber()));
         phonelabel.getStyleClass().add("sidebarSmallLabel");
         phonelabel.setLayoutX(45);
         phonelabel.setLayoutY(425);
 
-        addressLabel = new Label("Address: 3951 Dye Street, \n" +
-                "Phoenix,AZ, 85024");
+        addressLabel = new Label("Address: " + Main.currentPatient.getHomeAddress());
         addressLabel.getStyleClass().add("sidebarSmallLabel");
         addressLabel.setLayoutX(45);
         addressLabel.setLayoutY(466);
 
-        insuranceLabel = new Label("Insurance: Blue Cross Blue Shield \n" +
-                "ID: DZW92000000");
+        insuranceLabel = new Label("Insurance: " + Main.currentPatient.getInsuranceName() + " \n" +
+                "ID: " + Main.currentPatient.getInsuranceID());
         insuranceLabel.getStyleClass().add("sidebarSmallLabel");
         insuranceLabel.setLayoutX(45);
         insuranceLabel.setLayoutY(531);

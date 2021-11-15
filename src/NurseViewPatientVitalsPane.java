@@ -21,7 +21,7 @@ public class NurseViewPatientVitalsPane extends Pane {
 
         //Create right sidebar
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
-        rightPane = new PatientInformationSidebarPane("P44924663");
+        rightPane = new PatientInformationSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
 
@@ -31,7 +31,7 @@ public class NurseViewPatientVitalsPane extends Pane {
         vitalsLabel.setLayoutX(14);
         vitalsLabel.setLayoutY(36);
 
-        helloLabel = new Label("Hello " + specialistNameAndTitle);
+        helloLabel = new Label("Hello, " + specialistNameAndTitle);
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);

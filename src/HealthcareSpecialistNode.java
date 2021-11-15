@@ -49,6 +49,9 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     public String getTitleName(){return titleName;}
     public String getProviderID(){return providerID;}
     public ArrayList<PatientNode> getPatientIDs(){return patientIDs;}
+    public ArrayList<String> getNurseIDS(){ return nurseIDs;}
+    public String getType(){return type;}
+
 
     public String setFirstName()
     {

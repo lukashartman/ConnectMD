@@ -49,7 +49,9 @@ public class PatientInformationSidebarPane extends Pane {
         phonelabel.setLayoutX(45);
         phonelabel.setLayoutY(425);
 
-        addressLabel = new Label("Address: " + Main.currentPatient.getHomeAddress());
+
+        String[] dividedAddress = Main.currentPatient.getHomeAddress().split(",");
+        addressLabel = new Label("Address: " + dividedAddress[0] + ", \n\t\t " + dividedAddress[1] + ", " + dividedAddress[2] + ", " + dividedAddress[3]);
         addressLabel.getStyleClass().add("sidebarSmallLabel");
         addressLabel.setLayoutX(45);
         addressLabel.setLayoutY(466);
@@ -60,16 +62,8 @@ public class PatientInformationSidebarPane extends Pane {
         insuranceLabel.setLayoutX(45);
         insuranceLabel.setLayoutY(531);
 
-        FileInputStream inputstream = new FileInputStream("src/logo.png");
-        patientPFP = new Image(inputstream);
-        patientPFPView = new ImageView(patientPFP);
-        patientPFPView.setFitWidth(158);
-        patientPFPView.setFitHeight(158);
-        patientPFPView.setLayoutX(134);
-        patientPFPView.setLayoutY(12);
-
         this.setBackground(new Background(new BackgroundFill(Color.web("#659BFF"), null, null)));
-        this.getChildren().addAll(patientPFPView, nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel);
+        this.getChildren().addAll(nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel);
     }
 
 }

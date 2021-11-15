@@ -64,6 +64,7 @@ public class SpecialistWelcomePane extends Pane{
         selectPatient = new ComboBox(list);
         selectPatient.setValue("Select Patient");
         selectPatient.getStyleClass().add("selectPatientDropdown");
+        selectPatient.setEditable(false);
         selectPatient.setLayoutX(364);
         selectPatient.setLayoutY(185);
 
@@ -74,9 +75,7 @@ public class SpecialistWelcomePane extends Pane{
         //Action Events
 
         if(Main.currentHealthcareSpecialist.getType().equals("Nurse")){
-            Main.currentPatient = Main.findPatientByName(selectPatient.getValue().toString());
-            System.out.println(selectPatient.getValue().toString());
-            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane());
+            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
         }
 
         viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());

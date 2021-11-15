@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="Ingest doctor data, set provider within patient, fill combobox">
+    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientProviderChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientProviderChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +206,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix code that doesn't compile" />
     <MESSAGE value="Fix PatientVisitPane" />
     <MESSAGE value="Customize and Finish Specialist Welcome Pane" />
     <MESSAGE value="Customize and Finish Vitals Pane" />
@@ -235,9 +230,19 @@
     <MESSAGE value="Create patient provider change flow" />
     <MESSAGE value="Ingest doctor data" />
     <MESSAGE value="Ingest doctor data, set provider within patient, fill combobox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ingest doctor data, set provider within patient, fill combobox" />
+    <MESSAGE value="Ingest nurse data, prepare for vitals setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ingest nurse data, prepare for vitals setup" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="selectPatient.getValue().toString()" language="JAVA" />

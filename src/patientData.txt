@@ -1,48 +1,252 @@
 P18293746
 R23798542
-John
-Smith
-address
-pharmacyName
-pharmacyAddress
-insuranceName
-insuranceID
-5555555555
-2000-11-22
-2021-11-14
-160
-6
-1
-99.3
-100/50
-physicalExam
-knownAllergies
-healthIssues
-medications
-immunizations
-notes
+Rebecca 
+Knoche
+903 Jenna Lane, Gilbert, AZ, 85233
+Walgreens Pharmacy
+785 S Cooper Rd, Gilbert, AZ, 85233
+Optum Care
+AXZ02009623
+4803230147
+2001-06-10
+2021-01-13
+165
+5
+9
+97.3
+115/76
+Patient complained of sore throat and clogged ears. Ears filled with wax. Vitals normal.
+Dogs, cats, pollen, bananas
+None
+Sprintec, Dulera, Allertec
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Pfizer vaccine
+Patient was prescribed Amoxicillin
+2021-07-03
+162
+5
+9
+97.6
+113/72
+Patient complained of sore throat again. Patient has tonsil stones and swollen red throat. Says they get throat infections often. 
+Dogs, cats, pollen, bananas
+Asthma
+Sprintec, Dulera, Allertec
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Pfizer vaccine
+Patient was reffered to ENT.
+#
+P00002378
+R23798542
+Tate 
+Russel
+4214 Coplin Avenue, Phoenix, AZ, 85012
+CVS Pharmacy
+50 W Jefferson St, Phoenix, AZ 85003
+Aetna 
+BPD11039429
+6025790032
+2004-11-22
+2020-08-22
+133
+5
+8
+98.2
+119/78
+Patient came in for sports physical for school. Vitals normal.
+None
+None
+Apri
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was perfectly healthy
+2021-06-10
+138
+5
+8
+98.3
+116/72
+Patient complained of excessive migraines for months. Ears slightly irritated. Vitals normal.
+None
+None
+Apri
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient  was prescribed Emgality
+2021-08-24
+138
+5
+8
+98.3
+116/72
+Patient came in for sports physical. 
+None
+Excessive Migraines
+Apri, Emgality
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Moderna vaccine
+Patient was healthy. 
 #
 P96249821
 R34671900
-firstName
-lastName
-address
-pharmacyName
-pharmacyAddress
-insuranceName
-insuranceID
-5555555566
-2000-11-28
-2021-11-13
-165
+Robel 
+Wakayo 
+426 Parkway Drive, Laveen, AZ, 85339
+CVS Pharmacy
+6150 S 35th Ave, Phoenix, AZ 85041
+Aetna
+SZW24385001
+6023820176
+2001-07-20
+2019-05-20
+135
 6
 0
-100.3
-bloodPressure
-physicalExam
-knownAllergies
-healthIssues
-medications
-immunizations
-notes
+98.5
+90/50
+Patient came in for yearly flu shot and yearly checkup. Vitals look good.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was healthy.
+2020-06-10
+140
+6
+0
+98.6
+92/51
+Patient came in for flu shot and yearly checup. Vitals are good. 
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was healthy.
+2021-07-01
+166
+6
+0
+98.6
+90/49
+Patient came in for flu shot and yearly checup. Vitals good.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was perfeclty healthy. Had no compaints.
+2021-10-12
+164
+6
+0
+101.4
+90/50
+Patient complains of swollen throat, voice is raspy, throat is swollen with red and white spots.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Johnson&Johnson Vaccine
+Patient was prescribed Augmentin.
+#
+P09567293
+R34671900
+Remi 
+Garcia
+4046 Elmwood Avenue, Scottsdale, AZ, 85251
+CVS Pharmacy 
+7552 E Indian School Rd, Scottsdale, AZ, 85251
+Blue Cross Blue Shield
+DSW01009652
+4806256278
+1989-09-17
+2021-11-13
+178
+5
+8
+98.7
+119/81
+New Patient. Came in for new patient checkup. Blood pressure a little high but patient said they did not take their medication today yet. 
+Pollen, tomatoes, nsaids
+Asthma, high blood pressure
+Chlorthalidone
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Johnson&Johnson Vaccine
+Patient was healthy. 
+#
+P58720100
+R00012590
+Sheryl 
+Barnes
+15554 East Thistle Rd, Fountain Hills, AZ 85268
+Walgreens Pharmacy
+16415 E Palisades Blvd, Fountain Hills, AZ 85268
+Blue Cross Blue Shield 
+QSW00009653
+4803292719
+1963-02-16
+2021-01-10
+158
+5
+2
+98.4
+99/62
+Patient came in complaining of sharp stomach pain. Said pain is intolerable. Vitals looked okay, heart rate was high.
+Pollen, cats, dogs, grass, trees
+Asthma, severe anxiety
+Citalopram
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Johnson&Johnson Vaccine
+Patient was sent to hospital. Seems to be problem with appendix. 
+2021-10-22
+150
+5
+2
+98.6
+97/61
+Patient came in for flu shot. Vitals are good. 
+Pollen, cats, dogs, grass, trees
+Asthma, severe anxiety
+Citalopram
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Johnson&Johnson Vaccine
+Patient was healthy. 
+#
+P33562989
+R18101823
+Ashley 
+Frost
+60 Hillside Street, Scottsdale, AZ, 85260
+CVS Pharmacy 
+6045 N Scottsdale Rd, Scottsdale, AZ, 85250
+Blue Cross Blue Shield
+SWA00122223
+4804437184
+1983-04-02
+2020-06-02
+125
+5
+5
+98.6
+90/60
+Patient complained of symptoms of Vertigo, vitals are good.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was told to take Benadryl once a day every day and return if symptoms do not stop.
+2020-12-03
+125
+5
+5
+98.6
+90/60
+Patient complained of lower back pain. Vitals are good.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient was referred to a chiropractor and physcial therapist. 
+2021-11-12
+125
+5
+5
+98.6
+90/60
+Patient came in for yearly checkup. Vitals are good.
+None
+None
+None
+Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
+Patient is healthy. 
 #

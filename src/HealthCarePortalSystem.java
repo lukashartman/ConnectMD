@@ -143,7 +143,9 @@ public class HealthCarePortalSystem extends Main
         // TODO how do we select what is to be edited
     }
 
-    public static void showVitalsPane(){
+    public static void showVitalsPane(String nameOfPatient){
+        Main.currentPatient = Main.findPatientByName(nameOfPatient);
+
         mainPane.getChildren().removeAll();
         try {
             mainPane.getChildren().add(new NurseViewPatientVitalsPane());

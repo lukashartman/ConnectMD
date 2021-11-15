@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewPatientPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPatientPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +215,8 @@
     <MESSAGE value="Remove Unnecessary Classes" />
     <MESSAGE value="Create patient ingest system" />
     <MESSAGE value="Create login patient flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create login patient flow" />
+    <MESSAGE value="Create new patient flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new patient flow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

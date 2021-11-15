@@ -68,12 +68,14 @@ public class PatientWelcomePane extends Pane {
 
         //ACTIONS
       
-        viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.showPatientInfoPane());
+        logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
+
+        //TODO: the rest of these need to be mapped
         viewHealthButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         sendMessageButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         requestChangeButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        logOutButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        
+
     }
     
 }

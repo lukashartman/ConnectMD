@@ -150,8 +150,21 @@ public class HealthCarePortalSystem extends Main
             patientList.get(patientIndex).visits.add(0, newVisit);
     }
 
-    public void editPatientInfoPatient(String firstName, String lastName)
+    public static void showPatientInfoPane(){
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientInformationPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
+
+    public static void editPatientInfoPatient()
     {
+
+
         int patientIndex = -1;
 
 
@@ -205,6 +218,17 @@ public class HealthCarePortalSystem extends Main
             return index;
     }
 
-
+    public static void logOutUser(){
+        currentPatient = null;
+        currentHealthcareSpecialist = null;
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new LoginPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
 
 }

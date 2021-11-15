@@ -10,11 +10,11 @@ import java.io.FileNotFoundException;
 public class PatientViewMessagesPane extends Pane {
     private Button backButton;
     private Label helloLabel, welcomeLabel, fromLabel, subjectLabel, bodyLabel;
-    private String specialistNameAndTitle = "";
+    private String patientName = "";
 
     public PatientViewMessagesPane() throws FileNotFoundException {
         //LABELS
-        helloLabel = new Label("Hello " + specialistNameAndTitle);
+        helloLabel = new Label("Hello " + patientName);
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -44,7 +44,6 @@ public class PatientViewMessagesPane extends Pane {
         backButton.getStyleClass().add("smallBlueButton");
         backButton.setLayoutX(19);
         backButton.setLayoutY(654);
-
 
         //Set the background and children
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));

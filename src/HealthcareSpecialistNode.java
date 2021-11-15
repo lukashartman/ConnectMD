@@ -3,29 +3,30 @@ import java.util.ArrayList;
 public class HealthcareSpecialistNode {  //This class makes and fills the HealthcareSpecialist Node so that we can use it for the HealthcareSpecialist class
 
     //DECLARING VARIABLES
+    private String providerID;
     private String username;
     private String password;
     private String firstName;
     private String lastName;
-    private String type;
-    private String providerID;
     private String titleName; //what they want to be called by (RN or Dr) with name (ex. Dr. Smith)
-    private ArrayList<String> patientIDs; //list of patient IDs that they are assigned to
+    private String type;
+    private ArrayList<PatientNode> patientIDs; //list of patient IDs that they are assigned to
     private ArrayList<String> nurseIDs;
 
 
     //TODO: type (as in doctor or nurse) and if they're a doctor add all their nurse's ID
 
     //CONSTRUCTOR
-    public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName, String newType) {
-        firstName = new String("");
-        lastName = new String("");
-        username = new String("");
-        password = new String("");
-        titleName = new String("");
-        patientIDs = new ArrayList<String>();
-        //TODO: if doctor, initialize nurseIDs
-        // if nurse, leave array empty
+    public HealthcareSpecialistNode(String newProviderID, String newFirstName, String newLastName, String newUsername, String newPassword, String newTitleName, String newType) {
+        providerID = newProviderID;
+        firstName = newFirstName;
+        lastName = newLastName;
+        username = newUsername;
+        password = newPassword;
+        titleName = newTitleName;
+        type = newType;
+        patientIDs = new ArrayList<PatientNode>();
+        nurseIDs = new ArrayList<String>();
     }
 
     //GETTERS AND SETTERS
@@ -64,4 +65,6 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     {
         return password;
     }
+    public void addNurseID(String IDtoAdd){nurseIDs.add(IDtoAdd);}
+    public void addPatient(PatientNode patient){patientIDs.add(patient);}
 }

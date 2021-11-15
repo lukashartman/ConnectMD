@@ -14,8 +14,8 @@ public class Main extends Application {
     protected static Stage window;
     protected static Scene scene1;
     protected static Pane mainPane;
-    public static ArrayList<PatientNode> patientList = new ArrayList<PatientNode>();
-    public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList;
+    public static ArrayList<PatientNode> patientList = new ArrayList<>();
+    public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList = new ArrayList<>();
     public static ArrayList<Message> messages;
 
     public static HealthcareSpecialistNode currentHealthcareSpecialist; // current healthcare specialist that is logged in
@@ -44,9 +44,9 @@ public class Main extends Application {
             int patientPhoneNumber = Integer.parseInt(patientDataScanner.nextLine().substring(0, 9));
             LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
 
-            HealthcareSpecialistNode provider = findProviderByID(providerID);
+            //HealthcareSpecialistNode provider = findProviderByID(providerID);
 
-            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB, provider);
+            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
             patientList.add(patient);
 
             while (patientDataScanner.hasNextLine()){
@@ -72,14 +72,38 @@ public class Main extends Application {
                 }
             }
         patientDataScanner.close();
-//
-//        Scanner specialistDataScanner = new Scanner(new File("src/specialistData.txt"));
-//        while (specialistDataScanner.hasNext()){
-//            //TODO: use the data to create a healthcare specialist object via constructor
-//            HealthcareSpecialistNode tempSepcialist = new HealthcareSpecialistNode();
-//            healthcareSpecialistList.add(tempSepcialist);
-//        }
-//        specialistDataScanner.close();
+
+        Scanner doctorDataScanner = new Scanner(new File("src/doctorData.txt"));
+        while (doctorDataScanner.hasNext()){
+            String doctorID = doctorDataScanner.nextLine();
+            String username = doctorDataScanner.nextLine();
+            String password = doctorDataScanner.nextLine();
+            String doctorFirstName = doctorDataScanner.nextLine();
+            String doctorLastName = doctorDataScanner.nextLine();
+            String drTitle = doctorDataScanner.nextLine();
+            String type = doctorDataScanner.nextLine();
+
+            HealthcareSpecialistNode newDoctor = new HealthcareSpecialistNode(doctorID, doctorFirstName, doctorLastName, username, password, drTitle, type);
+            healthcareSpecialistList.add(newDoctor);
+
+            while (doctorDataScanner.hasNextLine()){
+                String tempString = doctorDataScanner.nextLine();
+                if (!tempString.equals("#")) {
+                    if (tempString.contains("P")){
+                        PatientNode tempPatient = findPatientByID(tempString);
+                        healthcareSpecialistList.get(healthcareSpecialistList.size()-1).addPatient(tempPatient);
+                    } else{
+                        healthcareSpecialistList.get(healthcareSpecialistList.size()-1).addNurseID(tempString);
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+        doctorDataScanner.close();
+
+        //TODO: read in nurses
+        //TODO; retroactively set providers of patients after all data has been read
 
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
@@ -98,6 +122,7 @@ public class Main extends Application {
     //Method to run on application stop
     public void stop(){
         System.out.println("Application stopped");
+        //TODO; save data to file
     }
 
     //Create pane that will be overwritten for every scene change
@@ -112,6 +137,15 @@ public class Main extends Application {
         for (HealthcareSpecialistNode provider : healthcareSpecialistList){
             if (provider.getProviderID().equals(providerID)){
                 return provider;
+            }
+        }
+        return null;
+    }
+
+    public PatientNode findPatientByID(String patientID){
+        for (PatientNode patient : patientList){
+            if (patient.getPatientID().equals(patientID)){
+                return patient;
             }
         }
         return null;

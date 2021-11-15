@@ -23,7 +23,7 @@ public class PatientNode {
     public PatientNode(String newPatientID, String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
                        String newInsuranceID, int newPhoneNumber,
-                   LocalDate newBirthDate, HealthcareSpecialistNode newProvider)
+                   LocalDate newBirthDate)
     {
         patientID = newPatientID;
         firstName = newFirstName;
@@ -36,7 +36,6 @@ public class PatientNode {
         phoneNumber = newPhoneNumber;
         birthDate = newBirthDate;
         visits = new ArrayList<Visit>();
-        provider = newProvider;
 
     }
 

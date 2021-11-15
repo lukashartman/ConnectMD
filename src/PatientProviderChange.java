@@ -71,6 +71,7 @@ public class PatientProviderChange extends Pane {
         this.setBackground(new Background (new BackgroundFill(Color.web("#FFFFFF"),null, null)));
 
         submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.requestProviderChange(chooseNewProviderField.getValue().toString(), reasonField.getText()));
+        backButton.setOnAction(event -> HealthCarePortalSystem.showPatientWelcomePane());
 
     }
 }

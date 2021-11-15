@@ -48,7 +48,7 @@ public class HealthCarePortalSystem extends Main
         HealthcareSpecialistNode provider = healthcareSpecialistList.get(providerIndex);
 
         newPatient = new PatientNode(patientID, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
-                insuranceName, insuranceID, phoneNumber, birthDate, provider); // create and initialize all attributes of new patient
+                insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
 
        patientList.add(newPatient); // add new patient to array list of type patient
 
@@ -248,6 +248,17 @@ public class HealthCarePortalSystem extends Main
 
         patientList.get(patientIndex).setProvider(healthcareSpecialistList.get(providerIndex));
 
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
+
+    public static void showPatientWelcomePane(){
         try {
             mainPane.getChildren().removeAll();
             mainPane.getChildren().add(new PatientWelcomePane());

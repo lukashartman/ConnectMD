@@ -1,6 +1,6 @@
 P18293746
 R23798542
-Rebecca 
+Rebecca
 Knoche
 903 Jenna Lane, Gilbert, AZ, 85233
 Walgreens Pharmacy
@@ -36,7 +36,7 @@ Patient was reffered to ENT.
 #
 P00002378
 R23798542
-Tate 
+Tate
 Russell
 4214 Coplin Avenue, Phoenix, AZ, 85012
 CVS Pharmacy
@@ -84,7 +84,7 @@ Patient was healthy.
 #
 P96249821
 R34671900
-Robel 
+Robel
 Wakayo 
 426 Parkway Drive, Laveen, AZ, 85339
 CVS Pharmacy
@@ -144,7 +144,7 @@ Patient was prescribed Augmentin.
 #
 P09567293
 R34671900
-Remi 
+Remi
 Garcia
 4046 Elmwood Avenue, Scottsdale, AZ, 85251
 CVS Pharmacy 
@@ -168,7 +168,7 @@ Patient was healthy.
 #
 P58720100
 R00012590
-Sheryl 
+Sheryl
 Barnes
 15554 East Thistle Rd, Fountain Hills, AZ 85268
 Walgreens Pharmacy
@@ -204,7 +204,7 @@ Patient was healthy.
 #
 P33562989
 R18101823
-Ashley 
+Ashley
 Frost
 60 Hillside Street, Scottsdale, AZ, 85260
 CVS Pharmacy 

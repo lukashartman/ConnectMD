@@ -159,6 +159,26 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
+    public static void showPatientViewMessagesPane(){
+        mainPane.getChildren().removeAll();
+        try {
+            mainPane.getChildren().add(new PatientViewMessagesPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void showPatientSendMessagesPane(){
+        mainPane.getChildren().removeAll();
+        try {
+            mainPane.getChildren().add(new PatientSendMessagesPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void editPatientHealthHistory() {
         // TODO how do we select what is to be edited
     }

@@ -17,7 +17,6 @@ public class SpecialistWelcomePane extends Pane{
     private ComboBox selectPatient;
     private String specialistNameAndTitle = "";
     private ObservableList<String> list = FXCollections.observableArrayList();
-    ;
 
     public SpecialistWelcomePane() throws FileNotFoundException {
 
@@ -75,6 +74,8 @@ public class SpecialistWelcomePane extends Pane{
         //Action Events
 
         if(Main.currentHealthcareSpecialist.getType().equals("Nurse")){
+            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
+        } else {
             beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
         }
 

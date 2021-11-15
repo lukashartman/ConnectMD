@@ -6,21 +6,18 @@ import java.io.FileNotFoundException;
 public class PatientSendMessagesPane extends Pane {
     private Button backButton, submitAndFinishButton;
     private Label msgProviderLabel, helloLabel, messageToLabel, subjectLabel, bodyLabel;
-    private ComboBox messageToBox;
+    private Label messageToLabelProviderName;
     private TextField subjectField;
     private TextArea bodyField;
     private Pane rightPane;
-    private String patientName = "";
-
 
     public PatientSendMessagesPane() throws FileNotFoundException {
-        //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
         rightPane = new PatientInformationSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
 
         // create labels
-        helloLabel = new Label("Hello, " + patientName);
+        helloLabel = new Label("Hello, " + Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -47,11 +44,12 @@ public class PatientSendMessagesPane extends Pane {
 
 
         //create Combo box
-        messageToBox = new ComboBox();
-        messageToBox.getStyleClass().add("selectPatientDropdown");
-        messageToBox.setMaxWidth(360);
-        messageToBox.setLayoutX(279);
-        messageToBox.setLayoutY(143);
+
+        messageToLabelProviderName = new Label(Main.currentPatient.getHealthCareSpecialist().getFirstName() + " " + Main.currentPatient.getHealthCareSpecialist().getLastName());
+        messageToLabelProviderName.getStyleClass().add("messageContentLabel");
+        messageToLabelProviderName.setMaxWidth(360);
+        messageToLabelProviderName.setLayoutX(279);
+        messageToLabelProviderName.setLayoutY(152);
 
         //create text fields
         subjectField = new TextField();
@@ -75,17 +73,18 @@ public class PatientSendMessagesPane extends Pane {
         backButton.setLayoutY(662);
 
         submitAndFinishButton = new Button("Send and Finish");
-        submitAndFinishButton.getStyleClass().add("smallBlueButton");
+        submitAndFinishButton.getStyleClass().add("wideBlueButton");
         submitAndFinishButton.setMinWidth(250);
-        submitAndFinishButton.setLayoutX(347);
+        submitAndFinishButton.setLayoutX(281);
         submitAndFinishButton.setLayoutY(527);
 
 
         this.setBackground(new Background (new BackgroundFill(Color.web("#FFFFFF"),null, null)));
-        this.getChildren().addAll(helloLabel, msgProviderLabel, messageToBox, subjectField, bodyField,
-                submitAndFinishButton, backButton, messageToLabel, subjectLabel, bodyLabel, rightPane );
+        this.getChildren().addAll(helloLabel, msgProviderLabel, messageToLabel, subjectField, bodyField,
+                submitAndFinishButton, backButton, subjectLabel, messageToLabelProviderName, bodyLabel, rightPane);
 
-
+        backButton.setOnAction(event -> HealthCarePortalSystem.showPatientWelcomePane());
+        submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.sendMessage(Main.currentPatient.getHealthCareSpecialist().getProviderID(), Main.currentPatient.getPatientID(), subjectField.getText(), bodyField.getText()));
 
     }
 }

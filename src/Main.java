@@ -139,11 +139,6 @@ public class Main extends Application {
             }
         }
 
-        //TODO: remove this method; it is for testing purposes only
-        messages.add(new Message( "R23798542", "P18293746", "Test1", "This is just a test message to make sure that everything is working properly"));
-        messages.add(new Message( "R23798542", "P18293746", "Test2", "This is just a test message to make sure that everything is working properly"));
-
-
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);
         window = primaryStage;
@@ -172,7 +167,7 @@ public class Main extends Application {
         }
     }
 
-    public HealthcareSpecialistNode findProviderByID(String providerID){
+    public static HealthcareSpecialistNode findProviderByID(String providerID){
         for (HealthcareSpecialistNode provider : healthcareSpecialistList){
             if (provider.getProviderID().equals(providerID)){
                 return provider;

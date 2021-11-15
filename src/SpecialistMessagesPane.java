@@ -20,7 +20,7 @@ public class SpecialistMessagesPane extends Pane {
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
 
-        welcomeLabel = new Label("Welcome to ConnectMD");
+        welcomeLabel = new Label("Messages from Patients");
         welcomeLabel.getStyleClass().add("welcomeLabel");
         welcomeLabel.setLayoutX(14);
         welcomeLabel.setLayoutY(36);

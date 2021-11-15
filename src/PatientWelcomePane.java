@@ -15,7 +15,8 @@ import javafx.scene.layout.*;
 
 public class PatientWelcomePane extends Pane {
     
-    private Button viewPatientInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, logOutButton;
+    private Button viewPatientInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, logOutButton,
+            viewMessagesButton;
     private Label helloLabelPatient, welcomeLabel;
     private String patientName = "";
     private ObservableList<String> list = FXCollections.observableArrayList("A", "B", "C", "D", "E");
@@ -55,26 +56,34 @@ public class PatientWelcomePane extends Pane {
         sendMessageButton.getStyleClass().add("wideBlueButton");
         sendMessageButton.setLayoutX(470);
         sendMessageButton.setLayoutY(413);
+
+        viewMessagesButton = new Button("View Message");
+        viewMessagesButton.getStyleClass().add("wideBlueButton");
+        viewMessagesButton.setLayoutX(470);
+        viewMessagesButton.setLayoutY(475);
         
         requestChangeButton = new Button("Request Change");
         requestChangeButton.getStyleClass().add("wideBlueButton");
         requestChangeButton.setLayoutX(470);
-        requestChangeButton.setLayoutY(475);
+        requestChangeButton.setLayoutY(537);
 
         //Set the background and children
       
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
-        this.getChildren().addAll(viewPatientInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, helloLabelPatient, welcomeLabel, logOutButton);
+        this.getChildren().addAll(viewPatientInfoButton, viewHealthButton, sendMessageButton, requestChangeButton,
+                helloLabelPatient, welcomeLabel, logOutButton, viewMessagesButton);
 
         //ACTIONS
       
         viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.showPatientInfoPane());
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
         requestChangeButton.setOnAction(event -> HealthCarePortalSystem.showPatientProviderChangePane());
+        sendMessageButton.setOnAction(event -> HealthCarePortalSystem.showPatientSendMessagesPane());
+        viewMessagesButton.setOnAction(event -> HealthCarePortalSystem.showPatientViewMessagesPane());
+
 
         //TODO: the rest of these need to be mapped
         viewHealthButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        sendMessageButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
 
     }
     

@@ -5,8 +5,7 @@ public class AuthenticationSystem extends HealthCarePortalSystem
     public int loginPatientAuthentication(String firstName, String lastName, LocalDate dob)
     {
         int status = -1;
-        for(int i = 0; i < patientList.size(); i++)
-        {
+        for(int i = 0; i < patientList.size(); i++) {
             if (patientList.get(i).getFirstName().equals(firstName) && patientList.get(i).getLastName().equals(lastName) && patientList.get(i).getBirthDate().equals(dob)) {
                 status = i;
                 return status;

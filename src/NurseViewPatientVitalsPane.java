@@ -20,7 +20,6 @@ public class NurseViewPatientVitalsPane extends Pane {
         specialistNameAndTitle = Main.currentHealthcareSpecialist.getTitleName();
 
         //Create right sidebar
-        //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
         rightPane = new PatientInformationSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);

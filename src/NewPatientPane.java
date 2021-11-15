@@ -10,14 +10,12 @@ public class NewPatientPane extends Pane {
     private TextField firstNameField, lastNameField;
     private DatePicker dobField;
     private ComboBox providerPrefField;
-    private String patientName = "";
-
-    private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
+    private ObservableList<String> list = FXCollections.observableArrayList();
 
 
     public NewPatientPane() {
 // labels
-        helloLabel = new Label("Hello, " + patientName);
+        helloLabel = new Label("Hello, new patient");
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -83,7 +81,12 @@ public class NewPatientPane extends Pane {
         dobField.setLayoutX(607);
         dobField.setLayoutY(438);
 
-        //TODO: fill this field with actual names of doctors
+        for (int i =0; i < Main.healthcareSpecialistList.size(); i++) {
+            if (Main.healthcareSpecialistList.get(i).getType().equals("Doctor")) {
+                list.add(Main.healthcareSpecialistList.get(i).getTitleName());
+            }
+        }
+
         providerPrefField = new ComboBox(list);
         providerPrefField.getStyleClass().add("whiteTextField");
         providerPrefField.setPrefWidth(361);
@@ -96,7 +99,7 @@ public class NewPatientPane extends Pane {
                 providerPrefField);
 
         submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.registerPatient(firstNameField.getText(), lastNameField.getText(), dobField.getValue(), providerPrefField.getValue().toString()));
-
+        quitButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
     }
     
 }

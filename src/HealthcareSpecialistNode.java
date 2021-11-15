@@ -13,9 +13,6 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     private ArrayList<PatientNode> patientIDs; //list of patient IDs that they are assigned to
     private ArrayList<String> nurseIDs;
 
-
-    //TODO: type (as in doctor or nurse) and if they're a doctor add all their nurse's ID
-
     //CONSTRUCTOR
     public HealthcareSpecialistNode(String newProviderID, String newFirstName, String newLastName, String newUsername, String newPassword, String newTitleName, String newType) {
         providerID = newProviderID;

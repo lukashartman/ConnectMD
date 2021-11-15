@@ -22,7 +22,6 @@ public class PatientInformationSidebarPane extends Pane {
         this.setPrefHeight(720);
 
         //LABELS
-        //TODO: for all these elements, grab the correct patient information using the patientID passed into here
         nameLabel = new Label(Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         nameLabel.getStyleClass().add("whiteLabel");
         nameLabel.setLayoutX(70);

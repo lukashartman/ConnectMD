@@ -324,6 +324,16 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
+    public static void showHealthHistoryPane(){
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientHealthHistoryPane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
 
     //Helper Methods
     public static int findPatient(String firstName, String lastName) {

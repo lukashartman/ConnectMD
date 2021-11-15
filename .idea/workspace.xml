@@ -6,16 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientViewMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientViewMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthHistoryScrollBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthHistoryScrollBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NewPatientPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPatientPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientHealthHistoryPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientHealthHistoryPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientInformationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Customize and Finish Vitals Pane" />
     <MESSAGE value="Customize and Finish PatientInfoSideBarPane" />
     <MESSAGE value="Customize and Finish PatientWelcomePane" />
     <MESSAGE value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
@@ -237,7 +234,8 @@
     <MESSAGE value="Ingest nurse data, prepare for vitals setup" />
     <MESSAGE value="Nurse vitals pane implementation" />
     <MESSAGE value="Implement specialist message system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement specialist message system" />
+    <MESSAGE value="Implement patient message system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement patient message system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,10 +245,13 @@
           <line>43</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PatientSendMessagesPane.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="42" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/PatientHealthHistoryPane.java</url>
+          <line>18</line>
+          <properties class="PatientHealthHistoryPane" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

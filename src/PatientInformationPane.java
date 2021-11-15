@@ -74,7 +74,6 @@ public class PatientInformationPane extends Pane  {
         backButton.setLayoutY(662);
         
         //text fields
-        //TODO: dynamically fill all these fields with information based on the current user
         pharmNameField = new TextField();
         pharmNameField.getStyleClass().add("whiteTextField");
         pharmNameField.setText(Main.currentPatient.getPharmacyName());

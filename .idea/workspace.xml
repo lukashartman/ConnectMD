@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HealthHistoryScrollBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HealthHistorySidebarPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PatientHealthHistoryPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientMessagesPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NurseViewPatientVitalsPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1zYTYJnJK7npJlPib2ojMasTdVb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,7 +36,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,18 +51,8 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="HealthCarePortalSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HealthCarePortalSystem" />
-      <module name="ConnectMD" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -76,7 +65,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.HealthCarePortalSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -84,69 +72,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="" />
-      <created>1636753328652</created>
+      <created>1636480403004</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1636753328652</updated>
-      <workItem from="1636753332262" duration="7173000" />
+      <updated>1636480403004</updated>
     </task>
-    <task id="LOCAL-00001" summary="Commit">
-      <created>1636774756414</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1636774756414</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commit">
-      <created>1636776148001</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1636776148001</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Commit">
-      <created>1636780145233</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1636780145233</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Commit">
-      <created>1636858554525</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1636858554525</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commit">
-      <created>1636858693606</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1636858693606</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commit">
-      <created>1636867361994</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1636867361995</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Commit">
-      <created>1636869803311</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1636869803311</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Commit">
-      <created>1636923258646</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1636923258646</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,16 +147,6 @@
     <MESSAGE value="Correct Main Start" />
     <MESSAGE value="Create SpecialistMessagesPane" />
     <MESSAGE value="Misc. Fixes" />
-    <MESSAGE value="Commit" />
-    <MESSAGE value="Correct incorrect Java implementations" />
-    <MESSAGE value="Remove Unnecessary Classes" />
-    <MESSAGE value="Create patient ingest system" />
-    <MESSAGE value="Create login patient flow" />
-    <MESSAGE value="Create new patient flow" />
-    <MESSAGE value="Create log out flow" />
-    <MESSAGE value="Create edit patient information flow" />
-    <MESSAGE value="Create edit information flow" />
-    <MESSAGE value="Complete edit information flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete edit information flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Misc. Fixes" />
   </component>
 </project>

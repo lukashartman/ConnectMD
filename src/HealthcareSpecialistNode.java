@@ -17,11 +17,11 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
 
     //CONSTRUCTOR
     public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName, String newType) {
-        firstName = new String("");
-        lastName = new String("");
-        username = new String("");
-        password = new String("");
-        titleName = new String("");
+        firstName = new String(" ");
+        lastName = new String(" ");
+        username = new String(" ");
+        password = new String(" ");
+        titleName = new String(" ");
         patientIDs = new ArrayList<String>();
         //TODO: if doctor, initialize nurseIDs
         // if nurse, leave array empty
@@ -44,7 +44,6 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     {
         return password;
     }
-
     public String setFirstName()
     {
         return firstName;

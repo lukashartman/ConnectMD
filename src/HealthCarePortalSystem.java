@@ -117,6 +117,17 @@ public class HealthCarePortalSystem extends Main
 
     }
 
+    public static void showSpecialistWelcomePane(){
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new SpecialistWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
+
     public static void showCreateAccountPane(){
         mainPane.getChildren().removeAll();
         mainPane.getChildren().add(new NewPatientPane());
@@ -155,17 +166,26 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public void enterPatientVitals(String patientFirstName, String patientLastName, float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
+    public static void enterPatientVitals(float weight, float temp, int heightFeet, int heightInch, String bloodPressure)
     {
         Visit newVisit = new Visit();
         int patientIndex = -1;
 
         newVisit.updateVitals(weight, heightFeet, heightInch, temp, bloodPressure);
 
-        patientIndex = findPatient(patientFirstName, patientLastName);
+        patientIndex = findPatient(currentPatient.getFirstName(), currentPatient.getLastName());
 
         if(patientIndex != -1)
             patientList.get(patientIndex).visits.add(0, newVisit);
+
+        mainPane.getChildren().removeAll();
+        try {
+            //TODO: change to patienthealthistorypane
+            mainPane.getChildren().add(new SpecialistWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void showPatientInfoPane(){

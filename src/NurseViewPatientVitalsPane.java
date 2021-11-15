@@ -17,6 +17,7 @@ public class NurseViewPatientVitalsPane extends Pane {
     private Pane rightPane;
 
     public NurseViewPatientVitalsPane() throws FileNotFoundException {
+        specialistNameAndTitle = Main.currentHealthcareSpecialist.getTitleName();
 
 
         //Create right sidebar
@@ -133,7 +134,9 @@ public class NurseViewPatientVitalsPane extends Pane {
                bodyTempLabel, degreesLabel, bloodPressureLabel, mmHgLabel, weightField, heightFieldFt, heightFieldIn, bodyTempField,
                bloodPressureField, backButton, nextButton, rightPane);
 
-        backButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        nextButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        backButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistWelcomePane());
+        nextButton.setOnAction(event -> HealthCarePortalSystem.enterPatientVitals(Float.parseFloat(weightField.getText()),
+                Float.parseFloat(bodyTempField.getText()), Integer.parseInt(heightFieldFt.getText()),
+                Integer.parseInt(heightFieldIn.getText()), bloodPressureField.getText()));
     }
 }

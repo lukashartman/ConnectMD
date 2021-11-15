@@ -51,7 +51,7 @@ public class PatientInformationSidebarPane extends Pane {
 
 
         String[] dividedAddress = Main.currentPatient.getHomeAddress().split(",");
-        addressLabel = new Label("Address: " + dividedAddress[0] + ", \n\t\t " + dividedAddress[1] + ", " + dividedAddress[2] + ", " + dividedAddress[3]);
+        addressLabel = new Label("Address: " + dividedAddress[0] + ", \n" + dividedAddress[1] + ", " + dividedAddress[2] + ", " + dividedAddress[3]);
         addressLabel.getStyleClass().add("sidebarSmallLabel");
         addressLabel.setLayoutX(45);
         addressLabel.setLayoutY(466);

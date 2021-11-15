@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientProviderChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientProviderChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,6 +228,7 @@
     <MESSAGE value="Create edit patient information flow" />
     <MESSAGE value="Create edit information flow" />
     <MESSAGE value="Complete edit information flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete edit information flow" />
+    <MESSAGE value="Create missing send patient message pane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create missing send patient message pane" />
   </component>
 </project>

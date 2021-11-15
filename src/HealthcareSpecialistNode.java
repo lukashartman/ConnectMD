@@ -8,6 +8,7 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     private String firstName;
     private String lastName;
     private String type;
+    private String providerID;
     private String titleName; //what they want to be called by (RN or Dr) with name (ex. Dr. Smith)
     private ArrayList<String> patientIDs; //list of patient IDs that they are assigned to
     private ArrayList<String> nurseIDs;
@@ -44,6 +45,8 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     {
         return password;
     }
+    public String getTitleName(){return titleName;}
+    public String getProviderID(){return providerID;}
 
     public String setFirstName()
     {

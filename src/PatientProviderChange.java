@@ -39,6 +39,7 @@ public class PatientProviderChange extends Pane {
         String[] providers = {""};
 
         //create Combo box
+        //TODO: fill this combo box with the list of providers
         chooseNewProviderField = new ComboBox();
         chooseNewProviderField.setValue("Choose New Provider");
         chooseNewProviderField.getStyleClass().add("selectPatientDropdown");
@@ -69,6 +70,7 @@ public class PatientProviderChange extends Pane {
         this.getChildren().addAll(helloLabel, changeOfProviderLabel, chooseNewProviderField, reasonField,submitAndFinishButton, reasonLabel, backButton, rightPane);
         this.setBackground(new Background (new BackgroundFill(Color.web("#FFFFFF"),null, null)));
 
+        submitAndFinishButton.setOnAction(event -> HealthCarePortalSystem.requestProviderChange(chooseNewProviderField.getValue().toString(), reasonField.getText()));
 
     }
 }

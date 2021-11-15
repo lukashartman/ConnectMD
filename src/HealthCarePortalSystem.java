@@ -29,6 +29,9 @@ public class HealthCarePortalSystem extends Main
         //TODO: here we need to add this patient's new ID to that specific specialist's list of patients
         // Along with the the doctor's nurse's array of patients
 
+        int providerIndex = -1;
+        providerIndex = findProviderByTitleName(newProviderPref);
+
         Random rnd = new Random();
         int n = 1000000 + rnd.nextInt(9999999);
 
@@ -42,9 +45,10 @@ public class HealthCarePortalSystem extends Main
         String insuranceName = "";
         String insuranceID = "";
         int phoneNumber = 0;
+        HealthcareSpecialistNode provider = healthcareSpecialistList.get(providerIndex);
 
         newPatient = new PatientNode(patientID, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
-                insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
+                insuranceName, insuranceID, phoneNumber, birthDate, provider); // create and initialize all attributes of new patient
 
        patientList.add(newPatient); // add new patient to array list of type patient
 
@@ -224,6 +228,38 @@ public class HealthCarePortalSystem extends Main
 
     }
 
+    public static void showPatientProviderChangePane(){
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientProviderChange());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
+
+    public static void requestProviderChange(String newProviderName, String newProviderReason){
+        int patientIndex = -1;
+        patientIndex = findPatient(currentPatient.getFirstName(), currentPatient.getLastName());
+
+        int providerIndex = -1;
+        providerIndex = findProviderByTitleName(newProviderName);
+
+        patientList.get(patientIndex).setProvider(healthcareSpecialistList.get(providerIndex));
+
+        try {
+            mainPane.getChildren().removeAll();
+            mainPane.getChildren().add(new PatientWelcomePane());
+            System.out.println("Scene changed");
+        } catch (FileNotFoundException e) {
+            System.out.println("You broke it");
+            e.printStackTrace();
+        }
+    }
+
+
+    //Helper Methods
     public static int findPatient(String firstName, String lastName)
     {
         int index = -1;
@@ -233,6 +269,16 @@ public class HealthCarePortalSystem extends Main
                 index = i;
 
             return index;
+    }
+
+    public static int findProviderByTitleName(String providerName){
+        int index = -1;
+
+        for(int i = 0; i < Main.healthcareSpecialistList.size(); i++)
+            if(healthcareSpecialistList.get(i).getTitleName().equals(providerName))
+                index = i;
+
+        return index;
     }
 
     public static void logOutUser(){

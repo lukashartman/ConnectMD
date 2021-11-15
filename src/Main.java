@@ -33,6 +33,7 @@ public class Main extends Application {
         Scanner patientDataScanner = new Scanner(new File("src/patientData.txt"));
         while (patientDataScanner.hasNextLine()){
             String patientID = patientDataScanner.nextLine();
+            String providerID = patientDataScanner.nextLine();
             String patientFirstName = patientDataScanner.nextLine();
             String patientLastName = patientDataScanner.nextLine();
             String patientAddress = patientDataScanner.nextLine();
@@ -42,7 +43,10 @@ public class Main extends Application {
             String insuranceID = patientDataScanner.nextLine();
             int patientPhoneNumber = Integer.parseInt(patientDataScanner.nextLine().substring(0, 9));
             LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
-            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
+
+            HealthcareSpecialistNode provider = findProviderByID(providerID);
+
+            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB, provider);
             patientList.add(patient);
 
             while (patientDataScanner.hasNextLine()){
@@ -102,5 +106,14 @@ public class Main extends Application {
 
             this.getChildren().add(new LoginPane());
         }
+    }
+
+    public HealthcareSpecialistNode findProviderByID(String providerID){
+        for (HealthcareSpecialistNode provider : healthcareSpecialistList){
+            if (provider.getProviderID().equals(providerID)){
+                return provider;
+            }
+        }
+        return null;
     }
 }

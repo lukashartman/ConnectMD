@@ -1,11 +1,12 @@
+import javafx.scene.control.Alert;
+
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
 
 
 public class HealthCarePortalSystem extends Main
 {
-    AuthenticationSystem authenticationSystem = new AuthenticationSystem();
-
+    private static AuthenticationSystem authenticationSystem = new AuthenticationSystem();
 
     //Note: this method is just for Luke to play around with and will be
     // removed in the final version.
@@ -44,18 +45,38 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public void loginPatient(String firstName, String lastName, LocalDate dob)
+    public static void loginPatient(String firstName, String lastName, LocalDate dob)
     {
-        int status = 0;
+        int patientIndex = 0;
 
-        status = authenticationSystem.loginPatientAuthentication(firstName, lastName, dob); //patient login request; returns status (yes or no)
+        patientIndex = authenticationSystem.loginPatientAuthentication(firstName, lastName, dob); //patient login request; returns status (yes or no)
 
-        if(status != -1)
-            currentPatient = patientList.get(status);
+        if(patientIndex != -1) {
+            currentPatient = patientList.get(patientIndex);
+
+            try {
+                mainPane.getChildren().removeAll();
+                mainPane.getChildren().add(new PatientWelcomePane());
+                System.out.println("Scene changed");
+            } catch (FileNotFoundException e) {
+                System.out.println("You broke it");
+                e.printStackTrace();
+            }
+
+        } else {
+            System.out.println("Patient not found");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Patient Not Found");
+            alert.setHeaderText("There was an error finding the patient");
+            alert.setContentText("Ensure all fields are filled and date is in the format of MM/DD/YYY");
+            alert.showAndWait();
+
+        }
 
     }
 
-    public void loginSpecialist(String userName, String password)
+    public static void loginSpecialist(String userName, String password)
     {
         int status = 0;
 

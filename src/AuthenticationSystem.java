@@ -7,10 +7,11 @@ public class AuthenticationSystem extends HealthCarePortalSystem
         int status = -1;
         for(int i = 0; i < patientList.size(); i++)
         {
-            if (patientList.get(i).getFirstName().equals(firstName) && patientList.get(i).getLastName().equals(lastName) && patientList.get(i).getBirthDate().equals(dob))
+            if (patientList.get(i).getFirstName().equals(firstName) && patientList.get(i).getLastName().equals(lastName) && patientList.get(i).getBirthDate().equals(dob)) {
                 status = i;
+                return status;
+            }
         }
-
         return status;
     }
 

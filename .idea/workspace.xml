@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,15 +215,19 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Correct incorrect Java implementations" />
     <MESSAGE value="Remove Unnecessary Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Unnecessary Classes" />
+    <MESSAGE value="Create patient ingest system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create patient ingest system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="6" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/HealthCarePortalSystem.java</url>
+          <line>47</line>
+          <properties class="HealthCarePortalSystem" method="loginPatient">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

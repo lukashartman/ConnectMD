@@ -44,8 +44,6 @@ public class Main extends Application {
             int patientPhoneNumber = Integer.parseInt(patientDataScanner.nextLine().substring(0, 9));
             LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
 
-            //HealthcareSpecialistNode provider = findProviderByID(providerID);
-
             PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
             patientList.add(patient);
 
@@ -103,7 +101,15 @@ public class Main extends Application {
         doctorDataScanner.close();
 
         //TODO: read in nurses
-        //TODO; retroactively set providers of patients after all data has been read
+
+        for (int i = 0; i < patientList.size(); i++){
+            for(int j = 0; j < healthcareSpecialistList.size(); j++){
+                if(healthcareSpecialistList.get(j).getPatientIDs().contains(patientList.get(i))){
+                    patientList.get(i).setProvider(healthcareSpecialistList.get(j));
+                    break;
+                }
+            }
+        }
 
         //Setup stage, scene, and window8
         primaryStage.setResizable(false);

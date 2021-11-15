@@ -16,13 +16,14 @@ public class SpecialistWelcomePane extends Pane{
     private Label helloLabel, welcomeLabel;
     private ComboBox selectPatient;
     private String specialistNameAndTitle = "";
-    private ObservableList<String> list = FXCollections.observableArrayList("A","B","C");
+    private ObservableList<String> list = FXCollections.observableArrayList();
+    ;
 
     public SpecialistWelcomePane() throws FileNotFoundException {
 
 
         //LABELS
-        helloLabel = new Label("Hello " + specialistNameAndTitle);
+        helloLabel = new Label("Hello, " + Main.currentHealthcareSpecialist.getTitleName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -54,6 +55,12 @@ public class SpecialistWelcomePane extends Pane{
         viewAllMessagesButton.setLayoutY(651);
 
         //COMBO BOX
+        for (int i = 0; i < Main.patientList.size(); i++) {
+            if (Main.patientList.get(i).getHealthCareSpecialist().equals(Main.currentHealthcareSpecialist)) {
+                list.add(Main.patientList.get(i).getFirstName() + " " + Main.patientList.get(i).getLastName() + " with DOB " + Main.patientList.get(i).getBirthDate().toString());
+            }
+        }
+
         selectPatient = new ComboBox(list);
         selectPatient.setValue("Select Patient");
         selectPatient.getStyleClass().add("selectPatientDropdown");
@@ -68,7 +75,7 @@ public class SpecialistWelcomePane extends Pane{
         viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
-        logOutButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
+        logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
     }
 }
 

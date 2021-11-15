@@ -62,6 +62,7 @@ public class PatientNode {
         return birthDate;
     }
     public String getPatientID() {return patientID;}
+    public HealthcareSpecialistNode getHealthCareSpecialist() {return provider;}
 
     //SETTERS
     public void setFirstName(String firstName)

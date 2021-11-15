@@ -3,7 +3,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import java.io.FileNotFoundException;
 
-public class PatientMessagesPane extends Pane {
+public class PatientSendMessagesPane extends Pane {
     private Button backButton, submitAndFinishButton;
     private Label msgProviderLabel, helloLabel, messageToLabel, subjectLabel, bodyLabel;
     private ComboBox messageToBox;
@@ -13,7 +13,7 @@ public class PatientMessagesPane extends Pane {
     private String patientName = "";
 
 
-    public PatientMessagesPane() throws FileNotFoundException {
+    public PatientSendMessagesPane() throws FileNotFoundException {
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
         rightPane = new PatientInformationSidebarPane("P44924663");
         rightPane.setLayoutX(852);

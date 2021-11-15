@@ -119,6 +119,7 @@ public class HealthCarePortalSystem extends Main
         System.out.println("Scene changed");
     }
 
+
     public void sendMessage(String to, String from, String subject, String body)
     {
         Message newMessage;

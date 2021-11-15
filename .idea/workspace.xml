@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hs_err_pid8811.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid8824.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patImages/P1005325.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -226,6 +226,7 @@
     <MESSAGE value="Create log out flow" />
     <MESSAGE value="Create edit patient information flow" />
     <MESSAGE value="Create edit information flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create edit information flow" />
+    <MESSAGE value="Complete edit information flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete edit information flow" />
   </component>
 </project>

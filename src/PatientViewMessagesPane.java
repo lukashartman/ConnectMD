@@ -45,7 +45,6 @@ public class PatientViewMessagesPane extends Pane {
         backButton.setLayoutX(19);
         backButton.setLayoutY(654);
 
-
         //Set the background and children
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
         this.getChildren().addAll(helloLabel, welcomeLabel, backButton, fromLabel, subjectLabel, bodyLabel);

@@ -24,6 +24,7 @@ public class HealthCarePortalSystem extends Main
     {
         PatientNode newPatient;
 
+        String patientID = "";
         LocalDate birthDate;
         String firstName = "";
         String lastName = "";
@@ -36,7 +37,7 @@ public class HealthCarePortalSystem extends Main
         birthDate = LocalDate.of(2000, 1, 1);
 
 
-        newPatient = new PatientNode(firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
+        newPatient = new PatientNode(patientID, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
                 insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
 
        patientList.add(newPatient); // add new patient to array list of type patient

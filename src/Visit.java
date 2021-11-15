@@ -26,6 +26,22 @@ public class Visit
         notes = "";
     }
 
+    public Visit(LocalDate newVisitDate, float newWeight, int newHeightFt, int newHeightIn, float newBodyTemp, String newBloodPressure, String newPhysicalExamNotes, String newKnownAllergies, String newHealthIssues, String newMedications, String newImmunizations, String newNotes)
+    {
+        visitDate = newVisitDate;
+        weight = newWeight;
+        heightFt = newHeightFt;
+        heightIn = newHeightIn;
+        bodyTemp = newBodyTemp;
+        bloodPressure = newBloodPressure;
+        physicalExamNotes = newPhysicalExamNotes;
+        knownAllergies = newKnownAllergies;
+        healthIssues = newHealthIssues;
+        medications = newMedications;
+        immunizations = newImmunizations;
+        notes = newNotes;
+    }
+
     public void updateVitals(float weight, int heightFt, int heightIn, float bodyTemp, String bloodPressure)
     {
         this.weight = weight;

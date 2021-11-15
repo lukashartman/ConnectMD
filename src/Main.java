@@ -4,6 +4,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,20 +31,43 @@ public class Main extends Application {
 
         System.out.println("Starting Patient Data Input");
         Scanner patientDataScanner = new Scanner(new File("src/patientData.txt"));
-//        while (patientDataScanner.hasNextLine()){
-//
-//            for (int i = 0; i < 4; i++) {
-//                String tempVariable = patientDataScanner.next();
-//                System.out.print(tempVariable);
-//            }
-//            System.out.println("New Patient Incoming");
-//            //TODO: use the data to create a patient object via constructor
-//            String tempVariable = patientDataScanner.next();
-//            System.out.print(tempVariable);
-//            Patient tempPatient = new Patient();
-//            patientList.add(tempPatient);
-//        }
-//        patientDataScanner.close();
+        while (patientDataScanner.hasNextLine()){
+            String patientID = patientDataScanner.nextLine();
+            String patientFirstName = patientDataScanner.nextLine();
+            String patientLastName = patientDataScanner.nextLine();
+            String patientAddress = patientDataScanner.nextLine();
+            String pharmacyName = patientDataScanner.nextLine();
+            String pharmacyAddress = patientDataScanner.nextLine();
+            String insuranceName = patientDataScanner.nextLine();
+            String insuranceID = patientDataScanner.nextLine();
+            int patientPhoneNumber = Integer.parseInt(patientDataScanner.nextLine().substring(0, 9));
+            LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
+            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
+            patientList.add(patient);
+
+            while (patientDataScanner.hasNextLine()){
+                String tempString = patientDataScanner.nextLine();
+                if (!tempString.equals("#")) {
+                    LocalDate visitDate = LocalDate.parse(tempString);
+                    int weight = Integer.parseInt(patientDataScanner.nextLine());
+                    int heightFt = Integer.parseInt(patientDataScanner.nextLine());
+                    int heightIn = Integer.parseInt(patientDataScanner.nextLine());
+                    float bodyTemp = Float.parseFloat(patientDataScanner.nextLine());
+                    String bloodPressure = patientDataScanner.nextLine();
+                    String physicalExam = patientDataScanner.nextLine();
+                    String knownAllergies = patientDataScanner.nextLine();
+                    String healthIssues = patientDataScanner.nextLine();
+                    String medications = patientDataScanner.nextLine();
+                    String immunizations = patientDataScanner.nextLine();
+                    String notes = patientDataScanner.nextLine();
+                    Visit tempVisit = new Visit(visitDate, weight, heightFt, heightIn, bodyTemp, bloodPressure, physicalExam, knownAllergies, healthIssues, medications, immunizations, notes);
+                    patient.visits.add(tempVisit);
+                } else {
+                    break;
+                    }
+                }
+            }
+        patientDataScanner.close();
 //
 //        Scanner specialistDataScanner = new Scanner(new File("src/specialistData.txt"));
 //        while (specialistDataScanner.hasNext()){

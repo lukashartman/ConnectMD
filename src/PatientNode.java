@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class PatientNode {
     //DECLARING VARIABLES
+    private String patientID;
     private String firstName;
     private String lastName;
     private String homeAddress;
@@ -17,11 +18,12 @@ public class PatientNode {
     ArrayList<Visit> visits;
 
     //CONSTRUCTOR
-    public PatientNode(String newFirstName, String newLastName, String newHomeAddress,
+    public PatientNode(String newPatientID, String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
                        String newInsuranceID, int newPhoneNumber,
                    LocalDate newBirthDate)
     {
+        patientID = newPatientID;
         firstName = newFirstName;
         lastName = newLastName;
         homeAddress = newHomeAddress;

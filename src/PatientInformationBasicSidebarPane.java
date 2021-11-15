@@ -16,7 +16,7 @@ public class PatientInformationBasicSidebarPane extends Pane {
     private ImageView patientPFPView;
     private Label nameLabel, birthdayLabel, idLabel;
 
-    public PatientInformationBasicSidebarPane(String patientID) throws FileNotFoundException {
+    public PatientInformationBasicSidebarPane() throws FileNotFoundException {
 
         //Set size of the sidebar across all calls to view it
         this.setPrefWidth(427);
@@ -34,7 +34,7 @@ public class PatientInformationBasicSidebarPane extends Pane {
         birthdayLabel.setLayoutX(100);
         birthdayLabel.setLayoutY(235);
 
-        idLabel = new Label("ID: " + patientID);
+        idLabel = new Label("ID:");
         idLabel.getStyleClass().add("sidebarDOBID");
         idLabel.setLayoutX(114);
         idLabel.setLayoutY(277);

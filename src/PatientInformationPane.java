@@ -1,10 +1,7 @@
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;  
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
@@ -16,16 +13,18 @@ import javafx.scene.paint.Color;
 
 public class PatientInformationPane extends Pane  {
     private Label helloLabel, yourInfoLabel, pharmNameLabel, pharmAddressLabel, phoneLabel, addressLabel, insuranceNameLabel, insuranceIDLabel;
-    private TextField pharmNameField, pharmAddressField, PhoneField, addressField, insuranceNameField, insuranceIDField;
+    private TextField pharmNameField, pharmAddressField, phoneField, addressField, insuranceNameField, insuranceIDField;
     private Button backButton; 
     private String patientName = "";
     private Pane rightPane;
 
     public PatientInformationPane()throws FileNotFoundException{
         //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
-        rightPane = new PatientInformationBasicSidebarPane("P44924663");
+        rightPane = new PatientInformationBasicSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
+
+        patientName = Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName();
 
         // labels
         helloLabel = new Label("Hello, " + patientName);
@@ -86,10 +85,10 @@ public class PatientInformationPane extends Pane  {
         pharmAddressField.setLayoutX(369);
         pharmAddressField.setLayoutY(250);
         
-        PhoneField = new TextField();
-        PhoneField.getStyleClass().add("whiteTextField");
-        PhoneField.setLayoutX(369);
-        PhoneField.setLayoutY(319);
+        phoneField = new TextField();
+        phoneField.getStyleClass().add("whiteTextField");
+        phoneField.setLayoutX(369);
+        phoneField.setLayoutY(319);
 
         addressField = new TextField();
         addressField.getStyleClass().add("whiteTextField");
@@ -108,8 +107,12 @@ public class PatientInformationPane extends Pane  {
 
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
         this.getChildren().addAll(helloLabel, yourInfoLabel, pharmNameLabel, pharmAddressLabel, phoneLabel,
-                addressLabel, insuranceNameLabel, insuranceIDLabel, pharmNameField, pharmAddressField, PhoneField,
+                addressLabel, insuranceNameLabel, insuranceIDLabel, pharmNameField, pharmAddressField, phoneField,
                 addressField, insuranceNameField, insuranceIDField, backButton, rightPane);
+
+        backButton.setOnAction(event -> HealthCarePortalSystem.editPatientInfoPatient(pharmAddressField.getText(),
+                pharmAddressField.getText(), Integer.parseInt(phoneField.getText()), addressField.getText(),
+                insuranceNameField.getText(), insuranceIDField.getText()));
 
     }
     

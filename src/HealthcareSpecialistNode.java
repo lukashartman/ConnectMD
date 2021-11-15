@@ -7,17 +7,24 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     private String password;
     private String firstName;
     private String lastName;
+    private String type;
     private String titleName; //what they want to be called by (RN or Dr) with name (ex. Dr. Smith)
     private ArrayList<String> patientIDs; //list of patient IDs that they are assigned to
+    private ArrayList<String> nurseIDs;
+
+
+    //TODO: type (as in doctor or nurse) and if they're a doctor add all their nurse's ID
 
     //CONSTRUCTOR
-    public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName) {
+    public HealthcareSpecialistNode(String newFirstName, String newLastName, String newUsername, String newPassword, String titleName, String newType) {
         firstName = new String("");
         lastName = new String("");
         username = new String("");
         password = new String("");
         titleName = new String("");
         patientIDs = new ArrayList<String>();
+        //TODO: if doctor, initialize nurseIDs
+        // if nurse, leave array empty
     }
 
     //GETTERS AND SETTERS

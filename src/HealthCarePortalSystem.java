@@ -167,6 +167,7 @@ public class HealthCarePortalSystem extends Main
 
         int patientIndex = -1;
 
+
         patientIndex = findPatient(currentPatient.getFirstName(), currentPatient.getLastName());  // finds patient in array list
 
         // updates patient information, overrides old info
@@ -181,7 +182,7 @@ public class HealthCarePortalSystem extends Main
 
     public void viewPatientInfoSpecialist()
     {
-        // change panes and pull info for patient
+        // change panes and pull info for said patient
 
     }
 

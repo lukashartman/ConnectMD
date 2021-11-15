@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +216,7 @@
     <MESSAGE value="Create login patient flow" />
     <MESSAGE value="Create new patient flow" />
     <MESSAGE value="Create log out flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create log out flow" />
+    <MESSAGE value="Create edit patient information flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create edit patient information flow" />
   </component>
 </project>

@@ -161,21 +161,26 @@ public class HealthCarePortalSystem extends Main
         }
     }
 
-    public static void editPatientInfoPatient()
+    public static void editPatientInfoPatient(String newHomeAddress, String newPharmacyName, String newPharmacyAddress, String newInsuranceName, String newInsuranceID, int newPhoneNumber)
     {
-
 
         int patientIndex = -1;
 
+        patientIndex = findPatient(currentPatient.getFirstName(), currentPatient.getLastName());  // finds patient in array list
 
-
-
+        // updates patient information, overrides old info
+        patientList.get(patientIndex).setHomeAddress(newHomeAddress);
+        patientList.get(patientIndex).setPharmacyName(newPharmacyName);
+        patientList.get(patientIndex).setPharmacyAddress(newPharmacyAddress);
+        patientList.get(patientIndex).setInsuranceName(newInsuranceName);
+        patientList.get(patientIndex).setInsuranceID(newInsuranceID);
+        patientList.get(patientIndex).setPhoneNumber(newPhoneNumber);
 
     }
 
     public void viewPatientInfoSpecialist()
     {
-        // change panes and pull info for said patient
+        // change panes and pull info for patient
 
     }
 
@@ -207,7 +212,7 @@ public class HealthCarePortalSystem extends Main
 
     }
 
-    public int findPatient(String firstName, String lastName)
+    public static int findPatient(String firstName, String lastName)
     {
         int index = -1;
 

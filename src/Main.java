@@ -4,6 +4,8 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -46,7 +48,7 @@ public class Main extends Application {
             String patientPhoneNumber = patientDataScanner.nextLine();
             LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
 
-            PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
+            PatientNode patient = new PatientNode(patientID, providerID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
             patientList.add(patient);
 
             while (patientDataScanner.hasNextLine()){
@@ -147,9 +149,89 @@ public class Main extends Application {
     }
 
     //Method to run on application stop
-    public void stop(){
-        System.out.println("Application stopped");
-        //TODO; save data to file
+    public void stop() throws IOException {
+        System.out.println("Starting writing");
+
+        File patientDataCreator = new File("src/patientData.txt");
+        patientDataCreator.createNewFile();
+        File patientData = new File("src/patientData.txt");
+        FileWriter patientDataWriter = new FileWriter(patientData);
+        for (int i = 0; i < patientList.size(); i++){
+            patientDataWriter.write(patientList.get(i).getPatientID() + "\n");
+            patientDataWriter.write(patientList.get(i).getProviderID() + "\n");
+            patientDataWriter.write(patientList.get(i).getFirstName() + "\n");
+            patientDataWriter.write(patientList.get(i).getLastName() + "\n");
+            patientDataWriter.write(patientList.get(i).getHomeAddress() + "\n");
+            patientDataWriter.write(patientList.get(i).getPharmacyName() + "\n");
+            patientDataWriter.write(patientList.get(i).getPharmacyAddress() + "\n");
+            patientDataWriter.write(patientList.get(i).getInsuranceName() + "\n");
+            patientDataWriter.write(patientList.get(i).getInsuranceID() + "\n");
+            patientDataWriter.write(patientList.get(i).getPhoneNumber() + "\n");
+            patientDataWriter.write(patientList.get(i).getBirthDate() + "\n");
+
+            for (int j = 0; j < patientList.get(i).visits.size(); j++){
+                patientDataWriter.write(patientList.get(i).visits.get(j).getVisitDate() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getWeight() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getHeightFt() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getHeightIn() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getBodyTemp() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getBloodPressure() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getPhysicalExamNotes() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getKnownAllergies() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getHealthIssues() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getMedications() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getImmunizations() + "\n");
+                patientDataWriter.write(patientList.get(i).visits.get(j).getNotes() + "\n");
+            }
+            patientDataWriter.write("#\n");
+        }
+        patientDataWriter.close();
+
+        File nurseDataCreator = new File("src/nurseData.txt");
+        nurseDataCreator.createNewFile();
+        File nurseData = new File("src/nurseData.txt");
+        FileWriter nurseDataWriter = new FileWriter(nurseData);
+        for (int i = 0; i < healthcareSpecialistList.size(); i++){
+            if (healthcareSpecialistList.get(i).getType().equals("Nurse")){
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getProviderID() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getUsername() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getPassword() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getFirstName() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getLastName() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getTitleName() + "\n");
+                nurseDataWriter.write(healthcareSpecialistList.get(i).getType() + "\n");
+                nurseDataWriter.write("#\n");
+            }
+        }
+        nurseDataWriter.close();
+
+        File doctorDataCreator = new File("src/doctorData.txt");
+        doctorDataCreator.createNewFile();
+        File doctorData = new File("src/doctorData.txt");
+        FileWriter doctorDataWriter = new FileWriter(doctorData);
+        for (int i = 0; i < healthcareSpecialistList.size(); i++){
+            if (healthcareSpecialistList.get(i).getType().equals("Doctor")){
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getProviderID() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getUsername() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getPassword() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getFirstName() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getLastName() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getTitleName() + "\n");
+                doctorDataWriter.write(healthcareSpecialistList.get(i).getType() + "\n");
+                for (int j = 0; j < healthcareSpecialistList.get(i).getPatientIDs().size(); j++){
+                    doctorDataWriter.write(healthcareSpecialistList.get(i).getPatientIDs().get(j).getPatientID() + "\n");
+                }
+
+                for (int j = 0; j < healthcareSpecialistList.get(i).getNurseIDS().size(); j++){
+                    doctorDataWriter.write(healthcareSpecialistList.get(i).getNurseIDS().get(j) + "\n");
+                }
+                doctorDataWriter.write("#\n");
+            }
+        }
+        doctorDataWriter.close();
+
+
+        System.out.println("Finished writing");
     }
 
     //Create pane that will be overwritten for every scene change

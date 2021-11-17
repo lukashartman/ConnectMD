@@ -10,7 +10,7 @@ AXZ02009623
 4803230147
 2001-06-10
 2021-11-16
-165
+165.0
 5
 9
 97.3
@@ -22,7 +22,7 @@ Sprintec, Dulera, Allertec
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Pfizer vaccine
 Patient was prescribed Amoxicillin
 2021-07-03
-162
+162.0
 5
 9
 97.6
@@ -46,7 +46,7 @@ BPD11039429
 6025790032
 2004-11-22
 2020-08-22
-133
+133.0
 5
 8
 98.2
@@ -58,7 +58,7 @@ Apri
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was perfectly healthy
 2021-06-10
-138
+138.0
 5
 8
 98.3
@@ -70,7 +70,7 @@ Apri
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was prescribed Emgality
 2021-08-24
-138
+138.0
 5
 8
 98.3
@@ -94,7 +94,7 @@ SZW24385001
 6023820176
 2001-07-20
 2019-05-20
-135
+135.0
 6
 0
 98.5
@@ -106,7 +106,7 @@ None
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was healthy.
 2020-06-10
-140
+140.0
 6
 0
 98.6
@@ -118,7 +118,7 @@ None
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was healthy.
 2021-07-01
-166
+166.0
 6
 0
 98.6
@@ -130,7 +130,7 @@ None
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was perfeclty healthy. Had no compaints.
 2021-10-12
-164
+164.0
 6
 0
 101.4
@@ -154,7 +154,7 @@ DSW01009652
 4806256278
 1989-09-17
 2021-11-13
-178
+178.0
 5
 8
 98.7
@@ -178,7 +178,7 @@ QSW00009653
 4803292719
 1963-02-16
 2021-01-10
-158
+158.0
 5
 2
 98.4
@@ -190,7 +190,7 @@ Citalopram
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A, Johnson&Johnson Vaccine
 Patient was sent to hospital. Seems to be problem with appendix. 
 2021-10-22
-150
+150.0
 5
 2
 98.6
@@ -214,7 +214,7 @@ SWA00122223
 4804437184
 1983-04-02
 2020-06-02
-125
+125.0
 5
 5
 98.6
@@ -226,7 +226,7 @@ None
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was told to take Benadryl once a day every day and return if symptoms do not stop.
 2020-12-03
-125
+125.0
 5
 5
 98.6
@@ -238,7 +238,7 @@ None
 Hepatitis B, Rotavirus, Diphtheria, Tetanus, Acellular pertussis, Haemophilus influenza type b, Influenza(IIV), Measles, Mumps, Rubella, Hepatitis A
 Patient was referred to a chiropractor and physcial therapist. 
 2021-11-12
-125
+125.0
 5
 5
 98.6

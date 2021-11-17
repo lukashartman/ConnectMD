@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class PatientNode {
     //DECLARING VARIABLES
     private String patientID;
+    private String providerID;
     private String firstName;
     private String lastName;
     private String homeAddress;
@@ -20,12 +21,13 @@ public class PatientNode {
     ArrayList<Visit> visits;
 
     //CONSTRUCTOR
-    public PatientNode(String newPatientID, String newFirstName, String newLastName, String newHomeAddress,
+    public PatientNode(String newPatientID, String newProviderID, String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
                        String newInsuranceID, String newPhoneNumber,
                    LocalDate newBirthDate)
     {
         patientID = newPatientID;
+        providerID = newProviderID;
         firstName = newFirstName;
         lastName = newLastName;
         homeAddress = newHomeAddress;
@@ -62,6 +64,7 @@ public class PatientNode {
         return birthDate;
     }
     public String getPatientID() {return patientID;}
+    public String getProviderID() {return providerID;}
     public HealthcareSpecialistNode getHealthCareSpecialist() {return provider;}
 
     //SETTERS
@@ -103,5 +106,6 @@ public class PatientNode {
     }
     public void setProvider(HealthcareSpecialistNode newProvider){
         this.provider = newProvider;
+        providerID = newProvider.getProviderID();
     }
 }

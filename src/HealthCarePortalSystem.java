@@ -30,7 +30,7 @@ public class HealthCarePortalSystem extends Main {
         String phoneNumber = "0000000000";
         HealthcareSpecialistNode provider = healthcareSpecialistList.get(providerIndex);
 
-        newPatient = new PatientNode(patientID, firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
+        newPatient = new PatientNode(patientID, provider.getProviderID(), firstName, lastName, homeAddress, pharmacyName, pharmacyAddress,
                 insuranceName, insuranceID, phoneNumber, birthDate); // create and initialize all attributes of new patient
 
         patientList.add(newPatient); // add new patient to array list of type patient

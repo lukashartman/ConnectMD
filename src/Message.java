@@ -47,20 +47,4 @@ public class Message
         return messageID;
     }
 
-    public void setMessageSubject(String newSubject) {
-        subject = newSubject;
-    }
-
-    public void setMessageBody(String newBody) {
-        body = newBody;
-    }
-
-    public void setRecipientName(String newTo) {
-        to = newTo;
-    }
-
-    public void setSenderName(String newFrom) {
-        from = newFrom;
-    }
-
 }

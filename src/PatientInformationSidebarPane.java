@@ -6,16 +6,14 @@ import java.io.FileNotFoundException;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import java.io.FileInputStream;
 
 //This pane will be a VBox in nurseViewPatientVitalsPane
 
 public class PatientInformationSidebarPane extends Pane {
-    private Image patientPFP;
-    private ImageView patientPFPView;
+
     private Label nameLabel, birthdayLabel, idLabel, pharmLabel, phonelabel, addressLabel, insuranceLabel;
 
-    public PatientInformationSidebarPane() throws FileNotFoundException {
+    public PatientInformationSidebarPane() {
 
         //Set size of the sidebar across all calls to view it
         this.setPrefWidth(427);

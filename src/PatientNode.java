@@ -1,6 +1,3 @@
-//Patient Node to store data
-
-import java.security.Provider;
 import java.time.LocalDate;
 import java.util.ArrayList;
 

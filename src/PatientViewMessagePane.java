@@ -11,8 +11,6 @@ public class PatientViewMessagePane extends Pane {
             subjectTitleLabel2, bodyTitleLabel2, messageToTitleLabel, fromInfoLabel2;
     private TextField subjectField;
     private TextArea bodyField;
-    String body = "";
-    String specialistNameAndTitle = "";
 
     public PatientViewMessagePane(Message message) {
 

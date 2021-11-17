@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 public class SpecialistAllMessagesPane extends Pane {
     private Button backButton;
     private Label helloLabel, welcomeLabel, fromLabel, subjectLabel, bodyLabel;
-    private String specialistNameAndTitle = "";
     int messageOffset = 104;
 
     public SpecialistAllMessagesPane() throws FileNotFoundException {
@@ -77,7 +76,6 @@ public class SpecialistAllMessagesPane extends Pane {
         backButton.getStyleClass().add("smallBlueButton");
         backButton.setLayoutX(19);
         backButton.setLayoutY(654);
-
 
         //Set the background and children
         this.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));

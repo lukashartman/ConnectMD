@@ -5,16 +5,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
-
-/**
- *
- * @author Noah
- */
-
 public class PatientInformationPane extends Pane  {
     private Label helloLabel, yourInfoLabel, pharmNameLabel, pharmAddressLabel, phoneLabel, addressLabel, insuranceNameLabel, insuranceIDLabel;
     private TextField pharmNameField, pharmAddressField, phoneField, addressField, insuranceNameField, insuranceIDField;
-    private Button backButton; 
+    private Button backButton;
     private String patientName = "";
     private Pane rightPane;
 

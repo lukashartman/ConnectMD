@@ -8,11 +8,6 @@ import javafx.scene.paint.Color;
 import java.io.FileNotFoundException;
 import javafx.scene.layout.*;
 
-/**
- *
- * @author Noah
- */
-
 public class PatientWelcomePane extends Pane {
     
     private Button viewPatientInfoButton, viewHealthButton, sendMessageButton, requestChangeButton, logOutButton,
@@ -24,7 +19,6 @@ public class PatientWelcomePane extends Pane {
    
     public PatientWelcomePane() throws FileNotFoundException {
         patientName = Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName();
-
 
         helloLabelPatient = new Label("Hello, " + patientName);
         helloLabelPatient.getStyleClass().add("helloLabel");
@@ -74,7 +68,6 @@ public class PatientWelcomePane extends Pane {
                 helloLabelPatient, welcomeLabel, logOutButton, viewMessagesButton);
 
         //ACTIONS
-      
         viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.showPatientInfoPane());
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
         requestChangeButton.setOnAction(event -> HealthCarePortalSystem.showPatientProviderChangePane());

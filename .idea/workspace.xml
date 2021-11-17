@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctorData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctorData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nurseData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/nurseData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +214,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Customize and Finish PatientInformationPane" />
     <MESSAGE value="Correct Main Start" />
     <MESSAGE value="Create SpecialistMessagesPane" />
     <MESSAGE value="Misc. Fixes" />
@@ -245,7 +238,8 @@
     <MESSAGE value="Create patient health history pane" />
     <MESSAGE value="Finishing touches and edge case fixes" />
     <MESSAGE value="Data saving mechanism implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data saving mechanism implemented" />
+    <MESSAGE value="Center name in sidebars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Center name in sidebars" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

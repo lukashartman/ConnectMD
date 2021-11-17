@@ -42,9 +42,6 @@ public class PatientSendMessagesPane extends Pane {
         bodyLabel.setLayoutX(185);
         bodyLabel.setLayoutY(265);
 
-
-        //create Combo box
-
         messageToLabelProviderName = new Label(Main.currentPatient.getHealthCareSpecialist().getFirstName() + " " + Main.currentPatient.getHealthCareSpecialist().getLastName());
         messageToLabelProviderName.getStyleClass().add("messageContentLabel");
         messageToLabelProviderName.setMaxWidth(360);

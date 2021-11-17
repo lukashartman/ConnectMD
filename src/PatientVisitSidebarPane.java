@@ -5,8 +5,6 @@ import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-
-import java.io.FileNotFoundException;
 import java.time.LocalDate;
 
 public class PatientVisitSidebarPane extends Pane {

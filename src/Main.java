@@ -55,7 +55,7 @@ public class Main extends Application {
                 String tempString = patientDataScanner.nextLine();
                 if (!tempString.equals("#")) {
                     LocalDate visitDate = LocalDate.parse(tempString);
-                    int weight = Integer.parseInt(patientDataScanner.nextLine());
+                    float weight = Float.parseFloat(patientDataScanner.nextLine());
                     int heightFt = Integer.parseInt(patientDataScanner.nextLine());
                     int heightIn = Integer.parseInt(patientDataScanner.nextLine());
                     float bodyTemp = Float.parseFloat(patientDataScanner.nextLine());

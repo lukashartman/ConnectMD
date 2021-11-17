@@ -14,10 +14,9 @@ public class PatientInformationBasicSidebarPane extends Pane {
         this.setPrefHeight(720);
 
         //LABELS
-        //TODO: center the nameLabel somehow?
         nameLabel = new Label(Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         nameLabel.getStyleClass().add("whiteLabel");
-        nameLabel.setLayoutX(70);
+        nameLabel.layoutXProperty().bind(this.widthProperty().subtract(nameLabel.widthProperty()).divide(2));
         nameLabel.setLayoutY(187);
 
         birthdayLabel = new Label("DOB: " + Main.currentPatient.getBirthDate());

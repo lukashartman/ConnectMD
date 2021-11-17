@@ -65,6 +65,7 @@ public class PatientSendMessagesPane extends Pane {
         bodyField.setPrefHeight(238);
         bodyField.setLayoutX(279);
         bodyField.setLayoutY(268);
+        bodyField.setWrapText(true);
 
         //create Buttons
         backButton = new Button("< Back");

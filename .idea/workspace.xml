@@ -4,16 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="">
+    <list default="true" id="9f237982-f304-4b88-9933-6e8d9e99e185" name="Changes" comment="Create patient health history pane">
+      <change afterPath="$PROJECT_DIR$/src/PatientViewMessagePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_2021_9_54_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_2021_9_54_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_21,_11_06_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_21,_9_53_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_21__11_06_AM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_21__9_53_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthCarePortalSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthHistoryScrollBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthHistoryScrollBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HealthcareSpecialistNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewPatientPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPatientPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientHealthHistoryPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientHealthHistoryPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationBasicSidebarPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientInformationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientInformationSidebarPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientProviderChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientProviderChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientSendMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientViewMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientAllMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientVisitSidebarPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientWelcomePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecialistMessagesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistAllMessagesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistWelcomePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewMessagePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecialistViewMessagePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patientData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/patientData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +47,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1zYTYJnJK7npJlPib2ojMasTdVb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -57,6 +83,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="HealthCarePortalSystem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
@@ -210,7 +239,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Customize and Finish PatientInfoSideBarPane" />
     <MESSAGE value="Customize and Finish PatientWelcomePane" />
     <MESSAGE value="Customize and Finish PatientMessagesPane and PatientProviderChange" />
     <MESSAGE value="Customize and Finish PatientInformationPane" />
@@ -235,29 +263,56 @@
     <MESSAGE value="Nurse vitals pane implementation" />
     <MESSAGE value="Implement specialist message system" />
     <MESSAGE value="Implement patient message system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement patient message system" />
+    <MESSAGE value="Create patient health history pane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create patient health history pane" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SpecialistMessagesPane.java</url>
+          <url>file://$PROJECT_DIR$/src/SpecialistAllMessagesPane.java</url>
           <line>43</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PatientInformationPane.java</url>
+          <line>116</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/PatientHealthHistoryPane.java</url>
-          <line>18</line>
-          <properties class="PatientHealthHistoryPane" method="&lt;init&gt;">
+          <url>file://$PROJECT_DIR$/src/PatientInformationPane.java</url>
+          <line>20</line>
+          <properties class="PatientInformationPane" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/HealthCarePortalSystem.java</url>
+          <line>316</line>
+          <properties class="HealthCarePortalSystem" method="showPatientHealthHistoryPane">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/HealthCarePortalSystem.java</url>
+          <line>335</line>
+          <properties class="HealthCarePortalSystem" method="showPatientHealthHistoryPane">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="selectPatient.getValue().toString()" language="JAVA" />
+        <watch expression="Main.currentPatient" language="JAVA" />
+        <watch expression="Main.currentPatient.visits.get(HealthCarePortalSystem.findIndexOfVisitDate(Main.currentVisitDate))" language="JAVA" />
+        <watch expression="((TextArea)scroll.getContent().lookup(&quot;#physicalExamField&quot;)).getText();" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

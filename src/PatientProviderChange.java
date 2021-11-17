@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -9,18 +11,17 @@ public class PatientProviderChange extends Pane {
     private TextArea reasonField;
     private ComboBox chooseNewProviderField;
     private Pane rightPane;
-    private String patientName = "";
+    private ObservableList<String> list = FXCollections.observableArrayList();
 
 
     public PatientProviderChange() throws FileNotFoundException {
 
-        //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
         rightPane = new PatientInformationSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
 
         // create labels
-        helloLabel = new Label("Hello, " + patientName);
+        helloLabel = new Label("Hello, " + Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -36,11 +37,15 @@ public class PatientProviderChange extends Pane {
         reasonLabel.setLayoutY(247);
 
         //providers list
-        String[] providers = {""};
 
         //create Combo box
-        //TODO: fill this combo box with the list of providers
-        chooseNewProviderField = new ComboBox();
+        for (int i =0; i < Main.healthcareSpecialistList.size(); i++) {
+            if (Main.healthcareSpecialistList.get(i).getType().equals("Doctor")) {
+                list.add(Main.healthcareSpecialistList.get(i).getTitleName());
+            }
+        }
+
+        chooseNewProviderField = new ComboBox(list);
         chooseNewProviderField.setValue("Choose New Provider");
         chooseNewProviderField.getStyleClass().add("selectPatientDropdown");
         chooseNewProviderField.setMaxWidth(361);

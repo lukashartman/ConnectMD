@@ -7,15 +7,12 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.collections.ObservableList;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.*;
-
 import java.io.FileNotFoundException;
-
 
 public class SpecialistWelcomePane extends Pane{
     private Button viewPatientInfoButton, beginPatientVisitButton, viewAllMessagesButton, logOutButton;
     private Label helloLabel, welcomeLabel;
     private ComboBox selectPatient;
-    private String specialistNameAndTitle = "";
     private ObservableList<String> list = FXCollections.observableArrayList();
 
     public SpecialistWelcomePane() throws FileNotFoundException {
@@ -76,13 +73,13 @@ public class SpecialistWelcomePane extends Pane{
         if(Main.currentHealthcareSpecialist.getType().equals("Nurse")){
             beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
         } else {
-            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showVitalsPane(selectPatient.getValue().toString()));
+            beginPatientVisitButton.setOnAction(event -> HealthCarePortalSystem.showPatientHealthHistoryPane(selectPatient.getValue().toString()));
         }
 
         viewAllMessagesButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistMessagesPane());
-
-        viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.changeSceneTest());
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
+        viewPatientInfoButton.setOnAction(event -> HealthCarePortalSystem.showPatientHealthHistoryPane(selectPatient.getValue().toString()));
+
     }
 }
 

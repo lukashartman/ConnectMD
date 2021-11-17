@@ -18,8 +18,7 @@ public class PatientInformationPane extends Pane  {
     private String patientName = "";
     private Pane rightPane;
 
-    public PatientInformationPane()throws FileNotFoundException{
-        //TODO: dynamically replace this parameter with the parameter from the dropdown in the previous view
+    public PatientInformationPane() throws FileNotFoundException{
         rightPane = new PatientInformationBasicSidebarPane();
         rightPane.setLayoutX(852);
         rightPane.setLayoutY(0);
@@ -116,7 +115,7 @@ public class PatientInformationPane extends Pane  {
                 addressField, insuranceNameField, insuranceIDField, backButton, rightPane);
 
         backButton.setOnAction(event -> HealthCarePortalSystem.editPatientInfoPatient(pharmNameField.getText(),
-                pharmAddressField.getText(), Integer.parseInt(phoneField.getText()), addressField.getText(),
+                pharmAddressField.getText(), phoneField.getText(), addressField.getText(),
                 insuranceNameField.getText(), insuranceIDField.getText()));
 
     }

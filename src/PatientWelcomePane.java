@@ -79,8 +79,8 @@ public class PatientWelcomePane extends Pane {
         logOutButton.setOnAction(event -> HealthCarePortalSystem.logOutUser());
         requestChangeButton.setOnAction(event -> HealthCarePortalSystem.showPatientProviderChangePane());
         sendMessageButton.setOnAction(event -> HealthCarePortalSystem.showPatientSendMessagesPane());
-        viewMessagesButton.setOnAction(event -> HealthCarePortalSystem.showPatientViewMessagesPane());
-        viewHealthButton.setOnAction(event -> HealthCarePortalSystem.showHealthHistoryPane());
+        viewMessagesButton.setOnAction(event -> HealthCarePortalSystem.showPatientViewAllMessagesPane());
+        viewHealthButton.setOnAction(event -> HealthCarePortalSystem.showPatientHealthHistoryPane(Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName()));
 
     }
     

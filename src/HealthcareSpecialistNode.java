@@ -49,23 +49,7 @@ public class HealthcareSpecialistNode {  //This class makes and fills the Health
     public ArrayList<String> getNurseIDS(){ return nurseIDs;}
     public String getType(){return type;}
 
-
-    public String setFirstName()
-    {
-        return firstName;
-    }
-    public String setLastName()
-    {
-        return lastName;
-    }
-    public String setUsername()
-    {
-        return username;
-    }
-    public String setPassword()
-    {
-        return password;
-    }
     public void addNurseID(String IDtoAdd){nurseIDs.add(IDtoAdd);}
     public void addPatient(PatientNode patient){patientIDs.add(patient);}
+    public void setPatientIDs(ArrayList<PatientNode> patientIDs){this.patientIDs = patientIDs;}
 }

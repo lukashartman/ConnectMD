@@ -18,8 +18,10 @@ public class Main extends Application {
     public static ArrayList<HealthcareSpecialistNode> healthcareSpecialistList = new ArrayList<>();
     public static ArrayList<Message> messages = new ArrayList<>();
 
-    public static HealthcareSpecialistNode currentHealthcareSpecialist; // current healthcare specialist that is logged in
-    public static PatientNode currentPatient; // current patient that is logged in
+    public static HealthcareSpecialistNode currentHealthcareSpecialist = null; // current healthcare specialist that is logged in
+    public static PatientNode currentPatient = null; // current patient that is logged in
+
+    public static LocalDate currentVisitDate = null;
 
     //Method to launch application
     public static void main(String[] args){
@@ -41,7 +43,7 @@ public class Main extends Application {
             String pharmacyAddress = patientDataScanner.nextLine();
             String insuranceName = patientDataScanner.nextLine();
             String insuranceID = patientDataScanner.nextLine();
-            int patientPhoneNumber = Integer.parseInt(patientDataScanner.nextLine().substring(0, 9));
+            String patientPhoneNumber = patientDataScanner.nextLine();
             LocalDate patientDOB = LocalDate.parse(patientDataScanner.nextLine());
 
             PatientNode patient = new PatientNode(patientID, patientFirstName, patientLastName, patientAddress, pharmacyName, pharmacyAddress, insuranceName, insuranceID, patientPhoneNumber, patientDOB);
@@ -88,7 +90,7 @@ public class Main extends Application {
                 String tempString = doctorDataScanner.nextLine();
                 if (!tempString.equals("#")) {
                     if (tempString.contains("P")){
-                        PatientNode tempPatient = findPatientByID(tempString);
+                        PatientNode tempPatient = HealthCarePortalSystem.findPatientByID(tempString);
                         healthcareSpecialistList.get(healthcareSpecialistList.size()-1).addPatient(tempPatient);
                     } else{
                         healthcareSpecialistList.get(healthcareSpecialistList.size()-1).addNurseID(tempString);
@@ -118,16 +120,7 @@ public class Main extends Application {
         }
         nurseDataScanner.close();
 
-        for (int i = 0; i < healthcareSpecialistList.size(); i++){
-            for(int j = 0; j < healthcareSpecialistList.size(); j++){
-                if (healthcareSpecialistList.get(i).getType().equals("Doctor")){
-                    if (healthcareSpecialistList.get(i).getNurseIDS().contains(healthcareSpecialistList.get(j).getProviderID())){
-                        healthcareSpecialistList.get(j).addPatient(healthcareSpecialistList.get(i).getPatientIDs().get(0));
-                    }
-                }
-
-            }
-        }
+        HealthCarePortalSystem.syncDoctorAndNursePatients();
 
 
         for (int i = 0; i < patientList.size(); i++){
@@ -167,31 +160,4 @@ public class Main extends Application {
         }
     }
 
-    public static HealthcareSpecialistNode findProviderByID(String providerID){
-        for (HealthcareSpecialistNode provider : healthcareSpecialistList){
-            if (provider.getProviderID().equals(providerID)){
-                return provider;
-            }
-        }
-        return null;
-    }
-
-    public static PatientNode findPatientByID(String patientID){
-        for (PatientNode patient : patientList){
-            if (patient.getPatientID().equals(patientID)){
-                return patient;
-            }
-        }
-        return null;
-    }
-
-    public static PatientNode findPatientByName(String patientName){
-        for (PatientNode patient : patientList){
-            String fullNameTemp = patient.getFirstName() + " " + patient.getLastName();
-            if (fullNameTemp.equals(patientName)){
-                return patient;
-            }
-        }
-        return null;
-    }
 }

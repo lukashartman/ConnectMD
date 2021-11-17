@@ -7,20 +7,19 @@ import javafx.scene.paint.Color;
 
 import java.io.FileNotFoundException;
 
-public class SpecialistMessagesPane extends Pane {
+public class PatientAllMessagesPane extends Pane {
     private Button backButton;
     private Label helloLabel, welcomeLabel, fromLabel, subjectLabel, bodyLabel;
-    private String specialistNameAndTitle = "";
     int messageOffset = 104;
 
-    public SpecialistMessagesPane() throws FileNotFoundException {
+    public PatientAllMessagesPane() throws FileNotFoundException {
         //LABELS
-        helloLabel = new Label("Hello, " + Main.currentHealthcareSpecialist.getTitleName());
+        helloLabel = new Label("Hello, " + Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
 
-        welcomeLabel = new Label("Messages from Patients");
+        welcomeLabel = new Label("Messages from Provider");
         welcomeLabel.getStyleClass().add("welcomeLabel");
         welcomeLabel.setLayoutX(14);
         welcomeLabel.setLayoutY(36);
@@ -41,13 +40,13 @@ public class SpecialistMessagesPane extends Pane {
         bodyLabel.setLayoutY(104);
 
         for (int i = 0; i < Main.messages.size(); i++) {
-            if (Main.messages.get(i).getRecipientID().equals(Main.currentHealthcareSpecialist.getProviderID())) {
+            if (Main.messages.get(i).getRecipientID().equals(Main.currentPatient.getPatientID())) {
                 messageOffset += 55;
 
-                Label fromLabel2 = new Label(Main.findPatientByID(Main.messages.get(i).getSenderID()).getFirstName() + " " + Main.findPatientByID(Main.messages.get(i).getSenderID()).getLastName());
-                 fromLabel2.getStyleClass().add("messageContentLabel");
-                 fromLabel2.setLayoutX(64);
-                 fromLabel2.setLayoutY(messageOffset);
+                Label fromLabel2 = new Label(HealthCarePortalSystem.findProviderByID(Main.messages.get(i).getSenderID()).getFirstName() + " " + HealthCarePortalSystem.findProviderByID(Main.messages.get(i).getSenderID()).getLastName());
+                fromLabel2.getStyleClass().add("messageContentLabel");
+                fromLabel2.setLayoutX(64);
+                fromLabel2.setLayoutY(messageOffset);
 
                 Label subjectLabel2 = new Label(Main.messages.get(i).getMessageSubject());
                 subjectLabel2.getStyleClass().add("messageContentLabel");
@@ -67,7 +66,7 @@ public class SpecialistMessagesPane extends Pane {
 
                 this.getChildren().addAll(fromLabel2, subjectLabel2, bodyLabel2, viewButton);
                 int finalI = i;
-                viewButton.setOnAction(event -> HealthCarePortalSystem.viewMessage(Main.messages.get(finalI)));
+                viewButton.setOnAction(event -> HealthCarePortalSystem.showPatientViewMessagePane(Main.messages.get(finalI)));
             }
         }
 
@@ -84,7 +83,8 @@ public class SpecialistMessagesPane extends Pane {
         this.getChildren().addAll(helloLabel, welcomeLabel, backButton, fromLabel, subjectLabel, bodyLabel);
 
         //Action Events
-        backButton.setOnAction(event -> HealthCarePortalSystem.showSpecialistWelcomePane());
+        backButton.setOnAction(event -> HealthCarePortalSystem.showPatientWelcomePane());
+
     }
 
 }

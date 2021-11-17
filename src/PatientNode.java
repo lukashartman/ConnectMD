@@ -14,7 +14,7 @@ public class PatientNode {
     private String pharmacyAddress;
     private String insuranceName;
     private String insuranceID;
-    private int phoneNumber;
+    private String phoneNumber;
     private LocalDate birthDate;
     private HealthcareSpecialistNode provider;
     ArrayList<Visit> visits;
@@ -22,7 +22,7 @@ public class PatientNode {
     //CONSTRUCTOR
     public PatientNode(String newPatientID, String newFirstName, String newLastName, String newHomeAddress,
                    String newPharmacyName, String newPharmacyAddress, String newInsuranceName,
-                       String newInsuranceID, int newPhoneNumber,
+                       String newInsuranceID, String newPhoneNumber,
                    LocalDate newBirthDate)
     {
         patientID = newPatientID;
@@ -56,7 +56,7 @@ public class PatientNode {
     }
     public String getInsuranceName() {return insuranceName;}
     public String getInsuranceID() {return insuranceID;}
-    public int getPhoneNumber() {return phoneNumber;}
+    public String getPhoneNumber() {return phoneNumber;}
     public LocalDate getBirthDate()
     {
         return birthDate;
@@ -93,7 +93,7 @@ public class PatientNode {
     {
         this.insuranceID = insuranceID;
     }
-    public void setPhoneNumber(int phoneNumber)
+    public void setPhoneNumber(String phoneNumber)
     {
         this.phoneNumber = phoneNumber;
     }

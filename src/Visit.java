@@ -17,13 +17,13 @@ public class Visit
         heightFt = 0;
         heightIn = 0;
         bodyTemp = 0;
-        bloodPressure = "";
-        physicalExamNotes = "";
-        knownAllergies = "";
-        healthIssues = "";
-        medications = "";
-        immunizations = "";
-        notes = "";
+        bloodPressure = " ";
+        physicalExamNotes = " ";
+        knownAllergies = " ";
+        healthIssues = " ";
+        medications = " ";
+        immunizations = " ";
+        notes = " ";
     }
 
     public Visit(LocalDate newVisitDate, float newWeight, int newHeightFt, int newHeightIn, float newBodyTemp, String newBloodPressure, String newPhysicalExamNotes, String newKnownAllergies, String newHealthIssues, String newMedications, String newImmunizations, String newNotes)
@@ -51,15 +51,29 @@ public class Visit
         this.bloodPressure = bloodPressure;
     }
 
-    public void updateHealthHistory(String knownAllergies, String healthIssues)
-    {
-        this.knownAllergies = knownAllergies;
-        this.healthIssues += " " + healthIssues;
+    public void updatePhysicalExam(String physicalExamNotes) {
+        this.physicalExamNotes = physicalExamNotes;
     }
 
-    public void prescribeMedication(String medication)
-    {
-        medications = medication;
+    public void updateAllergies(String knownAllergies) {
+        this.knownAllergies = knownAllergies;
+    }
+
+    public void updateHealthIssues(String healthIssues) {
+        this.healthIssues = healthIssues;
+    }
+
+    public void updateImmunizations(String immunizations) {
+        this.immunizations = immunizations;
+    }
+
+    public void updateNotes(String notes) {
+        this.notes = notes;
+    }
+
+
+    public void prescribeMedication(String medication) {
+        medications += ", "  + medication;
     }
 
     // getters

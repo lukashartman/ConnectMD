@@ -1,7 +1,10 @@
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
-public class ViewMessagePane extends Pane {
+public class PatientViewMessagePane extends Pane {
     private Button backButton, submitAndFinishButton;
     private Label helloLabel, messageLabel, fromTitleLabel, subjectTitleLabel,
             bodyTitleLabel, fromInfoLabel, subjectInfoLabel, bodyInfoLabel,
@@ -11,10 +14,10 @@ public class ViewMessagePane extends Pane {
     String body = "";
     String specialistNameAndTitle = "";
 
-    public ViewMessagePane(Message message) {
+    public PatientViewMessagePane(Message message) {
 
         // create labels
-        helloLabel = new Label("Hello, " + Main.currentHealthcareSpecialist.getTitleName());
+        helloLabel = new Label("Hello, " + Main.currentPatient.getFirstName() + " " + Main.currentPatient.getLastName());
         helloLabel.getStyleClass().add("helloLabel");
         helloLabel.setLayoutX(14);
         helloLabel.setLayoutY(12);
@@ -29,7 +32,7 @@ public class ViewMessagePane extends Pane {
         fromTitleLabel.setLayoutX(64);
         fromTitleLabel.setLayoutY(146);
 
-        fromInfoLabel = new Label(Main.findPatientByID(message.getSenderID()).getFirstName() + " " + Main.findPatientByID(message.getSenderID()).getLastName());
+        fromInfoLabel = new Label(HealthCarePortalSystem.findProviderByID(message.getSenderID()).getTitleName());
         fromInfoLabel.getStyleClass().add("messageContentLabel");
         fromInfoLabel.setLayoutX(166);
         fromInfoLabel.setLayoutY(152);
@@ -71,7 +74,7 @@ public class ViewMessagePane extends Pane {
         messageToTitleLabel.setLayoutX(608);
         messageToTitleLabel.setLayoutY(148);
 
-        fromInfoLabel2 = new Label(Main.findPatientByID(message.getSenderID()).getFirstName() + " " + Main.findPatientByID(message.getSenderID()).getLastName());
+        fromInfoLabel2 = new Label(HealthCarePortalSystem.findProviderByID(message.getSenderID()).getTitleName());
         fromInfoLabel2.getStyleClass().add("messageContentLabel");
         fromInfoLabel2.setLayoutX(802);
         fromInfoLabel2.setLayoutY(152);
